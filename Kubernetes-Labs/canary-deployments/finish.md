@@ -1,2 +1,2 @@
-Look at you, learning Linux!
+Look at you, learning Kubernetes!
 You solved this challenge!

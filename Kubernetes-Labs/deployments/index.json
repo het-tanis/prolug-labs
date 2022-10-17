@@ -14,8 +14,8 @@
         }
       ],
 	  "assets": {
-		  "controlplane": [
-		    {"file": "deployments_practice.yaml", "target": "/root", "chmod": "+w"}
+		  "host01": [
+		    {"file": "deployments_practice.yaml", "target": "/example"}
 		  ]
 	  },
       "finish": {

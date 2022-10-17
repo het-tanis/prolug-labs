@@ -13,9 +13,9 @@
           "verify": "step1/verify.sh"
         }
       ],
-	  "assets": {
-		  "host01": [
-		    {"file": "deployments_practice.yaml", "target": "/example"}
+	    "assets": {
+	       "controlplane": [
+		        {"file": "deployments_practice.yaml", "target": "/root"}
 		  ]
 	  },
       "finish": {

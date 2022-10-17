@@ -1,0 +1,28 @@
+{
+    "title": "Let's do Kubernetes Deployments",
+    "description": "Deploy with Kubernetes",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Start of lab",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        }
+      ],
+	  "assets": {
+		  "host01: [
+		    {"file": "deployments_practice.yaml", "target": "/root", "chmod": "+w"}
+		  ]
+	  },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

@@ -14,7 +14,7 @@
         }
       ],
 	    "assets": {
-	       "controlplane": [
+	       "host01": [
 		        {"file": "deployments_practice.yaml", "target": "~/"}
 		  ]
 	  },

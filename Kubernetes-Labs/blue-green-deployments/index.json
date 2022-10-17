@@ -1,6 +1,6 @@
 {
-    "title": "Let's do Kubernetes Deployments",
-    "description": "Deploy with Kubernetes",
+    "title": "Kubernetes Deployments",
+    "description": "Blue Green Deploy with Kubernetes",
     "details": {
       "intro": {
         "text": "intro.md",

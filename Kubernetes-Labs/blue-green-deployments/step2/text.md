@@ -5,8 +5,8 @@ Verify that the deployment is properly exposed and seeing the pod IPs for nginx-
 
 
 <br>
-
-### Solution
+<details>
+<summary>Solution</summary>
 Create a service that exposes the nginx-deployment-blue to the internal cluster.
 
 ```plain 
@@ -22,5 +22,5 @@ Check the pods for their IP addresses compare them to the endpoints from the abo
 ```plain
 kubectl get pods -o wide | grep blue
 ```{{exec}}
-
+</details>
 

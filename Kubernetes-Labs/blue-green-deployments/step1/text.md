@@ -5,7 +5,6 @@ Run this file and inspect the resources it creates.
 <br>
 <details>
 <summary>Solution</summary>
-### Solution
 Inspect the file and see that there are 4 configuration maps and 4 deployments
 
 ```plain 

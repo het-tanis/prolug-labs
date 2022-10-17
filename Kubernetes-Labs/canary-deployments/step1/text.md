@@ -4,7 +4,8 @@ Run this file and inspect the resources it creates.
 
 <br>
 
-### Solution
+<details>
+<summary>Solution</summary>
 Inspect the file and see that there are 4 configuration maps and 4 deployments
 
 ```plain 
@@ -29,3 +30,4 @@ kubectl get deployments
 ```plain
 kubectl get pods
 ```{{exec}}
+</details>

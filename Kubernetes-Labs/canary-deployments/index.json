@@ -1,0 +1,33 @@
+{
+    "title": "Let's do Kubernetes Deployments",
+    "description": "Deploy with Kubernetes",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Creating resources",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Services to expose deployment",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": "deployments_practice.yaml", "target": "~/"}
+		  ]
+	  },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

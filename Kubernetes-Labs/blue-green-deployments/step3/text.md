@@ -16,7 +16,6 @@ View the labels assigned and compare them to web-service selector
 ```plain
 kubectl get pods --show-labels | grep -E "blue|green"
 ```{{exec}}
-</details>
 
 Edit Selector for web-service to be app=nginx-green
 ```plain

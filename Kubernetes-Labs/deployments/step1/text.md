@@ -1,22 +1,29 @@
-Create a new empty file called `my-new-file` in your home directory
+Inspect the deployments_practice.yaml file in your home directory
+
+Run this file and inspect the resources it creates.
 
 <br>
 
 ### Solution
-First we make sure we're in our home directory using
+Inspect the file and see that there are 4 configuration maps and 4 deployments
 
+```vi /root/deployments_practice.yaml```{{exec}}
+
+Deploy the resources
 ```plain
-cd ~
+kubectl create -f /root/deployments_practice.yaml
 ```{{exec}}
 
-We can list the current directory using
+Inspect the resources that were created
 
 ```plain
-pwd
+kubectl get cm
 ```{{exec}}
 
-Now we create the file
+```plain
+kubectl get deployments
+```{{exec}}
 
 ```plain
-touch my-new-file
+kubectl get pods
 ```{{exec}}

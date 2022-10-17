@@ -8,8 +8,13 @@
       },
       "steps": [
         {
-          "title": "Start of lab",
+          "title": "Creating resources",
           "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Services to expose deployment",
+          "text": "step2/text.md",
           "verify": "step1/verify.sh"
         }
       ],

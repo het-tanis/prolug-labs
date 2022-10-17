@@ -7,7 +7,9 @@ Run this file and inspect the resources it creates.
 ### Solution
 Inspect the file and see that there are 4 configuration maps and 4 deployments
 
-```vi /root/deployments_practice.yaml```{{exec}}
+```plain 
+vi /root/deployments_practice.yaml
+```{{exec}}
 
 Deploy the resources
 ```plain

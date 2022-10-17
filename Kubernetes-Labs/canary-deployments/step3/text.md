@@ -8,7 +8,10 @@ Verify labels and change serice web-service to point to Both deployments at 80% 
 <br>
 <details>
 <summary>Solution</summary>
-Verify Pod Labels
+Scale up canary deployment
+```plain
+kubectl scale deployment nginx-deployment-canary --replicas=8
+```{{exec}}
 
 Look at Selector for web-service
 ```plain

@@ -1,6 +1,6 @@
-Create a service that exposes the nginx-deployment-blue to the internal cluster. Name it web-service
+Create a service that exposes the nginx-deployment-canary to the internal cluster. Name it web-service
 
-Verify that the deployment is properly exposed and seeing the pod IPs for nginx-deployment-blue
+Verify that the deployment is properly exposed and seeing the pod IPs for nginx-deployment-canary
 
 
 
@@ -8,13 +8,13 @@ Verify that the deployment is properly exposed and seeing the pod IPs for nginx-
 
 <details>
 <summary>Solution</summary>
-Create a service that exposes the nginx-deployment-blue to the internal cluster.
+Create a service that exposes the nginx-deployment-canary to the internal cluster.
 
 ```plain 
 kubectl expose deployment nginx-deployment-canary --port=80 --type=ClusterIP --name=web-service
 ```{{exec}}
 
-Verify that the deployment is properly exposed and seeing the pod IPs for nginx-deployment-blue
+Verify that the deployment is properly exposed and seeing the pod IPs for nginx-deployment-canary
 ```plain
 kubectl describe svc web-service
 ```{{exec}}

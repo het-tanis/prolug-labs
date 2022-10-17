@@ -3,7 +3,8 @@ Inspect the deployments_practice.yaml file in your home directory
 Run this file and inspect the resources it creates.
 
 <br>
-
+<details>
+<summary>Solution</summary>
 ### Solution
 Inspect the file and see that there are 4 configuration maps and 4 deployments
 
@@ -29,3 +30,4 @@ kubectl get deployments
 ```plain
 kubectl get pods
 ```{{exec}}
+</details>

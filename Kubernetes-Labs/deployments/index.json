@@ -15,7 +15,7 @@
       ],
 	    "assets": {
 	       "controlplane": [
-		        {"file": "deployments_practice.yaml", "target": "/root"}
+		        {"file": "deployments_practice.yaml", "target": "~/"}
 		  ]
 	  },
       "finish": {

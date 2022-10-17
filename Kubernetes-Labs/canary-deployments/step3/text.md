@@ -3,8 +3,6 @@ Scale the deployment nginx-deploymant-canary to have 8 replicas
 Verify labels and change serice web-service to point to Both deployments at 80% canary and 20% canary v2.
 
 
-
-
 <br>
 <details>
 <summary>Solution</summary>
@@ -46,5 +44,4 @@ Verify that pod IPs are for V2 of canary no longer v1
 kubectl get pods -o wide --show-labels| grep v2
 kubectl describe svc web-service
 ```{{exec}}
-
 </details>

@@ -1,4 +1,4 @@
-Create a service that exposes the nginx-deployment-blue to the internal cluster. Name it web-service
+Create a service that exposes the nginx-deployment-blue to the internal cluster on port 80. Name it web-service
 
 Verify that the deployment is properly exposed and seeing the pod IPs for nginx-deployment-blue
 

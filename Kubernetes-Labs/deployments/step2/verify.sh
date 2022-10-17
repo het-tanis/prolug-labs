@@ -1,3 +1,3 @@
 #!/bin/bash
 
-kubectl get deployments | grep green
+kubectl get svc web-service

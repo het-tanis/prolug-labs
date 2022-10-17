@@ -15,7 +15,7 @@
         {
           "title": "Services to expose deployment",
           "text": "step2/text.md",
-          "verify": "step1/verify.sh"
+          "verify": "step2/verify.sh"
         }
       ],
 	    "assets": {

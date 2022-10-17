@@ -29,3 +29,4 @@ Verify that web-service is using Selector nginx-green
 kubectl get pods -o wide | grep green
 kubectl describe svc web-service
 ```{{exec}}
+</details>

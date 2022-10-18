@@ -1,4 +1,4 @@
 #!/bin/bash
 
-stat /root/hosts
-grep controlplane /root/hosts
+grep distribution /root/version
+grep `date +%F` /root/date

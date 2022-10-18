@@ -8,12 +8,12 @@
       },
       "steps": [
         {
-          "title": "Install Ansible",
+          "title": "Setup Hosts file",
           "text": "step1/text.md",
           "verify": "step1/verify.sh"
         },
         {
-          "title": "Check modules and syntax",
+          "title": "Check functionality and connectivity",
           "text": "step2/text.md",
           "verify": "step2/verify.sh"
         }

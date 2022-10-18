@@ -1,4 +1,4 @@
 #!/bin/bash
 
 stat /root/hosts
-grep controlplane /root/hsots
+grep controlplane /root/hosts

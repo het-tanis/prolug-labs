@@ -1,22 +1,23 @@
-Create a new empty file called `my-new-file` in your home directory
+Install Ansible and put the version number in a file called /root/version
+
 
 <br>
+<details>
+<summary>Solution</summary>
 
-### Solution
-First we make sure we're in our home directory using
-
+Install Ansible
 ```plain
-cd ~
+apt -y install ansible
 ```{{exec}}
 
-We can list the current directory using
-
+Check the version
 ```plain
-pwd
+ansible --version
 ```{{exec}}
 
-Now we create the file
-
+Check version and send to file
 ```plain
-touch my-new-file
+ansible --version >> /root/version
 ```{{exec}}
+
+</details>

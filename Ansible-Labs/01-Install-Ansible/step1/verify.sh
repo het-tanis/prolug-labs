@@ -1,3 +1,3 @@
 #!/bin/bash
 
-stat /root/my-new-file
+grep version /root/version

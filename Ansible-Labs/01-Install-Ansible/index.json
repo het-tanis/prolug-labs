@@ -1,6 +1,6 @@
 {
     "title": "Let's do Ansible",
-    "description": "Setup your Ansible Hosts FIle",
+    "description": "Install Ansible and verify functionality",
     "details": {
       "intro": {
         "text": "intro.md",

@@ -1,0 +1,28 @@
+{
+    "title": "Let's do Ansible",
+    "description": "Setup Ansible host file and test connectivity",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Install Ansible",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Check modules and syntax",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        }
+      ],
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

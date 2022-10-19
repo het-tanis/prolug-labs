@@ -1,9 +1,9 @@
 ### Lab Activities
 Verify your hosts file and test ad hoc commands to your servers
 
-Verify server uptime
+Verify servers uptime
 
-Verify OS type of server
+Verify OS type of servers
 
 Verify date and time of servers
 

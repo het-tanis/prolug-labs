@@ -1,3 +1,4 @@
+###Lab Activities
 Verify your hosts file and test ad hoc commands to your servers
 
 Verify server uptime
@@ -6,8 +7,8 @@ Verify OS type of server
 
 Verify date and time of servers
 
+###Deliverables
 Write the version of servers into a file called /root/version
-
 Write the current date from the servers into a file called /root/date
 
 <br>
@@ -28,7 +29,7 @@ Setup module gives so much information you can use during playbook execution.
 ansible servers -i /root/hosts -m setup
 ```{{exec}}
 
-Cut that output down a bit so you can just check the host information
+Cut that output down a bit so you can just check the host distribution information
 ```plain
 ansible servers -i /root/hosts -m setup -a 'filter=ansible_distribution'
 ```{{exec}}
@@ -38,7 +39,7 @@ Send this output to the required file
 ansible servers -i /root/hosts -m setup -a 'filter=ansible_distribution' > /root/version
 ```{{exec}}
 
-Cut that output down a bit so you can just check the host information
+Cut that output down a bit so you can just check the host time information
 ```plain
 ansible servers -i /root/hosts -m setup -a 'filter=ansible_date_time'
 ```{{exec}}

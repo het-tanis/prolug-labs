@@ -9,6 +9,7 @@ Verify date and time of servers
 
 ### Deliverables
 Write the version of servers into a file called /root/version
+
 Write the current date from the servers into a file called /root/date
 
 <br>

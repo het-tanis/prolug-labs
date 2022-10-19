@@ -1,10 +1,13 @@
 Verify your hosts file and test ad hoc commands to your servers
 
 Verify server uptime
+
 Verify OS type of server
+
 Verify date and time of servers
-<br>
+
 Write the version of servers into a file called /root/version
+
 Write the current date from the servers into a file called /root/date
 
 <br>

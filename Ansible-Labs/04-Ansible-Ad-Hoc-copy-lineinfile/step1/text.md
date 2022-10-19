@@ -1,7 +1,7 @@
 ### Lab Activities
-Verify your hosts file and configfile.cfg
+Verify your /root/hosts file and /root/configfile.cfg
 
-Create a directory on your servers for deployments
+Create a directory on your servers for deployments named /opt/deployment
 
 Push over your config file
 
@@ -20,37 +20,24 @@ cat /root/hosts
 cat /root/configfile.cfg
 ```{{exec}}
 
-
-Check server uptime
+Create a Directory on each server named /opt/deployment
 ```plain
-ansible servers -i /root/hosts -m shell -a 'uptime'
+ansible servers -i /root/hosts -m file -a 'path=/opt/deployment state=directory'
 ```{{exec}}
 
-Setup module gives so much information you can use during playbook execution.
+Copy over your /root/configfile.cfg to that directory
 ```plain
-ansible servers -i /root/hosts -m setup
+ansible servers -i /root/hosts -m copy -a 'src=/root/configfile.cfg dest=/opt/deployment'
 ```{{exec}}
 
-Cut that output down a bit so you can just check the host distribution information
+Let's fix a bad configuration line from 000000 to 111111 with the lineinfile module
 ```plain
-ansible servers -i /root/hosts -m setup -a 'filter=ansible_distribution'
+ansible servers -i /root/hosts -m lineinfile -a "path=/opt/deployment/configfile.cfg regexp='^var1' line='var1=111111'"
 ```{{exec}}
 
-Send this output to the required file
+Quick verification that it looks good on all servers
 ```plain
-ansible servers -i /root/hosts -m setup -a 'filter=ansible_distribution' > /root/version
-```{{exec}}
-
-Cut that output down a bit so you can just check the host time information
-```plain
-ansible servers -i /root/hosts -m setup -a 'filter=ansible_date_time'
-```{{exec}}
-
-Send this output to the required file
-
-Cut that output down a bit so you can just check the host information
-```plain
-ansible servers -i /root/hosts -m setup -a 'filter=ansible_date_time' > /root/date
+ansible servers -i /root/hosts -m shell -a 'cat /opt/deployment/configfile.cfg'
 ```{{exec}}
 
 </details>

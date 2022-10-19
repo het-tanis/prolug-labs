@@ -1,6 +1,6 @@
 {
     "title": "Ansible Intro",
-    "description": "Testing Ad Hoc Commands - shell and setup",
+    "description": "Ad Hoc Commands - shell and setup",
     "details": {
       "intro": {
         "text": "intro.md",

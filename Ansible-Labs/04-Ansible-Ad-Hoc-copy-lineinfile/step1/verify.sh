@@ -1,4 +1,4 @@
 #!/bin/bash
 
-grep distribution /root/version
-grep `date +%F` /root/date
+
+ansible servers -i /root/hosts -m shell -a 'grep 111111 /opt/deployment/configfile.cfg'

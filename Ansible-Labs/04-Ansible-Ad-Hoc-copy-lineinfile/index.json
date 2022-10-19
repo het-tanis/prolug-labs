@@ -1,6 +1,6 @@
 {
     "title": "Ansible Intro",
-    "description": "Testing Ad Hoc Commands - copy and lineinfile",
+    "description": "Ad Hoc Commands - copy and lineinfile",
     "details": {
       "intro": {
         "text": "intro.md",

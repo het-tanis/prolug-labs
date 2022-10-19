@@ -20,7 +20,7 @@ Write the current date from the servers into a file called /root/date
 cat /root/hosts
 ```{{exec}}
 
-Checks server uptime
+Check server uptime
 ```plain
 ansible servers -i /root/hosts -m shell -a 'uptime'
 ```{{exec}}

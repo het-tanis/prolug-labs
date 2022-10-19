@@ -1,6 +1,6 @@
 {
     "title": "Ansible Intro",
-    "description": "Testing Ad Hoc Commands - shell and setup",
+    "description": "Testing Ad Hoc Commands - copy and lineinfile",
     "details": {
       "intro": {
         "text": "intro.md",
@@ -8,14 +8,15 @@
       },
       "steps": [
         {
-          "title": "Ad Hoc to gather data",
+          "title": "Ad Hoc to copy and edit",
           "text": "step1/text.md",
           "verify": "step1/verify.sh"
         }
       ],
 	    "assets": {
 	       "host01": [
-		        {"file": "hosts", "target": "~/"}
+		        {"file": "hosts", "target": "~/"},
+            {"file": "configfile.cfg", "target": "~/"}
          ]
         },
       "finish": {

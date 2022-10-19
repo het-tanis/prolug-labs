@@ -47,7 +47,6 @@ ansible servers -i /root/hosts -m setup -a 'filter=ansible_date_time'
 
 Send this output to the required file
 
-Cut that output down a bit so you can just check the host information
 ```plain
 ansible servers -i /root/hosts -m setup -a 'filter=ansible_date_time' > /root/date
 ```{{exec}}

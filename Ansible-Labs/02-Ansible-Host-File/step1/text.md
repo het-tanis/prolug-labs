@@ -1,7 +1,9 @@
 Setup an Ansible file with the hosts in your network
 
 servers:
+
 controlplane
+
 node01
 
 <br>

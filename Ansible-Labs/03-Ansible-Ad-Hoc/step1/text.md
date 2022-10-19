@@ -23,7 +23,7 @@ Checks server uptime
 ansible servers -i /root/hosts -m shell -a 'uptime'
 ```{{exec}}
 
-Gives so much information you can use during playbook execution.
+Setup module gives so much information you can use during playbook execution.
 ```plain
 ansible servers -i /root/hosts -m setup
 ```{{exec}}
@@ -33,9 +33,21 @@ Cut that output down a bit so you can just check the host information
 ansible servers -i /root/hosts -m setup -a 'filter=ansible_distribution'
 ```{{exec}}
 
+Send this output to the required file
+```plain
+ansible servers -i /root/hosts -m setup -a 'filter=ansible_distribution' > /root/version
+```{{exec}}
+
 Cut that output down a bit so you can just check the host information
 ```plain
 ansible servers -i /root/hosts -m setup -a 'filter=ansible_date_time'
+```{{exec}}
+
+Send this output to the required file
+
+Cut that output down a bit so you can just check the host information
+```plain
+ansible servers -i /root/hosts -m setup -a 'filter=ansible_date_time' > /root/date
 ```{{exec}}
 
 </details>

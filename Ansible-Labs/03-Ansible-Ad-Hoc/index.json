@@ -11,11 +11,6 @@
           "title": "Ad Hoc to gather data",
           "text": "step1/text.md",
           "verify": "step1/verify.sh"
-        },
-        {
-          "title": "Ad hoc to push files",
-          "text": "step2/text.md",
-          "verify": "step2/verify.sh"
         }
       ],
 	    "assets": {

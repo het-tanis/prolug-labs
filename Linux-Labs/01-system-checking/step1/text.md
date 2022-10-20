@@ -1,4 +1,4 @@
-Create a new empty file called `my-new-file` in your home directory
+Follow along and look around a new Linux system for the first time
 
 <br>
 

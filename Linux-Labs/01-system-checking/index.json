@@ -1,6 +1,6 @@
 {
-    "title": "Let's do Ansible",
-    "description": "Setup your Ansible Hosts FIle",
+    "title": "Let's do Linux",
+    "description": "Look around a Linux System",
     "details": {
       "intro": {
         "text": "intro.md",
@@ -8,7 +8,7 @@
       },
       "steps": [
         {
-          "title": "Start of lab",
+          "title": "Linux Commands to gather information",
           "text": "step1/text.md",
           "verify": "step1/verify.sh"
         }

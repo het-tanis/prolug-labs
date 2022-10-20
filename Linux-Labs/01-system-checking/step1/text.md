@@ -3,20 +3,30 @@ Create a new empty file called `my-new-file` in your home directory
 <br>
 
 ### Solution
-First we make sure we're in our home directory using
+<details>
+<summary>Solution</summary>
+First we check what version of Linux we're on.
 
 ```plain
-cd ~
+cat /etc/*release
 ```{{exec}}
 
-We can list the current directory using
+Next we check the kernel version.
 
 ```plain
-pwd
+uname -r
 ```{{exec}}
 
-Now we create the file
+Next we might want to know how long the system has been up.
 
 ```plain
-touch my-new-file
+uptime
 ```{{exec}}
+
+Last we might want to see how the system booted and what kernel parameters were passed.
+
+```plain
+cat /proc/cmdline
+```{{exec}}
+
+</details>

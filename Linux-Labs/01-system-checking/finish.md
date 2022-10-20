@@ -1,2 +1,2 @@
 Look at you, learning Linux!
-You solved this challenge!
+You looked around the OS!

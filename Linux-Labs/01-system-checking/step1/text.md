@@ -23,10 +23,11 @@ Next we might want to know how long the system has been up.
 uptime
 ```{{exec}}
 
-Last we might want to see how the system booted and what kernel parameters were passed.
+Next we might want to see how the system booted and what kernel parameters were passed when the system was started.
 
 ```plain
 cat /proc/cmdline
 ```{{exec}}
+
 
 </details>

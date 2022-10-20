@@ -1,0 +1,23 @@
+{
+    "title": "Let's do Linux",
+    "description": "Checking kernel and packages",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Linux Commands for Kernel and Packages",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        }
+      ],
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "ubuntu"
+    }
+  }

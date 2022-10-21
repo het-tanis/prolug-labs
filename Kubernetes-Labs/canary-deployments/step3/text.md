@@ -1,6 +1,6 @@
 Scale the deployment nginx-deploymant-canary to have 8 replicas
 
-Verify labels and change serice web-service to point to Both deployments at 80% canary and 20% canary v2.
+Verify labels and change service web-service to point to Both deployments at 80% canary and 20% canary v2.
 
 <br>
 <details>

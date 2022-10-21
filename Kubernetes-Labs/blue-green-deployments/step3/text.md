@@ -1,4 +1,4 @@
-Verify labels and change serice web-service to point to green deployment
+Verify labels and change service web-service to point to green deployment
 
 
 

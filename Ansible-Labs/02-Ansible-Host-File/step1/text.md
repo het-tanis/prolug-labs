@@ -1,4 +1,4 @@
-Setup an Ansible file with the hosts in your network
+Setup an Ansible file call /root/hosts with the hosts in your network
 
 servers:
 

@@ -11,4 +11,4 @@
       copy:
         src: /root/deploy.tar.gz
         dest: /opt/deploy.tar.gz
-        checksum: <add in checksum from earlier>
+        checksum: c6cd21b75a4b300b9228498c78afc6e7a831839e

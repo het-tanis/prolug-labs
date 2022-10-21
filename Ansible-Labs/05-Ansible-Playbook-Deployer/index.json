@@ -1,5 +1,5 @@
 {
-    "title": "Ansible Intro",
+    "title": "Ansible Playbooks",
     "description": "Playbook to deploy an application",
     "details": {
       "intro": {

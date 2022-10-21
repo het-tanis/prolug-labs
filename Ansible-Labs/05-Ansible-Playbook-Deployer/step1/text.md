@@ -1,5 +1,5 @@
 ### Lab Activities
-Verify your hosts file and create a deployer to push the tar.gz file /root/deploy.tar.gz over to all servers in /opt
+Verify your hosts file and create a deploy playbook called /root/deploy.yml to push the tar.gz file /root/deploy.tar.gz over to all servers in /opt
 
 
 <br>
@@ -24,22 +24,12 @@ cat /root/hosts
       copy:
         src: /root/deploy.tar.gz
         dest: /opt/deploy.tar.gz
-        checksum: <add in checksum from earlier>
+        checksum: c6cd21b75a4b300b9228498c78afc6e7a831839e
 ```
 
 Copy over your /root/configfile.cfg to that directory
 ```plain
-ansible servers -i /root/hosts -m copy -a 'src=/root/configfile.cfg dest=/opt/deployment'
-```{{exec}}
-
-Let's fix a bad configuration line from 000000 to 111111 with the lineinfile module
-```plain
-ansible servers -i /root/hosts -m lineinfile -a "path=/opt/deployment/configfile.cfg regexp='^var1' line='var1=111111'"
-```{{exec}}
-
-Quick verification that it looks good on all servers
-```plain
-ansible servers -i /root/hosts -m shell -a 'cat /opt/deployment/configfile.cfg'
+ansible-playbook servers -i /root/hosts /root/deploy.yml
 ```{{exec}}
 
 </details>

@@ -25,11 +25,11 @@
 
     - name: Make the installer script executable
       file:
-        path: /opt/myapp/installer.sh
+        path: /opt/myapp/deploy/installer.sh
         mode: '0755'
 
     - name: Run the installer and register the output
-      shell: /opt/myapp/installer.sh
+      shell: /opt/myapp/deploy/installer.sh
       register: installer_output
 
     - name: Debug and show the variable installer_output

@@ -1,0 +1,30 @@
+{
+    "title": "Ansible Playbooks",
+    "description": "Playbook to deploy jinja2 template",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Create a playbook to deploy a jinja2 template",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": "hosts", "target": "~/"},
+            {"file": "template.yml", "target": "/answers"},
+            {"file": "template.j2", "target": "/answers"}
+         ]
+        },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

@@ -1,0 +1,20 @@
+This is a system Validation at {{ ansible_date_time.time }} on {{ ansible_date_time.date }}
+
+Unreachable systems:
+----------------------------------------------
+{% for host in ansible_play_hosts_all %}
+{% if host not in ansible_play_hosts %}
+{{ host }}
+{% endif  %}
+{% endfor %}
+
+Hosts who have been up longer than a day:
+----------------------------------------------
+{% for host in ansible_play_hosts_all %}
+{% if hostvars[host].uptime is defined %}
+{% if 'day' in hostvars[host].uptime.stdout %}
+ {{ hostvars[host].ansible_hostname }} - has not rebooted today
+{% endif %}
+{% endif %}
+{% endfor %}
+

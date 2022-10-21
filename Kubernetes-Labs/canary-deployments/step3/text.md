@@ -34,7 +34,7 @@ kubectl get pods -o wide | grep canary
 kubectl describe svc web-service
 ```{{exec}}
 
-Once you've verified that traffic is going to both, edit Selector for web-service and remove add the version: v2 selector
+Once you've verified that traffic is going to both, edit Selector for web-service and add the `version: v2` selector 
 ```plain
 kubectl edit svc web-service
 ```{{exec}}

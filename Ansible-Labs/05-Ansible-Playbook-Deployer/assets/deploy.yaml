@@ -1,0 +1,14 @@
+---
+
+- name: Start of Deployer playbook
+  hosts: servers
+  vars:
+  gather_facts: True
+  become: False
+  tasks:
+
+    - name: Copy deploy.tar.gz over at {{ ansible_date_time.iso8601_basic_short }}
+      copy:
+        src: /root/deploy.tar.gz
+        dest: /opt/deploy.tar.gz
+        checksum: <add in checksum from earlier>

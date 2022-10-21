@@ -55,7 +55,7 @@ ansible-playbook -i /root/hosts /root/template.yml
 Manual verify for all 
 
 ```
-cat /root/report.txt
+cat /root/report.*.txt
 ```{{exec}}
 
 </details>

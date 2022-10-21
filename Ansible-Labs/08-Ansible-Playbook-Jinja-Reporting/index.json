@@ -1,6 +1,6 @@
 {
     "title": "Ansible Playbooks",
-    "description": "Playbook to deploy jinja2 template",
+    "description": "Playbook to deploy jinja2 report",
     "details": {
       "intro": {
         "text": "intro.md",
@@ -8,7 +8,7 @@
       },
       "steps": [
         {
-          "title": "Create a playbook to deploy a jinja2 template",
+          "title": "Create a playbook to deploy a jinja2 report",
           "text": "step1/text.md",
           "verify": "step1/verify.sh"
         }

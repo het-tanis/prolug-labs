@@ -1,6 +1,11 @@
 ### Lab Activities
 Verify your hosts file and create a deploy playbook called /root/deploy.yml to push the tar.gz file /root/deploy.tar.gz over to all servers in /opt
+<br>
 
+<details>
+<summary>Tip</summary>
+If you get stuck, the answer file is found in /root/answers/deploy.yml
+</details>
 
 <br>
 <details>

@@ -1,6 +1,6 @@
 {
     "title": "Ansible Playbooks",
-    "description": "Playbook to deploy an application",
+    "description": "Playbook to stage a .tar.gz file",
     "details": {
       "intro": {
         "text": "intro.md",

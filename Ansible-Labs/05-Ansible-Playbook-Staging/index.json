@@ -8,7 +8,7 @@
       },
       "steps": [
         {
-          "title": "Create a playbook to deploy an application",
+          "title": "Create a playbook to stage an application",
           "text": "step1/text.md",
           "verify": "step1/verify.sh"
         }

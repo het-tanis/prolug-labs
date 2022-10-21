@@ -1,0 +1,38 @@
+---
+
+- name: Start of Deployer playbook
+  hosts: servers
+  vars:
+  gather_facts: True
+  become: False
+  tasks:
+
+    - name: Copy deploy.tar.gz over at {{ ansible_date_time.iso8601_basic_short }}
+      copy:
+        src: /root/deploy.tar.gz
+        dest: /opt/deploy.tar.gz
+        checksum: c6cd21b75a4b300b9228498c78afc6e7a831839e
+
+    - name: Create directory for us to untar into
+      file:
+        path: /opt/myapp
+        state: directory
+
+    - name: Untar the deployer
+      unarchive:
+        src: /opt/deploy.tar.gz
+        dest: /opt/myapp
+
+    - name: Make the installer script executable
+      file:
+        path: /opt/myapp/installer.sh
+        mode: '0755'
+
+    - name: Run the installer and register the output
+      shell: /opt/myapp/installer.sh
+      register: installer_output
+
+    - name: Debug and show the variable installer_output
+      debug:
+        var: installer_output
+

@@ -1,0 +1,30 @@
+{
+    "title": "Ansible Playbooks",
+    "description": "Playbook to deploy an application",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Create a playbook to deploy an application",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": "hosts", "target": "~/"},
+            {"file": "deploy.tar.gz", "target": "~/"},
+            {"file": "deploy.yml", "target": "/answers"}
+         ]
+        },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

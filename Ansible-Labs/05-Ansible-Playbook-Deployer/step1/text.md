@@ -27,9 +27,10 @@ cat /root/hosts
         checksum: c6cd21b75a4b300b9228498c78afc6e7a831839e
 ```
 
-Copy over your /root/configfile.cfg to that directory
+Run Playbook and verify that everything pushed correctly
+
 ```plain
-ansible-playbook servers -i /root/hosts /root/deploy.yml
+ansible-playbook -i /root/hosts /root/deploy.yml
 ```{{exec}}
 
 </details>

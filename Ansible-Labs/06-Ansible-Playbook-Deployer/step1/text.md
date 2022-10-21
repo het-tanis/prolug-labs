@@ -60,14 +60,14 @@ This module unarchives and places the contents in /opt/myapp
 ```
     - name: Make the installer script executable
       file:
-        path: /opt/myapp/deploy/installer.sh
+        path: /opt/myapp/deploy/deployer.sh
         mode: '0755'
 ```
 
 These last two modules execute the script to install the app and show us the debug output so we can test/review.
 ```
     - name: Run the installer and register the output
-      shell: /opt/myapp/deploy/installer.sh
+      shell: /opt/myapp/deploy/deployer.sh
       register: installer_output
 
     - name: Debug and show the variable installer_output

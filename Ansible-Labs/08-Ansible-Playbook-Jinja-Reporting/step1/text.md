@@ -1,7 +1,9 @@
 ### Lab Activities
 Verify your hosts file 
 
-Create a deploy playbook called /root/template.yml to check the uptime of all servers and report back unreachable servers and servers that have been up longer than a day to /root/report.txt on the server of execution.
+Create a deploy playbook called /root/template.yml to check the uptime of all servers. 
+
+Report back unreachable servers and servers that have been up longer than a day to /root/report.txt on the server of execution.
 <br>
 
 <details>

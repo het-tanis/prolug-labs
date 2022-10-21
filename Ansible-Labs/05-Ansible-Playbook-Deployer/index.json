@@ -17,7 +17,7 @@
 	       "host01": [
 		        {"file": "hosts", "target": "~/"},
             {"file": "deploy.tar.gz", "target": "~/"},
-            {"file": "deploy.yaml", "target": "~/answers/"}
+            {"file": "deploy.yaml", "target": "/answers"}
          ]
         },
       "finish": {

@@ -44,4 +44,10 @@ Run Playbook and verify that everything pushed correctly
 ansible-playbook -i /root/hosts /root/deploy.yml
 ```{{exec}}
 
+Manual verify for all 
+
+```
+ansible servers -i /root/hosts -m shell -a 'ls -l /opt/deploy.tar.gz'
+```{{exec}}
+
 </details>

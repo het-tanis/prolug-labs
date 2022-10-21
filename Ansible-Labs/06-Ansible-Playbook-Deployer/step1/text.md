@@ -75,8 +75,6 @@ These last two modules execute the script to install the app and show us the deb
         var: installer_output
 ```
 
-```
-
 Run Playbook and verify that everything pushed correctly
 
 ```plain
@@ -86,7 +84,7 @@ ansible-playbook -i /root/hosts /root/deploy.yml
 Manual verify for all 
 
 ```
-ansible servers -i /root/hosts -m shell -a 'ls -l /opt/deploy.tar.gz'
+ansible servers -i /root/hosts -m shell -a 'ls -l /opt/myapp'
 ```{{exec}}
 
 </details>

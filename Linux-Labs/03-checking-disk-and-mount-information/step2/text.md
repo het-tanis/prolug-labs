@@ -43,7 +43,7 @@ ls -l /dev/disk/by-label
 There are 4 ways to mount disk: label, partuuid, path, and uuid. You can verify this by looking in each of these locations. This gives you how the system is mapping to the underlying disks.
 
 ```plain
-for type in `ls /dev/disk`; do echo "type is $type"; ls -l /dev/disk/$type; done
+for type in \`ls /dev/disk\`; do echo "type is $type"; ls -l /dev/disk/$type; done
 ```{{exec}}
 
 Remember to put the file that the system uses to mount the disks into /root/mountinfo

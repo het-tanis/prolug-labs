@@ -41,7 +41,7 @@ Let's write out 10,000 files and see how that affects our inode usage
 
 ```plain
 df -i /
-touch /root/file{1.10000}
+touch /root/file{1..10000}
 df -i /
 ```{{exec}}
 

@@ -1,6 +1,6 @@
 {
     "title": "Ansible Playbooks",
-    "description": "Playbook to call ansible vault with variables",
+    "description": "Playbook to push MOTD to all servers",
     "details": {
       "intro": {
         "text": "intro.md",
@@ -19,7 +19,6 @@
             {"file": "motd_push.yaml", "target": "~/"},
             {"file": "dev_motd", "target": "~/"},
             {"file": "prod_motd", "target": "~/"}
-
          ]
         },
       "finish": {

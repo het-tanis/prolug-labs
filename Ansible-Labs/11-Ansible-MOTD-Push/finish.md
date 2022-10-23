@@ -1,3 +1,3 @@
 Look at you, learning Ansible!
-You vaulted information and decrypted it to read variables.
+You pushed MOTDs to all servers.
 You solved this challenge!

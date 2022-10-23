@@ -8,7 +8,7 @@
       },
       "steps": [
         {
-          "title": "Ad Hoc to copy and edit",
+          "title": "Playbook execution to see API call with URI module",
           "text": "step1/text.md",
           "verify": "step1/verify.sh"
         }

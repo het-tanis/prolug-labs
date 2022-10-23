@@ -1,6 +1,6 @@
 {
-    "title": "Ansible Intro",
-    "description": "Ad Hoc Commands - copy and lineinfile",
+    "title": "Ansible Playbooks",
+    "description": "Playbook to call an API and 'debug' variables",
     "details": {
       "intro": {
         "text": "intro.md",

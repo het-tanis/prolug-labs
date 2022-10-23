@@ -27,4 +27,10 @@ Uncomment these lines
     #    var: swapi.json.results[0]
 ```
 
+Rerun the Playbook to see the new output
+```plain
+ansible-playbook api.yaml
+```{{exec}}
+
+
 </details>

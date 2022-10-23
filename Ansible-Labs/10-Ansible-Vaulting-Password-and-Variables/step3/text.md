@@ -24,7 +24,7 @@ chmod 400 .passfile
 
 Run the ansible playbook and consume that password file to decrypt the vault
 ```
-ansible-playbook --vault-password-file=.passfile vault_variables.yml
+ansible-playbook --vault-password-file=.passfile vault_variables.yaml
 ```{{exec}}
 
 

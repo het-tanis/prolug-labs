@@ -19,7 +19,7 @@ cat /root/motd_push.yaml
 
 Run the Playbook push the MOTD
 ```plain
-ansible-playbook motd_push.yaml
+ansible-playbook -i /root/hosts motd_push.yaml
 ```{{exec}}
 
 Run an adhoc command to check all the MOTD on all servers

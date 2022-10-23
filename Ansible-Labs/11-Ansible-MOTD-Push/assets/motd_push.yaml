@@ -13,13 +13,13 @@
 
   - name: Push over the file if prod
     copy:
-      src: files/prod_motd
+      src: /root/prod_motd
       dest: "/etc/motd"
     when: '"prod" in env'
 
   - name: Push over the file if dev
     copy:
-      src: files/dev_motd
+      src: /root/dev_motd
       dest: "/etc/motd"
     when: '"dev" in env'
 

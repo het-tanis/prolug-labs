@@ -1,2 +1,2 @@
 Look at you, learning Linux!
-You looked at the kernel and packages!
+You looked at the disk space and usage!

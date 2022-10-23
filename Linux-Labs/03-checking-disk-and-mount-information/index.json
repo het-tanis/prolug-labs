@@ -16,6 +16,11 @@
           "title": "Linux Commands for filesystems and mountpoints",
           "text": "step2/text.md",
           "verify": "step2/verify.sh"
+        },
+        {
+          "title": "Linux Commands disk space and inodes",
+          "text": "step3/text.md",
+          "verify": "step3/verify.sh"
         }
       ],
       "finish": {

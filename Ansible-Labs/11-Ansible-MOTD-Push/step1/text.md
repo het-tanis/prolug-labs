@@ -29,7 +29,7 @@ ansible servers -i /root/hosts -m shell -a 'cat /etc/motd'
 
 Manually check by logging into node01
 ```plain
-ssh node01 'uptime'
+ssh node01 'cat /etc/motd'
 ```{{exec}}
 
 </details>

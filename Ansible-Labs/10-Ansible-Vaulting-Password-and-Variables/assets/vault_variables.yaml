@@ -1,0 +1,19 @@
+---
+
+- name: Variable output testing
+  hosts: localhost
+  vars:
+  vars_files:
+    - vault.yml
+  gather_facts: True
+  become: False
+  tasks:
+
+    - name: "Debug variables to view contents"
+      debug:
+        msg: "{{ item }} is in variable list"
+      with_items:
+        - "{{ username }}"
+        - "{{ password }}"
+
+    

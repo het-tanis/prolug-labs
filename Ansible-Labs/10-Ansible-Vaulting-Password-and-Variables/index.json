@@ -1,0 +1,40 @@
+{
+    "title": "Ansible Playbooks",
+    "description": "Playbook to call ansible vault with variables",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Playbook execution to see extra-vars",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Create Ansible Vault",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        },
+        {
+          "title": "Run playbook to consume Ansible Vault variables",
+          "text": "step3/text.md",
+          "verify": "step3/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": "hosts", "target": "~/"},
+            {"file": "variables.yaml", "target": "~/"},
+            {"file": "vault_variables.yaml", "target": "~/"}
+         ]
+        },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "ubuntu"
+    }
+  }

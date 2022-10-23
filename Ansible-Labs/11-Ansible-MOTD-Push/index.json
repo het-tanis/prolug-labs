@@ -1,0 +1,32 @@
+{
+    "title": "Ansible Playbooks",
+    "description": "Playbook to call ansible vault with variables",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Playbook execution to push MOTD to all servers",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": "hosts", "target": "~/"},
+            {"file": "motd_push.yaml", "target": "~/"},
+            {"file": "dev_motd", "target": "~/"},
+            {"file": "prod_motd", "target": "~/"}
+
+         ]
+        },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

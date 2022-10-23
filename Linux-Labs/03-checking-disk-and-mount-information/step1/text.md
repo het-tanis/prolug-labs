@@ -17,7 +17,7 @@ fdisk -l | grep -i vd
 
 Why did we use VD?
 
-Let's use another commad to see taht information another way.
+Let's use another commad to see that information another way.
 ```plain
 lsblk
 ```{{exec}}

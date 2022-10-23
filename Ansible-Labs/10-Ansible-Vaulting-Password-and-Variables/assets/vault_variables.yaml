@@ -4,7 +4,7 @@
   hosts: localhost
   vars:
   vars_files:
-    - vault.yml
+    - vault.yaml
   gather_facts: True
   become: False
   tasks:

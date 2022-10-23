@@ -8,7 +8,7 @@ Create your ansible vault
 
 Create a vault using Ansible. You will be asked to give a password, make sure you remember it.
 ```plain
-ansible-vault create vault.yml
+ansible-vault create vault.yaml
 ```{{exec}}
 
 Add the following information:

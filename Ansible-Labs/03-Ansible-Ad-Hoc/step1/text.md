@@ -8,9 +8,9 @@ Verify OS type of servers
 Verify date and time of servers
 
 ### Deliverables
-Write the version of servers into a file called /root/version
+1. Create a file /root/version with the Ansible Facts for the distribution of each server.
 
-Write the current date from the servers into a file called /root/date
+2. Create a file /root/date with the Ansible Facts for the current date of each server.
 
 <br>
 <details>

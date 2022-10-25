@@ -1,4 +1,4 @@
-Install Ansible and put the version number in a file called /root/version
+Install Ansible and put the version output in a file called /root/version.
 
 
 <br>

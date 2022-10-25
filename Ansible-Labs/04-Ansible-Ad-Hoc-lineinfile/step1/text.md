@@ -5,7 +5,7 @@ Create a directory on your servers for deployments named /opt/deployment
 
 Push over your config file
 
-Change the values of var1 to equal 111111
+Change the values of var1 to equal 111111 only in the config file in /opt/deployment.
 
 
 <br>

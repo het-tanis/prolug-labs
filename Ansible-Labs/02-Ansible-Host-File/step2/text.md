@@ -1,4 +1,4 @@
-Verify with ping module that access to all hosts is achieved
+Verify connectivity to all hosts with ping module and save the output to /root/ping_check.
 
 
 <br>

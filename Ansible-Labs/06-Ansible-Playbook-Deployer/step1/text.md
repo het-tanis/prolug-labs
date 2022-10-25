@@ -1,7 +1,7 @@
 ### Lab Activities
 Verify your hosts file 
 
-Create a deploy playbook called /root/deploy.yml to push the file /root/deploy.tar.gz over to all servers in the /opt directory. Unpackage and run the installer.sh.
+Create a deploy playbook called /root/deploy.yml to push the file /root/deploy.tar.gz over to the /opt directory on all servers, unpackage it, and run the installer.sh.
 <br>
 
 <details>

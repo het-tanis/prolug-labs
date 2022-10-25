@@ -21,6 +21,12 @@ cp /answers/deploy.yml /root/deploy.yml
 cat /root/hosts
 ```{{exec}}
 
+Get sha1 checksum of the archive.
+
+```plain
+sha1sum /root/deploy.tar.gz
+```{{exec}}
+
 ### Yaml for playbook
 ```
 ---

@@ -1,0 +1,32 @@
+{
+    "title": "Ansible Playbooks",
+    "description": "Playbook to push facts to all servers",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Playbook execution to push facts to all servers",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": "hosts", "target": "~/"},
+            {"file": "custom_fact_push.yaml", "target": "~/"},
+            {"file": "group_by.yaml", "target": "~/"},
+            {"file": "dev_patching.fact", "target": "~/"},
+            {"file": "prod_patching.fact", "target": "~/"}
+         ]
+        },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

@@ -1,5 +1,5 @@
 ### Lab Activities
-Run the playbook vault_varaiables.yaml to see ansible run and use the vault variables.
+Run the playbook vault_variables.yaml to see ansible run and use the vault variables.
 
 <br>
 <details>

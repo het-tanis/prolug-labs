@@ -17,7 +17,7 @@ mount | grep vda
 
 Check the filesystem written to that partition.
 
-Let's use another commad to see that information another way.
+Let's use another command to see that information another way.
 ```plain
 blkid /dev/vda1
 ```{{exec}}

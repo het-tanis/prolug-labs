@@ -21,8 +21,8 @@
 	    "assets": {
 	       "host01": [
 		        {"file": "hosts", "target": "~/"},
-            {"file": "user_create.yaml", "target": "~/"},
-            {"file": "user_key_add.yaml", "target": "~/"}
+            {"file": "packages_update.yaml", "target": "~/"},
+            {"file": "packages_install.yaml", "target": "~/"}
          ]
         },
       "finish": {

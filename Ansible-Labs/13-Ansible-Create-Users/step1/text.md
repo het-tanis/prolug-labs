@@ -27,7 +27,7 @@ ansible-playbook -i /root/hosts /root/user_create.yaml
 Run an ad hoc command to verify users were added and place in groups.
 
 ```plain
-ansible servers -i /root/hosts -m shell -a "tail -1 /etc/passwd; grep admin /etc/groups"
+ansible servers -i /root/hosts -m shell -a "tail -1 /etc/passwd; grep admin /etc/group"
 ```{{exec}}
 
 </details>

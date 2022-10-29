@@ -1,6 +1,6 @@
 ---
 
-- name: Patching Facts Push
+- name: User push to environment servers
   hosts: servers
   vars:
   gather_facts: True
@@ -11,20 +11,16 @@
     debug:
       var: env
 
-  - name: Create the facts directory in case it isn't there
-    file:
-      path: /etc/ansible/facts.d
-      state: directory
-
-  - name: Push over the prod_patching.fact file if prod
-    copy:
-      src: /root/prod_patching.fact
-      dest: "/etc/ansible/facts.d/patching.fact"
+  - name: Create the prod_engineer user
+    user:
+      name: prod_engineer
+      comment: Prod engineer 
     when: '"prod" in env'
 
-  - name: Push over the dev_patching.fact file if dev
-    copy:
-      src: /root/dev_patching.fact
-      dest: "/etc/ansible/facts.d/patching.fact"
+  - name: Create the dev_engineer user and give admin
+    user:
+      name: dev_engineer
+      comment: Dev engineer
+      groups: admins
     when: '"dev" in env'
 

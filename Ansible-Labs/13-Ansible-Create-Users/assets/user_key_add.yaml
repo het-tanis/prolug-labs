@@ -1,0 +1,32 @@
+---
+
+- name: User push to environment servers
+  hosts: servers
+  vars:
+  gather_facts: True
+  become: True
+  tasks:
+
+  - name: Debug env variables just to see them
+    debug:
+      var: env
+
+  - name: Create the prod_engineer user
+    user:
+      name: prod_engineer
+      comment: Prod engineer 
+      generate_ssh_key: yes
+      ssh_key_bits: 2048
+      ssh_key_file: .ssh/id_rsa
+    when: '"prod" in env'
+
+  - name: Create the dev_engineer user and give admin
+    user:
+      name: dev_engineer
+      comment: Dev engineer
+      groups: admins
+      generate_ssh_key: yes
+      ssh_key_bits: 2048
+      ssh_key_file: .ssh/id_rsa
+    when: '"dev" in env'
+

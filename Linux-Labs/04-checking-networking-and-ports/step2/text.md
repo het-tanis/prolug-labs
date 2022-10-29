@@ -43,6 +43,8 @@ So let's stop containerd and verify that the process is no longer running.
 systemctl status containerd
 ```{{exec}}
 
+You may have to hit "q" to escape.
+
 and we'll stop it.
 
 ```plain

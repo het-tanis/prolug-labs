@@ -35,7 +35,7 @@ lsof -i :22
 Connect to port 22. #Timeout just causes it to drop after 3 sec
 ```plain
 timeout 3 nc 127.0.0.1 22
-```
+```{{exec}}
 
 So let's stop containerd and verify that the process is no longer running.
 

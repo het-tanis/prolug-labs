@@ -32,6 +32,6 @@ for i in `seq 1 5`; do ping -c 10 www.google.com & done; tcpdump -ni enp1s0 -s0 
 Verify the size and creation of the file.
 ```plain
 ls -lh /root/ubuntu.pcap
-```
+```{{exec}}
 
 </details>

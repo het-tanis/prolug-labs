@@ -1,0 +1,30 @@
+---
+
+- name: Patching Facts Push
+  hosts: servers
+  vars:
+  gather_facts: True
+  become: True
+  tasks:
+
+  - name: Debug env variables just to see them
+    debug:
+      var: env
+
+  - name: Create the facts directory in case it isn't there
+    file:
+      path: /etc/ansible/facts.d
+      state: directory
+
+  - name: Push over the prod_patching.fact file if prod
+    copy:
+      src: /root/prod_patching.fact
+      dest: "/etc/ansible/facts.d/patching.fact"
+    when: '"prod" in env'
+
+  - name: Push over the dev_patching.fact file if dev
+    copy:
+      src: /root/dev_patching.fact
+      dest: "/etc/ansible/facts.d/patching.fact"
+    when: '"dev" in env'
+

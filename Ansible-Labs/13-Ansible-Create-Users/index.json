@@ -1,0 +1,29 @@
+{
+    "title": "Ansible Playbooks",
+    "description": "Playbook to create users on different servers",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Playbook execution to create users",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": "hosts", "target": "~/"},
+            {"file": "user_create.yaml", "target": "~/"}
+         ]
+        },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

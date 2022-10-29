@@ -14,7 +14,7 @@ cat /root/hosts
 Note: There are variables now assigned to each of the servers (env)
 
 ```plain
-cat /root/packages_updae.yaml
+cat /root/packages_update.yaml
 ```{{exec}}
 
 Note: This will update all current packages on the server

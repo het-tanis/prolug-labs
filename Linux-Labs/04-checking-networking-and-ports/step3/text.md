@@ -1,8 +1,8 @@
 Check network traffic to our system.
 
+Look at the throughput to your interfaces.
 
-
-
+Create a file /root/ubuntu.pcap with 200 packets that can be read by wireshark later. (*We don't look at it in the lab. We just create it)
 
 <br>
 

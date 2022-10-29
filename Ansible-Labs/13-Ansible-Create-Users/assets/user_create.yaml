@@ -21,6 +21,6 @@
     user:
       name: dev_engineer
       comment: Dev engineer
-      groups: admins
+      groups: admin
     when: '"dev" in env'
 

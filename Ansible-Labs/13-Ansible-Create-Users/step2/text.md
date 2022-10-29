@@ -8,7 +8,7 @@ Modify and generate keys for the users.
 <summary>Solution</summary>
 
 ```plain
-cat /root/user_create.yaml
+cat /root/user_key_add.yaml
 ```{{exec}}
 
 Note: This will generate keys for the existing users.

@@ -23,7 +23,15 @@ Copy over the /root/motd to node01:/etc/motd
 scp /root/motd node01:/etc/motd
 ```{{exec}}
 
-You get to see information about how long it took to push the file. Let's verify the file is exactly the size we think it is over there
+You get to see information about how long it took to push the file. 
+
+Let's ssh over and see our MOTD
+
+```plain
+timeout 1 ssh node01
+```{{exec}}
+
+Let's verify the file is exactly the size we think it is over there
 
 We can see them, so we'll set that to yes.
 ```plain

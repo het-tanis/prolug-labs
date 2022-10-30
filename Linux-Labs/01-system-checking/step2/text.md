@@ -21,7 +21,7 @@ Next we check the overall CPU usage of the system every second for 5 seconds.
 mpstat 1 5
 ```{{exec}}
 
-Is this system under high memory load or not?
+Is this system under high CPU load or not?
 
 Next we check what processes are running on the system
 

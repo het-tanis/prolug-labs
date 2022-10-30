@@ -27,7 +27,7 @@ Next we check what processes are running on the system
 
 ```plain
 ps -ef
-ps -ef | awk '{print $1}' | uniq -c
+ps -ef | awk '{print $1}' | sort | uniq -c
 ```{{exec}}
 
 What users is using the most processes? Do you think this system is doing any real work or just sitting there running an OS?

@@ -5,12 +5,12 @@ Verify connectivity to all hosts with ping module and save the output to /root/p
 <details>
 <summary>Solution</summary>
 
-Check ansible-doc help
+Executing ping module against both servers
 ```plain
 ansible servers -i /root/hosts -m ping
 ```{{exec}}
 
-Check ansible-doc help
+Executing ping module against both servers and output to /root/ping_check
 ```plain
 ansible servers -i /root/hosts -m ping > /root/ping_check
 ```{{exec}}

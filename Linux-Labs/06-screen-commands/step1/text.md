@@ -21,6 +21,17 @@ Create a screen session
 screen
 ```{{exec}}
 
+Split the screen horizontally 
+
+```plain
+Ctrl A + S
+```
+
+Jump between the horizontal screen sessions
+```
+Ctrl A + 'Tab Key'
+```
+
 Rename the window you're in "Window1"
 
 ```plain

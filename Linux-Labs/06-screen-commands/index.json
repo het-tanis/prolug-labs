@@ -1,0 +1,33 @@
+{
+    "title": "Let's do Linux",
+    "description": "Screen Commands and persistent connections",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Screen Commands to create windows",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Screen Commands for logging sessions ",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": ".screenrc", "target": "~/"}   
+         ]
+        },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

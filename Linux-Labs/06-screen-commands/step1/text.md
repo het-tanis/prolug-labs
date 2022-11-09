@@ -21,6 +21,12 @@ Create a screen session
 screen
 ```{{exec}}
 
+Verify that you are attached in screen
+
+```plain
+screen -ls
+```{{exec}}
+
 Split the screen horizontally 
 
 ```plain

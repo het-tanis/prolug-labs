@@ -27,7 +27,7 @@ Reconnect to that session
 screen -r
 ```{{exec}}
 
-Kill that session
+Kill each window sessions
 
 ```plain
 Ctrl A + K
@@ -43,7 +43,7 @@ screen -L -Logfile /root/screenlog.log
 Execute a command to log it out
 
 ```plain
-timeout 10 while true; uptime; sleep 1; done
+for i in $(seq); do uptime; sleep 1; done
 ```{{exec}}
 
 Detach the screen

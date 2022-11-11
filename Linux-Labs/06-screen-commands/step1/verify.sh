@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/bin/true
+ps -ef | grep [s]creen

@@ -4,8 +4,7 @@ Create an nginx pod with a liveness and readiness probe for port 80
 
 <details>
 <summary>Tip</summary>
-Relevant Documentation [Probes]
-(https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
+Relevant Documentation [Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
 
 Answer file can be found at /answers/readiness-pod.yaml
 </details>

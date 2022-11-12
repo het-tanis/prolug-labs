@@ -45,7 +45,17 @@ kubectl top nodes
 
 Which node is using the most cpu and memory?
 
-Now execute against the pods
+You can actually use a sort command to find this quickly
+
+```plain
+kubectl top nodes --sort-by=cpu
+```{{exec}}
+
+```plain
+kubectl top nodes --sort-by=memory
+```{{exec}}
+
+Now find all the metrics for the pods
 ```plain
 kubectl top pods -A
 ```{{exec}}

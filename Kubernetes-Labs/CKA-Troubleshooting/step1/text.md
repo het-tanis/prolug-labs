@@ -32,16 +32,18 @@ Kubelet is not running, so let's start it.
 We also see that it is not enabled, so we need to ensure that it is enabled on future system restarts
 
 ```plain
-systemctl start kubectl
-systemctl enable kubectl
+systemctl start kubelet
+systemctl enable kubelet
 ```{{exec}}
 
-
+Exit back to controlplane node
 ```plain
-kubectl get deployments
-```{{exec}}
+exit
+```
 
+Verify that both nodes are in a ready state
 ```plain
-kubectl get pods
-```{{exec}}
+kubectl get nodes
+```
+
 </details>

@@ -28,6 +28,7 @@
 	       "host01": [
 		        {"file": "readiness-pod.yaml", "target": "/answers/"},
             {"file": "awake.yaml", "target": "/answers/"},
+            {"file": "deployment.yaml", "target": "/answers/"},
             {"file": "sleep.yaml", "target": "/answers/"}
 		  ]
 	  },

@@ -7,9 +7,6 @@ Install metrics server and show metrics for nodes and pods in all namespaces
 
 Relevant Documentation [Metrics Pipeline](https://kubernetes.io/docs/tasks/debug-application-cluster/resource-metrics-pipeline/)
 
-Awake file can be found at /answers/awake.yaml
-Corrected Sleep file can be found at /answers/sleep.yaml
-
 </details>
 
 <details>
@@ -22,13 +19,12 @@ git clone https://github.com/kubernetes-sigs/metrics-server
 
 For this to work, you will need to edit a file found at metrics-server/manifests/base/deployment.yaml
 
-Add the following line to the file in the args: section
+We've included the corrected file in /answers/deployment.yaml
 ```plain
-- --kubelet-insecure-tls
+cp /answers/deployment.yaml metrics-server/manifests/base/deployment.yaml
 ```
 
 Deploy the metrics server
-
 
 ```plain
 kubectl apply -k metrics-server/manifests/base/

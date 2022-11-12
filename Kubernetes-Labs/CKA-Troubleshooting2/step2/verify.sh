@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ls -l /tmp/scheduler.log
+stat /tmp/awake.log

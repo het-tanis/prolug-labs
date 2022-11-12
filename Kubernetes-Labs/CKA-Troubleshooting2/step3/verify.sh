@@ -1,3 +1,3 @@
 #!/bin/bash
 
-grep both /root/answer
+kubectl top nodes

@@ -1,41 +1,52 @@
-Look at the logs for the following servers
+Troubleshoot Application Failure
 
-API Server
+Launch a pod with a busybox container that has the awake 5000 command running. (This command doesn't exist.)
 
-Controller Manager
-
-Scheduler
-
-Save the logs into /tmp/scheduler.log
+Get the logs from the pod and save them at /tmp/awake.log, then correct the error to make it launch sleep 3600
 
 <br>
 
 <details>
+<summary>Tip</summary>
+
+Relevant Documentation [Application Debug](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application/)
+
+Awake file can be found at /answers/awake.yaml
+Corrected Sleep file can be found at /answers/sleep.yaml
+
+</details>
+
+<details>
 <summary>Solution</summary>
 
-View the logs of the API Server
+Create the file via an imperative command
 
 ```plain 
-kubectl -n kube-system logs kube-apiserver-controlplane
+kubectl run sleep --image=busybox --command -- awake 5000
 ```{{exec}}
 
-View the logs of the Controller Manager
+Verify that this pod doesn't correctly start
 
 ```plain
-kubectl -n kube-system logs kube-controller-manager-controlplane
+kubectl get pod sleep
 ```{{exec}}
 
-Do you see the errors from step 1 on node01?
+What about in the logs?
 
-View the logs of the Scheduler and send them out to a file called /tmp/scheduler.log
 ```plain
-kubectl -n kube-system logs kube-scheduler-controlplane | tee -a /tmp/scheduler.log
+kubectl logs sleep | tee -a /tmp/awake.log
 ```{{exec}}
 
-Notice that all of the names are appended with controlplane? That's because they're static pods whose manifests exist in /etc/kubernetes/manifests on the controlplane node
+Delete the broken pod
 
 ```plain
-ls /etc/kubernetes/manifests/
+kubectl delete pod sleep --force --grace-period=0
+```{{exec}}
+
+Fix and deploy the working pod
+
+```plain
+kubectl run sleep --image=busybox --command -- sleep 3600
 ```{{exec}}
 
 </details>

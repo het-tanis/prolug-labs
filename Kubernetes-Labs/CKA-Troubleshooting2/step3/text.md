@@ -1,44 +1,52 @@
-Check the kube-dns service running in the kube-system namespace.
-
-Check the endpoints behind the service. 
-
-Check the pods that serve the endpoints.
-
-Are the pods on just one node or both? put your answer in /root/answer
+Install metrics server and show metrics for nodes and pods in all namespaces
 
 <br>
+
+<details>
+<summary>Tip</summary>
+
+Relevant Documentation [Metrics Pipeline](https://kubernetes.io/docs/tasks/debug-application-cluster/resource-metrics-pipeline/)
+
+Awake file can be found at /answers/awake.yaml
+Corrected Sleep file can be found at /answers/sleep.yaml
+
+</details>
+
 <details>
 <summary>Solution</summary>
 
-Describe the service and look at information.
+Download metrics server
 ```plain
-kubectl -n kube-system describe svc kube-dns
+git clone https://github.com/kubernetes-sigs/metrics-server
 ```{{exec}}
 
-What labels do you see? What ports are used and which protocols are for each?
+For this to work, you will need to edit a file found at metrics-server/manifests/base/deployment.yaml
 
-Check the endpoints behind the service
+Add the following line to the file in the args: section
 ```plain
-kubectl -n kube-system describe ep kube-dns
-```{{exec}}
+- --kubelet-insecure-tls
+```
 
-What labels do you see? What ports are used and which protocols are for each?
+Deploy the metrics server
 
-Check the pods that serve those endpoints
-```plain
-kubectl -n kube-system get pods -l k8s-app=kube-dns -o wide
-```{{exec}}
-
-Where are these pods located? What other information can you gather about coredns in this system?
 
 ```plain
-kubectl -n kube-system get all | grep coredns
+kubectl apply -k metrics-server/manifests/base/
 ```{{exec}}
 
-Answer the final lab question.
+Once this has deployed, you should be able to use top command against the nodes and the pods
 
 ```plain
-echo both > /root/answer
+kubectl top nodes
 ```{{exec}}
+
+Which node is using the most cpu and memory?
+
+Now execute against the pods
+```plain
+kubectl top pods -A
+```{{exec}}
+
+Which pod is using the most resources? Why do you think that is?
 
 </details>

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: sleep
+  name: sleep
+spec:
+  containers:
+  - image: busybox:latest
+    name: sleep
+    args:
+      - sleep
+      - "3600"

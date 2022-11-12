@@ -14,7 +14,7 @@ Answer file can be found at /answers/readiness-pod.yaml
 <details>
 <summary>Solution</summary>
 
-Create this yaml file and then run kubectl create -f ```filename```
+Create this yaml file and then run kubectl create -f filename
 
 ```plain 
 apiVersion: v1

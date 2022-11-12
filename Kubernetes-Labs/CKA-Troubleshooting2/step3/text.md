@@ -30,6 +30,13 @@ Deploy the metrics server
 kubectl apply -k metrics-server/manifests/base/
 ```{{exec}}
 
+Watch for the metrics-server to come available
+```plain
+kubectl get pods -n kube-system
+```{{exec}}
+
+DO NOT Continue until the above step shows the metrics-server 1/1 ready state. This may take upwards of 30 seconds.
+
 Once this has deployed, you should be able to use top command against the nodes and the pods
 
 ```plain

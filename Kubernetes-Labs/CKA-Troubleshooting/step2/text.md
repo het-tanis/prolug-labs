@@ -10,12 +10,15 @@ Save the logs into /tmp/scheduler.log
 
 <details>
 <summary>Solution</summary>
+
 View the logs of the API Server
+
 ```plain 
 kubectl -n kube-system logs kube-apiserver-controlplane
 ```{{exec}}
 
 View the logs of the Controller Manager
+
 ```plain
 kubectl -n kube-system logs kube-controller-manager-controlplane
 ```{{exec}}

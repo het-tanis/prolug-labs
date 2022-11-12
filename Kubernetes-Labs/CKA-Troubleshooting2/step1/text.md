@@ -37,4 +37,14 @@ spec:
         port: 80
 ```
 
+Verify that the pod starts correctly
+```plain
+kubectl get pods nginx
+```{{exec}}
+
+View the Liveness and Readiness status in pod description
+```plain
+kubectl describe pods nginx
+```{{exec}}
+
 </details>

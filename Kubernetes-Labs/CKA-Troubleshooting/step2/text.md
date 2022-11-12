@@ -1,7 +1,9 @@
 Look at the logs for the following servers
 
 API Server
+
 Controller Manager
+
 Scheduler
 
 Save the logs into /tmp/scheduler.log

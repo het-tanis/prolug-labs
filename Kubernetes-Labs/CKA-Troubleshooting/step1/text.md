@@ -44,6 +44,6 @@ exit
 Verify that both nodes are in a ready state
 ```plain
 kubectl get nodes
-```
+```{{exec}}
 
 </details>

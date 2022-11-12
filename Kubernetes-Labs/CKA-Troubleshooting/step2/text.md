@@ -1,26 +1,34 @@
-Create a service that exposes the nginx-deployment-canary to the internal cluster on port 80. Name it web-service
+Look at the logs for the following servers
 
-Verify that the deployment is properly exposed and seeing the pod IPs for nginx-deployment-canary
+API Server
+Controller Manager
+Scheduler
 
-
+Save the logs into /tmp/scheduler.log
 
 <br>
 
 <details>
 <summary>Solution</summary>
-Create a service that exposes the nginx-deployment-canary to the internal cluster.
-
+View the logs of the API Server
 ```plain 
-kubectl expose deployment nginx-deployment-canary --port=80 --type=ClusterIP --name=web-service
+kubectl -n kube-system logs kube-apiserver-controlplane
 ```{{exec}}
 
-Verify that the deployment is properly exposed and seeing the pod IPs for nginx-deployment-canary
+View the logs of the Controller Manager
 ```plain
-kubectl describe svc web-service
+kubectl -n kube-system logs kube-controller-manager-controlplane
 ```{{exec}}
 
-Check the pods for their IP addresses compare them to the endpoints from the above output
+View the logs of the Scheduler and send them out to a file called /tmp/scheduler.log
 ```plain
-kubectl get pods -o wide | grep canary | grep -v v2
+kubectl -n kube-system logs kube-scheduler-controlplane | tee -a /tmp/scheduler.log
 ```{{exec}}
+
+Notice that all of the names are appended with controlplane? That's because they're static pods whose manifests exist in /etc/kubernetes/manifests on the controlplane node
+
+```plain
+ls /etc/kubernetes/manifests/
+```{{exec}}
+
 </details>

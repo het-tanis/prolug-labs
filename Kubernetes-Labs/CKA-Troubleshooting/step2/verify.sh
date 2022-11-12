@@ -1,3 +1,3 @@
 #!/bin/bash
 
-kubectl get svc web-service
+ls -l /tmp/scheduler.log

@@ -19,6 +19,8 @@ git clone https://github.com/kubernetes-sigs/metrics-server
 
 For this to work, you will need to edit a file found at metrics-server/manifests/base/deployment.yaml
 
+The added line allows for insecure TLS connections. Without it, the components will not work correctly in the lab.
+
 We've included the corrected file in /answers/deployment.yaml
 ```plain
 cp /answers/deployment.yaml metrics-server/manifests/base/deployment.yaml

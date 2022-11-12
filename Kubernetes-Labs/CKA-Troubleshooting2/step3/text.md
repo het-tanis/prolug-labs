@@ -22,7 +22,7 @@ For this to work, you will need to edit a file found at metrics-server/manifests
 We've included the corrected file in /answers/deployment.yaml
 ```plain
 cp /answers/deployment.yaml metrics-server/manifests/base/deployment.yaml
-```
+```{{exec}}
 
 Deploy the metrics server
 

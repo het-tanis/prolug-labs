@@ -1,47 +1,44 @@
-Scale the deployment nginx-deployment-canary to have 8 replicas
+Check the kube-dns service running in the kube-system namespace.
 
-Verify labels and change service web-service to point to Both deployments at 80% canary and 20% canary v2.
+Check the endpoints behind the service. 
+
+Check the pods that serve the endpoints.
+
+Are the pods on just one node or both? put your answer in /root/answer
 
 <br>
 <details>
 <summary>Solution</summary>
 
-Scale up canary deployment
+Describe the service and look at information.
 ```plain
-kubectl scale deployment nginx-deployment-canary --replicas=8
+kubectl -n kube-system describe svc kube-dns
 ```{{exec}}
 
-Look at Selector for web-service
+What labels do you see? What ports are used and which protocols are for each?
+
+Check the endpoints behind the service
 ```plain
-kubectl describe svc web-service
+kubectl -n kube-system describe ep kube-dns
 ```{{exec}}
 
-View the labels assigned and compare them to web-service selector
+What labels do you see? What ports are used and which protocols are for each?
+
+Check the pods that serve those endpoints
 ```plain
-kubectl get pods --show-labels | grep canary
+kubectl -n kube-system get pods -l k8s-app=kube-dns -o wide
 ```{{exec}}
 
-Note the v1 and v2 versions
+Where are these pods located? What other information can you gather about coredns in this system?
 
-Edit Selector for web-service and remove the version selector
 ```plain
-kubectl edit svc web-service
+kubectl -n kube-system get all | grep coredns
 ```{{exec}}
 
-Verify that pod IPs are the same endpoints to the service
+Answer the final lab question.
+
 ```plain
-kubectl get pods -o wide | grep canary
-kubectl describe svc web-service
+echo both > /root/answer
 ```{{exec}}
 
-Once you've verified that traffic is going to both, edit Selector for web-service and add the `version: v2` selector 
-```plain
-kubectl edit svc web-service
-```{{exec}}
-
-Verify that pod IPs are for V2 of canary no longer v1
-```plain
-kubectl get pods -o wide --show-labels| grep v2
-kubectl describe svc web-service
-```{{exec}}
 </details>

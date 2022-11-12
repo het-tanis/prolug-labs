@@ -23,6 +23,8 @@ View the logs of the Controller Manager
 kubectl -n kube-system logs kube-controller-manager-controlplane
 ```{{exec}}
 
+Do you see the errors from step 1 on node01?
+
 View the logs of the Scheduler and send them out to a file called /tmp/scheduler.log
 ```plain
 kubectl -n kube-system logs kube-scheduler-controlplane | tee -a /tmp/scheduler.log

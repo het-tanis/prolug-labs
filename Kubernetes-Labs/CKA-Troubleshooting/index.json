@@ -1,0 +1,38 @@
+{
+    "title": "Kubernetes Deployments",
+    "description": "Troubleshooting for CKA Part 1",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Verifying Kubelet",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Log Review of components",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        },
+        {
+          "title": "Monitoring applications and Pod Health",
+          "text": "step3/text.md",
+          "verify": "step3/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": "deployments_practice.yaml", "target": "~/"}
+		  ]
+	  },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

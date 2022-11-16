@@ -1,6 +1,6 @@
 The one user that is supposed to exist is realuser. 
 
-Create a realuser account on both systems 
+Create a realuser account on both systems.
 
 Ensure that root can log in as that user. 
 
@@ -49,7 +49,7 @@ Clear the old entries
 ssh node01 'echo "" > /var/log/auth.log'
 ```{{exec}}
 
-Rerun the script /root/ssh_script and then check the invalid users from node01
+Rerun the script /root/ssh_script and then check the invalid users from node01. This should take ~25 seconds.
 
 ```plain
 /root/ssh_script.sh

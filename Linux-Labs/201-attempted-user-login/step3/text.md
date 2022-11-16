@@ -1,4 +1,4 @@
-The realuser user is not set up and we want to key root to log in as that user. This isn't extremely practical, but is useful in testing to creat a key and see the user connect via a key.
+The realuser user is now set up and we want to key root to log in as that user. This isn't extremely practical, but is useful in testing to create a key and see the user connect via a key.
 
 Create a key for root called realuser_rsa
 
@@ -23,7 +23,7 @@ ssh-keygen
 You can verify the new keys with the command below
 
 ```plain
-ls /root/.ssh
+ls -l /root/.ssh
 ```{{exec}}
 
 Note: You created a named file realuser_rsa (private key) and a realuser_rsa.pub (public key)

@@ -34,7 +34,7 @@ Send the usernames into the file /root/users on controlplane node
 Be sure to exit back to the controlplane node
 ```plain
 exit
-```
+```{{exec}}
 
 ```plain
 ssh node01 'grep Invalid /var/log/auth.log' > /root/users

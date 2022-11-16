@@ -38,11 +38,26 @@ passwd realuser
 
 You will have to hit enter twice
 
-Rerun the script /root/ssh_script and then check the invalid users from node01
+Be sure to exit back to the controlplane node
+```plain
+exit
+```{{exec}}
+
+Clear the old entries
 
 ```plain
 ssh node01 'echo "" > /var/log/auth.log'
+```{{exec}}
+
+Rerun the script /root/ssh_script and then check the invalid users from node01
+
+```plain
 /root/ssh_script.sh
+```{{exec}}
+
+Recheck for Invalid users. You should no longer see realuser in invalid users.
+
+```plain
 ssh node01 'grep Invalid /var/log/auth.log'
 ```{{exec}}
 

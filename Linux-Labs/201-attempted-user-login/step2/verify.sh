@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cksum /tmp/node01.crontab | grep 638366506
+ssh node01 'id realuser'

@@ -1,64 +1,51 @@
-We'll push and pull files around to test scp on the systems.
+The one user that is supposed to exist is realuser. 
 
-scp is always "from" "to" on the command line, so the syntax is:
+Create a realuser account on both systems 
 
-scp sourcetarget destinationtarget
+Ensure that root can log in as that user. 
 
-Push the /root/motd file over to node01 at location /etc/motd and then log in to verify that the file has been pushed.
+Now, we may not always do this activity like this in the enterprise, but the pieces are valuable to understand.
 
 <br>
 
 ### Solution
 <details>
 <summary>Solution</summary>
-Verify the file you have at /root/motd
+Check if the user exists on both servers
 
 ```plain
-cksum /root/motd
+id realuser
+ssh node01 'id realuser'
 ```{{exec}}
 
-Copy over the /root/motd to node01:/etc/motd
+So we see that realuser exists on controlplane but the user was not created on node01. Let's create it.
 
 ```plain
-scp /root/motd node01:/etc/motd
+ssh node01 'useradd -m realuser'
 ```{{exec}}
 
-You get to see information about how long it took to push the file. 
-
-Let's ssh over and see our MOTD
+We normally wouldn't do this part, as some LDAP or outside authority would give the user password, but we'll do it for now to be able to establish connection.
 
 ```plain
-timeout 1 ssh node01
+ssh node01
 ```{{exec}}
 
-Let's verify the file is exactly the size we think it is over there
-
-We can see them, so we'll set that to yes.
-```plain
-ssh node01 'cksum /etc/motd'
-```{{exec}}
-
-You should now both see the motd as you log in, as well as seeing the cksum matches what you did in step 1.
-
-Now we have config files that we need to pull and give to the vendor. Let's pull those logs back over to this server from node01.
-
-Verify cksum of /etc/crontab file
+Create a password 1234 (I know, super secure, but useful for lab testing)
 
 ```plain
-ssh node01 'cksum /etc/crontab'
+passwd realuser
 ```{{exec}}
 
-Pull file over to /tmp/node01.crontab from node01
+You will have to hit enter twice
+
+Rerun the script /root/ssh_script and then check the invalid users from node01
 
 ```plain
-scp node01:/etc/crontab /tmp/node01.crontab
+ssh node01 'echo "" > /var/log/auth.log'
+/root/ssh_script.sh
+ssh node01 'grep Invalid /var/log/auth.log'
 ```{{exec}}
 
-So now that you've pulled the file over, verify that it's exactly the same as you just saw it.
-
-```plain
-cksum /tmp/node01.crontab
-```{{exec}}
-
+You'll still see errors with the login, but now at least the realuser is no longer Invalid. We'll fix their login in the next section.
 
 </details>

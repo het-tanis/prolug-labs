@@ -45,11 +45,15 @@ systemctl status kubelet
 Exit back to controlplane node
 ```plain
 exit
-```
+```{{exec}}
 
 Verify that both nodes are in a ready state
 ```plain
 kubectl get nodes
 ```{{exec}}
+  
+Related Resources: 
+  - [Kubernetes Components - Kubelet](https://kubernetes.io/docs/concepts/overview/components/#kubelet)
+  - [Kubernetes Architecture - Control Plane to Node Communication](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/#control-plane-to-node)
 
 </details>

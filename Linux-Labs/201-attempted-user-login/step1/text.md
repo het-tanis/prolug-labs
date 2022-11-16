@@ -1,6 +1,10 @@
 Your Security Operations team has informed you that an alert for unknown users has gone off for your node01 instance.
 
-Connect to the other server (node01) and look at the appropriate log to determine login attempts. Add the usernames into a file called /root/users and number of attempted logins into a file called /root/attempts. 
+Connect to the other server (node01) and look at the appropriate log to determine login attempts. 
+
+Add the usernames into a file called /root/users.
+
+Add the number of attempted logins into a file called /root/attempts. 
 
 <br>
 

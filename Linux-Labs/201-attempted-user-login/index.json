@@ -1,0 +1,33 @@
+{
+    "title": "Let's do Linux Security",
+    "description": "Unusual User behavior - Attempted login",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Find the Unusual user activity on node01",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Fix user error for the correct user",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": "ssh_script.sh", "target": "~/"}   
+         ]
+        },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

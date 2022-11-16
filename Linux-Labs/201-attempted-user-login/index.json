@@ -17,6 +17,11 @@
           "title": "Fix user error for the correct user",
           "text": "step2/text.md",
           "verify": "step2/verify.sh"
+        },
+        {
+          "title": "Key root log into realuser account",
+          "text": "step3/text.md",
+          "verify": "step3/verify.sh"
         }
       ],
 	    "assets": {

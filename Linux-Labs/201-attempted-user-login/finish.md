@@ -1,2 +1,2 @@
-Look at you, learning Linux!
-You ssh-ed into servers and pushed or pulled files as needed!
+Look at you, learning Linux Security!
+You looked at logs for user login issues and then created a user and keys to verify connectivity.

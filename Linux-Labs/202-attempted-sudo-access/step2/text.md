@@ -27,6 +27,11 @@ Let's verify that the group information looks correct for our user.
 grep baduser /etc/group
 ```{{exec}}
 
+Verify sudo permisions that exist for baduser
+```plain
+sudo -l -U baduser
+```{{exec}}
+
 Let's wait another 60 seconds and see if the logs are showing better output for our user.
 
 ```plain
@@ -50,5 +55,11 @@ grep baduser /var/log/*
 What values are you seeing now in there, in regards to the baduser account and sudo access?
 
 Is the user now successfully performing their sudo commands? Why or why not?
+
+If you want to fix their new 'sudo auth' issue, you have to give baduser a password of 1234. the password MUST be 1234.
+
+```plain
+passwd baduser
+```{{exec}}
 
 </details>

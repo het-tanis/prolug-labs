@@ -1,45 +1,44 @@
-The realuser user is now set up and we want to key root to log in as that user. This isn't extremely practical, but is useful in testing to create a key and see the user connect via a key.
+We've given the user ALL commands with sudo, but typically this isn't the correct solution. The rule of least privilege states we should only give the permissions they need to complete their job.
 
-Create a key for root called realuser_rsa
-
-Push key over to node01 for realuser login (from root)
-
-Test and see that you are that user.
+Limit the user down to only the permissions they need.
 
 <br>
 
 ### Solution
 <details>
 <summary>Solution</summary>
-Create a key in the root account that we can push over to node01 and authenticate with
-
-This will be interactive, choose file to save the key /root/.ssh/realuser_rsa
-All the rest can be left blank, just hit enter.
+Remove the user from the sudo group
 
 ```plain
-ssh-keygen
+usermod -G baduser baduser
 ```{{exec}}
 
-You can verify the new keys with the command below
+Verify that baduser is no longer in sudo group
 
 ```plain
-ls -l /root/.ssh
+grep sudo /etc/group
 ```{{exec}}
 
-Note: You created a named file realuser_rsa (private key) and a realuser_rsa.pub (public key)
+The logs will start to show that the user is NOT in sudoers again.
 
-Push the key file over to realuser@node01 (You will need to use your password from step2)
+So we can create a file in /etc/sudoers.d/ to give permissions to just the baduser with just the commands they need.
 
 ```plain
-ssh-copy-id -i /root/.ssh/realuser_rsa.pub realuser@node01
+echo "baduser ALL=(ALL) NOPASSWD:/usr/bin/ls /root,/usr/bin/su -" > /etc/sudoers.d/baduser
 ```{{exec}}
 
-Test your connection via your private key into realuser@node01.
+If you're wondering where we found those paths, this is how we find where paths to commands are
 
 ```plain
-ssh -i /root/.ssh/realuser_rsa realuser@node01 'hostname; id'
+which su
+which ls
 ```{{exec}}
 
-You were able to create and push over a keypair. You then used that keypair to connect to the server as that user.
+Verify sudo permisions for that user are scoped down properly
+```plain
+sudo -l -U baduser
+```{{exec}}
+
+How 
 
 </details>

@@ -24,12 +24,7 @@
           "verify": "step3/verify.sh"
         }
       ],
-	    "assets": {
-	       "host01": [
-		        {"file": "sudo_attempts.sh", "target": "~/"}   
-         ]
-        },
-      "finish": {
+	    "finish": {
         "text": "finish.md"
       }
     },

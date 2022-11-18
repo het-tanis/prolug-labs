@@ -1,10 +1,7 @@
 useradd -m baduser
-cp /root/sudo_attempts.sh /home/baduser/sudo_attempts.sh
-chmod 755 /home/baduser/sudo_attempts.sh
-chown baduser:baduser /home/baduser/sudo_attempts.sh
-
-echo "* * * * * baduser /home/baduser/sudo_attempts.sh" > /var/spool/cron/crontabs/baduser
-chown baduser:crontab /var/spool/cron/crontabs/baduser
-chmod 600 /var/spool/cron/crontabs/baduser
+echo "1234 \n 1234 \n" | passwd baduser
+echo "* * * * * root su - baduser -c 'echo \"1234\" | sudo -S ls /root'" > /var/spool/cron/crontabs/root
+chown root:crontab /var/spool/cron/crontabs/root
+chmod 600 /var/spool/cron/crontabs/root
 
 touch /tmp/finished

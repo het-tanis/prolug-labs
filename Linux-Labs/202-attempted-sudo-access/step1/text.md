@@ -5,7 +5,7 @@ Your Security Operations team has informed you that an alert for sudo activity h
 ### Solution
 <details>
 <summary>Solution</summary>
-Check the logs where Ubuntu keeps sudo requests.
+Check the logs where Ubuntu keeps sudo requests. They may take up to 
 
 ```plain
 tail -20 /var/log/auth.log

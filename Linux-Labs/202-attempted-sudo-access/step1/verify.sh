@@ -1,3 +1,3 @@
 #!/bin/bash
 
-grep baduser /var/log/* | grep "Not in sudoers"
+grep baduser /var/log/* | grep "NOT in sudoers"

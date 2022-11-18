@@ -1,66 +1,54 @@
-The one user that is supposed to exist is realuser. 
+The baduser is supposed to have the permissions they're trying to sudo to. So lets give them those permissions
 
-Create a realuser account on both systems.
-
-Ensure that root can log in as that user. 
-
-Now, we may not always do this activity like this in the enterprise, but the pieces are valuable to understand.
+Give sudo permissions to the user baduser. 
 
 <br>
 
 ### Solution
 <details>
 <summary>Solution</summary>
-Check if the user exists on both servers
+There are many ways to give sudo permissions. You can add them directly to the /etc/sudoers file. You can add them to their own files in /etc/sudoers.d/ directory. We're just going to inspect the current sudoers and then put the user in a group that was already set up to give them sudoers permissions..
 
+Inspect sudoers file.
 ```plain
-id realuser
-ssh node01 'id realuser'
+cat /etc/sudoers
 ```{{exec}}
 
-So we see that realuser exists on controlplane but the user was not created on node01. Let's create it.
+Give this file a quick read: Which groups does it say have permissions to "execute any command"?
 
+Let's add our user to that group.
 ```plain
-ssh node01 'useradd -m realuser'
+usermod -a -G sudo baduser
 ```{{exec}}
 
-We normally wouldn't do this part, as some LDAP or outside authority would give the user password, but we'll do it for now to be able to establish connection.
+Let's verify that the group information looks correct for our user.
 
 ```plain
-ssh node01
+grep baduser /etc/group
 ```{{exec}}
 
-Create a password 1234 (I know, super secure, but useful for lab testing)
+Let's wait another 60 seconds and see if the logs are showing better output for our user.
 
 ```plain
-passwd realuser
+sleep 60
 ```{{exec}}
 
-You will have to hit enter twice
-
-Be sure to exit back to the controlplane node
-```plain
-exit
-```{{exec}}
-
-Clear the old entries
+Check logs
 
 ```plain
-ssh node01 'echo "" > /var/log/auth.log'
+tail -20 /var/log/auth.log
 ```{{exec}}
-
-Rerun the script /root/ssh_script and then check the invalid users from node01. This should take ~25 seconds.
 
 ```plain
-/root/ssh_script.sh
+tail -20 /var/log/syslog
 ```{{exec}}
-
-Recheck for Invalid users. You should no longer see realuser in invalid users.
 
 ```plain
-ssh node01 'grep Invalid /var/log/auth.log'
+grep baduser /var/log/*
 ```{{exec}}
 
-You'll still see errors with the login, but now at least the realuser is no longer Invalid. We'll fix their login in the next section.
+What values are you seeing now in there, in regards to the baduser account and sudo access?
+
+Is the user now successfully performing their sudo commands? Why or why not?
 
 </details>

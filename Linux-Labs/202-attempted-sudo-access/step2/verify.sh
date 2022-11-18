@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ssh node01 'id realuser'
+grep sudo /etc/group | grep baduser

@@ -5,13 +5,12 @@ Your Security Operations team has informed you that an alert for sudo activity h
 ### Solution
 <details>
 <summary>Solution</summary>
-Let's give baduser a password so their account is active.
+User logging may take up to 60 seconds to execute and populate the logs for this. If you cannot easily wait 60 seconds, push this command
 
 ```plain
-passwd baduser
+echo "I am patient and can wait 60 seconds"
+sleep 60
 ```{{exec}}
-
-Give them the password 1234 . You must enter it twice. The password must be 1234.
 
 Check the logs where Ubuntu keeps sudo requests. They may take up to 60 seconds to populate with the bad sudo requests.
 

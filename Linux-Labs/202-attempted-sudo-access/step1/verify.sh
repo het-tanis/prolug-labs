@@ -1,3 +1,3 @@
 #!/bin/bash
 
-grep suspect /root/users && grep 4 /root/attempts
+grep baduser /var/log/* | grep "Not in sudoers"

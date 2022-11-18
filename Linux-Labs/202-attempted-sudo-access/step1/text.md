@@ -5,10 +5,10 @@ Your Security Operations team has informed you that an alert for sudo activity h
 ### Solution
 <details>
 <summary>Solution</summary>
-Connect to node01
+Check the logs where Ubuntu keeps sudo requests.
 
 ```plain
-ssh node01
+tail -20 /var/log/auth.log
 ```{{exec}}
 
 Connect 

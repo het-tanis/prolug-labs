@@ -13,39 +13,36 @@ passwd baduser
 
 Give them the password 1234 . You must enter it twice. The password must be 1234.
 
-Check the logs where Ubuntu keeps sudo requests. They may take up to 
+Check the logs where Ubuntu keeps sudo requests. They may take up to 60 seconds to populate with the bad sudo requests.
 
 ```plain
 tail -20 /var/log/auth.log
 ```{{exec}}
 
-Connect 
+Also check 
 
 ```plain
-tail -20 /var/log/auth.log
+tail -20 /var/log/syslog
 ```{{exec}}
 
-What are the invalid users? Once you've looked at this log you can probably parse it down some
+You can search all the logs for baduser like this as well.
 
 ```plain
-grep Invalid /var/log/auth.log
+grep baduser /var/log/*
 ```{{exec}}
 
-Send the usernames into the file /root/users on controlplane node
-
-Be sure to exit back to the controlplane node
+You will eventually see the line 
 ```plain
-exit
-```{{exec}}
+baduser : user NOT in sudoers
+```
+and that is how you know you can continue with lab.
 
-```plain
-ssh node01 'grep Invalid /var/log/auth.log' > /root/users
-```{{exec}}
+So far you've activated a user account that root is using to attempt bad commands every minute.
 
-How many total failed logins were there? Write that out to /root/attempts
+To see root's crontab and how we're causing all the failed sudo attempts, use this command:
 
 ```plain
-echo 4 > /root/attempts
+crontab -l
 ```{{exec}}
  
 </details>

@@ -34,14 +34,15 @@ You will eventually see the line
 ```plain
 baduser : user NOT in sudoers
 ```
-and that is how you know you can continue with lab.
 
-So far you've activated a user account that root is using to attempt bad commands every minute.
+This indicates a user is trying to sudo and use elevated permissions that they do not have. We can then either remove user access permissions or grant them the correct permissions.This line is how you know you can continue with lab.
 
 To see root's crontab and how we're causing all the failed sudo attempts, use this command:
 
 ```plain
 crontab -l
 ```{{exec}}
- 
+
+You can see that root is using baduser account to attempt sudo commands that it doesn't yet have permissions to execute.
+
 </details>

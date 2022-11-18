@@ -39,6 +39,6 @@ Verify sudo permisions for that user are scoped down properly
 sudo -l -U baduser
 ```{{exec}}
 
-How 
+How do these permissions compare with what was given when the baduser was just put in the sudo group. Why might this type of permission be more secure, but harder to maintain? If you've used ansible, how might Ansible help deploy permissions to /etc/sudoers.d/ ?
 
 </details>

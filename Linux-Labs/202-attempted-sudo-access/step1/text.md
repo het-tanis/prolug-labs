@@ -11,7 +11,7 @@ Let's give baduser a password so their account is active.
 passwd baduser
 ```{{exec}}
 
-Give them the password 1234 . You must enter it twice.
+Give them the password 1234 . You must enter it twice. The password must be 1234.
 
 Check the logs where Ubuntu keeps sudo requests. They may take up to 
 

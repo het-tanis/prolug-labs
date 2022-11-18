@@ -5,6 +5,14 @@ Your Security Operations team has informed you that an alert for sudo activity h
 ### Solution
 <details>
 <summary>Solution</summary>
+Let's give baduser a password so their account is active.
+
+```plain
+passwd baduser
+```{{exec}}
+
+Give them the password 1234 . You must enter it twice.
+
 Check the logs where Ubuntu keeps sudo requests. They may take up to 
 
 ```plain

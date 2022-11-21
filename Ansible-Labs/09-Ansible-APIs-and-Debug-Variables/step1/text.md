@@ -1,6 +1,9 @@
 ### Lab Activities
 Verify your /root/hosts file and /root/api.yaml
 
+Create a playbook that calls from https://swapi.dev/api/people/ via the uri method.
+
+Return JSON output and debug to see values returned by various calls.
 
 <br>
 <details>

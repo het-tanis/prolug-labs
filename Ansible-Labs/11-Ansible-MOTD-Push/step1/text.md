@@ -1,7 +1,7 @@
 ### Lab Activities
 Verify your /root/hosts file and /root/motd_push.yaml file
 
-Push the motd messages to all servers
+Push the motd messages to all servers based on the new variables assigned in the /root/hosts file.
 
 <br>
 <details>

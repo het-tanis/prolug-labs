@@ -22,7 +22,7 @@ make the directory structure as required.
 
 ```plain
 mkdir -p /root/playbooks/roles
-cd /root/playbook/roles
+cd /root/playbooks/roles
 ```{{exec}}
 
 Note: You're now moved into that directory and can create the required roles using ansible-galaxy command

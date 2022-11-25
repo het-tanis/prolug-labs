@@ -42,7 +42,8 @@ Remove the mount point so we can mount it via /etc/fstab
 umount -l /mnt
 ```{{exec}}
 
-Edit /etc/fstab and add the line ``` node01:/share /mnt nfs defaults 0 0 ```
+Edit /etc/fstab and add the line 
+` node01:/share /mnt nfs defaults 0 0 `
 
 ```plain
 vi /etc/fstab

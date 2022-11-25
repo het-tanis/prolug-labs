@@ -69,4 +69,10 @@ showmount -e
 
 Once you see the share, you're ready to move on to the client connection.
 
+Remember to move back to controlplane node
+
+```plain
+exit
+```{{exec}}
+
 </details>

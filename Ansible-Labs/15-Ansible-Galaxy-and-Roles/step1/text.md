@@ -60,13 +60,13 @@ Go into the update directory to update and create the right files.
 vi /root/playbook/roles/update/tasks/main.yml
 ```{{exec}}
 
-`---
+```---
 # tasks file for update
 
 - include_tasks: update.yaml
   tags:
     - update
-`
+```
 
 You also have to create that file correctly with the tasks.
 
@@ -74,11 +74,11 @@ You also have to create that file correctly with the tasks.
 vi /root/playbook/roles/update/tasks/update.yaml
 ```{{exec}}
 
-`- name: Upgrade all packages to the latest version
+```- name: Upgrade all packages to the latest version
   apt:
     name: "*"
     state: latest
-`
+```
 
 Go into the update directory to update and create the right files.
 
@@ -86,13 +86,13 @@ Go into the update directory to update and create the right files.
 vi /root/playbook/roles/update/tasks/main.yml
 ``` {{exec}}
 
-`---
+```---
 # tasks file for update
 
 - include_tasks: update.yaml
   tags:
     - update
-`
+```
 
 Now you have to do that for the second directory
 
@@ -102,13 +102,13 @@ Go into the update directory to update and create the right files.
 vi /root/playbook/roles/install/tasks/main.yml
 ``` {{exec}}
 
-`---
+```---
 # tasks file for install
 
 - include_tasks: install.yaml
   tags:
     - install
-`
+```
 
 You also have to create that file correctly with the tasks.
 
@@ -116,7 +116,7 @@ You also have to create that file correctly with the tasks.
 vi /root/playbook/roles/install/tasks/install.yaml
 ```{{exec}}
 
-`- name: Debug env variables just to see them
+```- name: Debug env variables just to see them
 debug:
     var: app
 
@@ -135,7 +135,7 @@ apt:
     - mariadb-client
     state: present
 when: '"db" in app'
-`
+```
 
 
 </details>

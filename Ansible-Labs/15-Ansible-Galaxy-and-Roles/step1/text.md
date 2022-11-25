@@ -81,7 +81,7 @@ vi /root/playbooks/roles/update/tasks/update.yaml
     name: "*"
     state: latest
   tags:
-    - install
+    - update
 ```
 
 Now you have to do that for the second directory
@@ -112,7 +112,7 @@ vi /root/playbooks/roles/install/tasks/install.yaml
   debug:
     var: app
   tags:
-    - update
+    - install
 
 - name: Install apache2 on the web server
   apt:
@@ -122,7 +122,7 @@ vi /root/playbooks/roles/install/tasks/install.yaml
     state: present
   when: '"web" in app'
   tags:
-    - update
+    - install
 
 - name: Install mariadb on the web server
   apt:
@@ -132,7 +132,7 @@ vi /root/playbooks/roles/install/tasks/install.yaml
     state: present
   when: '"db" in app'
   tags:
-    - update
+    - install
 ```
 
 

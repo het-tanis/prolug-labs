@@ -60,7 +60,8 @@ Go into the update directory to update and create the right files.
 vi /root/playbooks/roles/update/tasks/main.yml
 ```{{exec}}
 
-```---
+```
+---
 # tasks file for update
 
 - include_tasks: update.yaml
@@ -68,7 +69,7 @@ vi /root/playbooks/roles/update/tasks/main.yml
     - update
 ```
 
-You also have to create that file correctly with the tasks.
+You also have to create that file correctly within the tasks.
 
 ```plain
 vi /root/playbooks/roles/update/tasks/update.yaml
@@ -79,21 +80,6 @@ vi /root/playbooks/roles/update/tasks/update.yaml
   apt:
     name: "*"
     state: latest
-```
-
-Go into the update directory to update and create the right files.
-
-```plain
-vi /root/playbooks/roles/update/tasks/main.yml
-```{{exec}}
-
-```
----
-# tasks file for update
-
-- include_tasks: update.yaml
-  tags:
-    - update
 ```
 
 Now you have to do that for the second directory
@@ -113,7 +99,7 @@ vi /root/playbooks/roles/install/tasks/main.yml
     - install
 ```
 
-You also have to create that file correctly with the tasks.
+You also have to create that file correctly within the tasks.
 
 ```plain
 vi /root/playbooks/roles/install/tasks/install.yaml

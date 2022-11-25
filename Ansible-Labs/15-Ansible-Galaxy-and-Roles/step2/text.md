@@ -17,7 +17,7 @@ vi /root/playbooks/environment.yaml
 
 Copy in this value:
 
-`
+```
 - hosts: all
   gather_facts: true
   vars:
@@ -26,10 +26,12 @@ Copy in this value:
   roles:
   - update
   - install
-
-`
+```
 
 Run the Playbook to see it work with no tags
+
+This playbook may take some time as it is updating the servers. Possibly even a minute.
+
 ```plain
 ansible-playbook -i /root/hosts /root/playbooks/environment.yaml
 ```{{exec}}

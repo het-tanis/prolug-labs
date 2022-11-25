@@ -57,7 +57,7 @@ Go into the update directory to update and create the right files.
 
 ```plain
 vi /root/playbook/roles/update/tasks/main.yml
-``` {{exec}}
+```{{exec}}
 
 `
 ---

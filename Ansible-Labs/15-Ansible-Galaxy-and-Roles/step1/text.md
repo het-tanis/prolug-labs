@@ -29,6 +29,7 @@ Note: You're now moved into that directory and can create the required roles usi
 
 ```plain
 ls -l
+tree
 ansible-galaxy init update
 ```{{exec}}
 

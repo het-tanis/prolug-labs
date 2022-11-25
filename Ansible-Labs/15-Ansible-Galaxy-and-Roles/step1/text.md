@@ -57,7 +57,7 @@ tree
 Go into the update directory to update and create the right files.
 
 ```plain
-vi /root/playbook/roles/update/tasks/main.yml
+vi /root/playbooks/roles/update/tasks/main.yml
 ```{{exec}}
 
 ```---
@@ -71,7 +71,7 @@ vi /root/playbook/roles/update/tasks/main.yml
 You also have to create that file correctly with the tasks.
 
 ```plain
-vi /root/playbook/roles/update/tasks/update.yaml
+vi /root/playbooks/roles/update/tasks/update.yaml
 ```{{exec}}
 
 ```- name: Upgrade all packages to the latest version
@@ -83,7 +83,7 @@ vi /root/playbook/roles/update/tasks/update.yaml
 Go into the update directory to update and create the right files.
 
 ```plain
-vi /root/playbook/roles/update/tasks/main.yml
+vi /root/playbooks/roles/update/tasks/main.yml
 ```{{exec}}
 
 ```---
@@ -99,7 +99,7 @@ Now you have to do that for the second directory
 Go into the update directory to update and create the right files.
 
 ```plain
-vi /root/playbook/roles/install/tasks/main.yml
+vi /root/playbooks/roles/install/tasks/main.yml
 ```{{exec}}
 
 ```---
@@ -113,7 +113,7 @@ vi /root/playbook/roles/install/tasks/main.yml
 You also have to create that file correctly with the tasks.
 
 ```plain
-vi /root/playbook/roles/install/tasks/install.yaml
+vi /root/playbooks/roles/install/tasks/install.yaml
 ```{{exec}}
 
 ```- name: Debug env variables just to see them

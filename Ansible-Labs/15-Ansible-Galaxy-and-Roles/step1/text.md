@@ -80,6 +80,8 @@ vi /root/playbooks/roles/update/tasks/update.yaml
   apt:
     name: "*"
     state: latest
+  tags:
+    - install
 ```
 
 Now you have to do that for the second directory
@@ -107,24 +109,30 @@ vi /root/playbooks/roles/install/tasks/install.yaml
 
 ```
 - name: Debug env variables just to see them
-debug:
+  debug:
     var: app
+  tags:
+    - update
 
 - name: Install apache2 on the web server
-apt:
+  apt:
     pkg: 
     - apache2
     - php
     state: present
-when: '"web" in app'
+  when: '"web" in app'
+  tags:
+    - update
 
 - name: Install mariadb on the web server
-apt:
+  apt:
     pkg: 
     - mariadb-server
     - mariadb-client
     state: present
-when: '"db" in app'
+  when: '"db" in app'
+  tags:
+    - update
 ```
 
 

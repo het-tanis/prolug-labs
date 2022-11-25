@@ -1,7 +1,9 @@
 Your team has determined they need an NFS share to facilitate filesystem access across multiple servers from one central location.
 
 Deploy the nfs server on node01
+
 Share out a filesystem /share to any system
+
 Verify that the system is being shared out
 
 <br>

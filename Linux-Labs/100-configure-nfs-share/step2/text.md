@@ -1,7 +1,9 @@
 So far you've set up an NFS server and share, now we have to connect to it as another system.
 
 Install the nfs-common client.
-Mount the node01:/share to /mnt to test
+
+Mount the node01:/share to /mnt to test.
+
 Make the node01:/share to /mnt a permanent setting in /etc/fstab.
 
 <br>

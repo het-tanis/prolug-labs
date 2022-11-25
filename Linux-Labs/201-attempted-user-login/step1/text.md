@@ -17,7 +17,7 @@ Connect to node01
 ssh node01
 ```{{exec}}
 
-Connect 
+Verify connection attempts from /var/log/auth.log file.
 
 ```plain
 tail -20 /var/log/auth.log

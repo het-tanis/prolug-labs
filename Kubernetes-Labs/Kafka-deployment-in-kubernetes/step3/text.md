@@ -30,6 +30,8 @@ kubectl port-forward $(kubectl get pods -n kafka | grep kafka | awk '{print $1}'
 echo "127.0.0.1 localhost kafka-broker" >> /etc/hosts
 ```{{exec}}
 
+Hit enter after this command.
+
 This will work for now, we could clean up our /etc/hosts file later if we wanted.
 
 Send a message into kafka with kafkacat

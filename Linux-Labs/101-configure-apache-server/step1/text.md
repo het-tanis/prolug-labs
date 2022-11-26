@@ -36,7 +36,7 @@ Verfiy the version of software
 
 ```plain
 dpkg -l | grep -i apache2
-```
+```{{exec}}
 
 Verify that the server is running, set to run on reboot, and it working on the default ports.
 

@@ -35,7 +35,7 @@ vi /etc/apache2/ports.conf
 
 Add the lines below, below the ` Listen 80 ` line
 
-```
+```plain
 Listen 8080
 Listen 8081
 Listen 8082
@@ -78,7 +78,7 @@ Add the following information to the file. This may seem like a lot, but it's ac
 </VirtualHost>
 ```
 
-The last setp will be to create simple websites in each of the DocumentRoot directories for each webpage.
+The last step will be to create simple websites in each of the DocumentRoot directories for each webpage.
 
 ```plain
 vi /var/www/html_dev/index.html
@@ -132,7 +132,7 @@ ss -ntulp | grep 80
 lsof -i :8080
 lsof -i :8081
 lsof -i :8082
-```
+```{{exec}}
 
 Now we run a curl command against each environment in a for loop.
 

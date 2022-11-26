@@ -1,1 +1,1 @@
-#Welcome to ProLUG Kubernetes Troubleshooting CKA Lab2
+#Welcome to ProLUG Kafka deployment into Kubernetes

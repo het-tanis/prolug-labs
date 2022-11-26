@@ -23,7 +23,7 @@ Answer file can be found at /answers/zookeeper.yaml
 Create the namespace kafka
 
 ```plain
-kubectl create ns -n kafka
+kubectl create ns kafka
 ```{{exec}}
 
 Verify that your namespace is created

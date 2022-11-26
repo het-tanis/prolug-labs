@@ -23,6 +23,15 @@ Install kafkacat tool
 apt -y install kafkacat
 ```{{exec}}
 
+For the communication to work, we have just one last thing to do, modify our /etc/hosts and make sure the port is forwarded from localhost to port 9092.
+
+```plain
+kubectl port-forward $(kubectl get pods -n kafka | grep kafka | awk '{print $1}') 9092 -n kafka &
+echo "127.0.0.1 localhost kafka-broker" >> /etc/hosts
+```{{exec}}
+
+This will work for now, we could clean up our /etc/hosts file later if we wanted.
+
 Send a message into kafka with kafkacat
 
 ```plain

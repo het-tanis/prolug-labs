@@ -3,7 +3,9 @@ You've set up a webserver, but your team has a requirement to test against 3 dif
 Set up a directive and web page that identifies each of the following web pages:
 
 dev - port 8080
+
 test - port 8081
+
 qa   - port 8082
 
 Make sure each html page exists and has the name dev, test, and qa on the page.

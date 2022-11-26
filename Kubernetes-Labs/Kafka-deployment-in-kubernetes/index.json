@@ -1,0 +1,41 @@
+{
+    "title": "Kafka in Kubernetes Lab",
+    "description": "Kubernetes Deployments",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "foreground": "foreground.sh",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Deploying Zookeeper",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Deploying Kafka",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        },
+        {
+          "title": "Sending and receiving messages in Kafka",
+          "text": "step3/text.md",
+          "verify": "step3/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": "kafka.yaml", "target": "/answers/"},
+            {"file": "namespace.yaml", "target": "/answers/"},
+            {"file": "zookeeper.yaml", "target": "/answers/"}
+		  ]
+	  },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

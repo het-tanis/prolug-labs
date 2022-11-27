@@ -137,7 +137,7 @@ lsof -i :8082
 Now we run a curl command against each environment in a for loop.
 
 ```plain
-for port in 8080 8081 8082; do curl 127.0.0.1:$port | grep Environment; done
+for port in 8080 8081 8082; do curl 127.0.0.1:$port | grep "dev\|qa\|test"; done
 ```{{exec}}
 
 </details>

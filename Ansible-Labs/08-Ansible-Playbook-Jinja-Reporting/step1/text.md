@@ -41,7 +41,7 @@ cat /root/hosts
     - name: Copy template over to all hosts
       template:
         src: /root/template.j2
-        dest: "/root/report.{{ansible_date_time.so8601_basic_short}}.txt"
+        dest: "/root/report.{{ansible_date_time.iso8601_basic_short}}.txt"
       run_once: yes
       delegate_to: localhost
 ```

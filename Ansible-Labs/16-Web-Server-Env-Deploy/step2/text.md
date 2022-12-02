@@ -20,8 +20,12 @@ cp /answers/individual_web_environment.yaml /root/individual_web_environment.yam
 
 Inspect that file and see how it is different than the other file. What is the use of block and when conditions doing in this file?
 
+What variables must you provide at the deployment of the file?
+
 ```plain
-ansible-playbook -i /root/hosts /root/individual_web_environment.yaml
+ansible-playbook -i /root/hosts /root/individual_web_environment.yaml --extra-vars "deploy=absent env=test port=8081"
 ```{{exec}}
+
+Play with these and see what variables you can and cannot use. To finish the lab ensure that test port 8081 is off, per the requirement.
 
 </details>

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ss -ntlp | grep 8081 && bomb
+curl node01:8081; if [ $? == 1 ]; then echo "passed"; fi

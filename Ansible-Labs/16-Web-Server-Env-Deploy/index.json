@@ -1,0 +1,40 @@
+{
+    "title": "Ansible Playbooks",
+    "description": "Web Server Environment Deployment in Ansible",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Create a playbook to push apache environment",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Remove environment and push only based on tags",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": "hosts", "target": "~/"},
+            {"file": "dev_virtual_host.conf", "target": "/answers/"},
+            {"file": "qa_virtual_host.conf", "target": "/answers/"},
+            {"file": "test_virtual_host.conf", "target": "/answers/"},
+            {"file": "dev_index.html", "target": "/answers/"},
+            {"file": "test_index.html", "target": "/answers/"},
+            {"file": "web_environment.yaml", "target": "/answers/"},
+            {"file": "qa_index.html", "target": "/answers/"}
+         ]
+        },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

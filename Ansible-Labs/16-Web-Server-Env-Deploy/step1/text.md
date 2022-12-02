@@ -27,7 +27,10 @@ cat /root/hosts
 Check your virtual hosts and index files. Modify this command for all the files in that directory.
 
 ```plain
-cat /answers/dev*
+ls /answers/
+cat /answers/dev_index.html
+echo ""
+cat /answers/dev_virtual_host.conf
 ```{{exec}}
 
 Create each component of the /root/web_environment.yaml file. (If you get stuck you can find this file in /answers/web_environment.yaml)

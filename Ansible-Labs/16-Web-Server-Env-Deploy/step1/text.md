@@ -123,7 +123,6 @@ cp /answers/web_environment.yaml /root/web_environment.yaml
 
 Run your completed playbook to deploy all environments
 
-
 ```plain
 ansible-playbook -i /root/hosts /root/web_environment.yaml
 ```{{exec}}

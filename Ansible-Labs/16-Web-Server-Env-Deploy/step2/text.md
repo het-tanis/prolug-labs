@@ -12,4 +12,14 @@ There's no awnsers here. You have to do this one on your own, you can do it manu
 
 Ok, there's an answer found at /answers/individual_web_environments.yaml.
 
+Copy that file over
+
+```plain
+cp /answers/individual_web_environments.yaml /root/individual_web_environments.yaml
+```{{exec}}
+
+```plain
+ansible-playbook -i /root/hosts /root/individual_web_environments.yaml
+```{{exec}}
+
 </details>

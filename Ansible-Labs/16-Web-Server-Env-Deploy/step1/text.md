@@ -115,6 +115,12 @@ In each of those blocks above you set a notification if something is changed. No
       name: apache2
 ```
 
+If you need to copy the deployment file from the answers, use this.
+
+```plain
+cp /answers/web_environment.yaml /root/web_environment.yaml
+```{{exec}}
+
 Run your completed playbook to deploy all environments
 
 

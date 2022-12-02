@@ -27,6 +27,7 @@
             {"file": "dev_index.html", "target": "/answers/"},
             {"file": "test_index.html", "target": "/answers/"},
             {"file": "web_environment.yaml", "target": "/answers/"},
+            {"file": "individual_web_environment.yaml", "target": "/answers/"},
             {"file": "qa_index.html", "target": "/answers/"}
          ]
         },

@@ -1,0 +1,91 @@
+---
+
+#Required variables:
+#deploy = present or absent
+#env = dev test or qa
+#port = 8080 8081 or 8082 (must match defined spec given by teams)
+
+- name: Web Environment
+  hosts: webservers
+  vars:
+  gather_facts: True
+  become: True
+  tasks:
+
+  - name: Install Apache2 Server
+    apt:
+      name: "apache2"
+      state: latest
+    
+  - name: Block for Present deploy State
+    block:
+
+    - name: Create directories for environments
+      file:
+        path: "/var/www/html_{{env}}"
+        state: directory
+      notify:
+        - Restart apache
+    
+    - name: Add the Listener ports to /etc/apache2/ports.conf
+      lineinfile:
+        path: /etc/apache2/ports.conf
+        insertafter: '^Listen'
+        state: present
+        line: "Listen {{port}}"
+      notify:
+        - Restart apache
+
+    - name: Push the Virtual Directives files into the correct place
+      copy:
+        src: "/answers/{{env}}_virtual_host.conf"
+        dest: "/etc/apache2/sites-enabled/{{item}}_virtual_host.conf"
+      notify:
+        - Restart apache
+
+    - name: Push the html for each page over
+      copy:
+        src: "/answers/{{env}}"
+        dest: "/var/www/html_{{env}}/index.html"
+      notify:
+        - Restart apache
+
+    when: deploy == "present"
+
+  - name: Block for Absent deploy State
+    block:
+
+    - name: Delete directories for environments
+      file:
+        path: "/var/www/html_{{env}}"
+        state: absent     
+      notify:
+        - Restart apache
+    
+    - name: Remove the Listener ports to /etc/apache2/ports.conf
+      lineinfile:
+        path: /etc/apache2/ports.conf
+        insertafter: '^Listen'
+        state: absent
+        line: "Listen {{port}}"
+      loop:
+      notify:
+        - Restart apache
+
+    - name: Remove the Virtual Directives files into the correct place
+      file:
+        path: "/answers/{{env}}_virtual_host.conf"
+        state: absent
+      notify:
+        - Restart apache
+
+    when: deploy == "absent"
+
+  handlers:
+
+  - name: Restart apache
+    systemd:
+      state: restarted
+      name: apache2
+  
+  

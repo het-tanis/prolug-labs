@@ -10,16 +10,18 @@ Break out the playbook and turn off the listener for test on port 8081.
 
 There's no awnsers here. You have to do this one on your own, you can do it manually but know that you're going to be doing that a lot for all those developer teams.
 
-Ok, there's an answer found at /answers/individual_web_environments.yaml.
+Ok, there's an answer found at /answers/individual_web_environment.yaml.
 
 Copy that file over
 
 ```plain
-cp /answers/individual_web_environments.yaml /root/individual_web_environments.yaml
+cp /answers/individual_web_environment.yaml /root/individual_web_environment.yaml
 ```{{exec}}
 
+Inspect that file and see how it is different than the other file. What is the use of block and when conditions doing in this file?
+
 ```plain
-ansible-playbook -i /root/hosts /root/individual_web_environments.yaml
+ansible-playbook -i /root/hosts /root/individual_web_environment.yaml
 ```{{exec}}
 
 </details>

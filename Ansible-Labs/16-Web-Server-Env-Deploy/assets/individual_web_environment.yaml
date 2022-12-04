@@ -39,7 +39,7 @@
     - name: Push the Virtual Directives files into the correct place
       copy:
         src: "/answers/{{env}}_virtual_host.conf"
-        dest: "/etc/apache2/sites-enabled/{{item}}_virtual_host.conf"
+        dest: "/etc/apache2/sites-enabled/{{env}}_virtual_host.conf"
       notify:
         - Restart apache
 

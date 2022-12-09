@@ -92,6 +92,24 @@ Add the listener ports to the correct configuration file
 
 ```
 
+Create the virtual directives for each web page
+
+```plain
+  - name: Push the Virtual Directives files into the correct place
+    copy:
+      src: "/answers/{{item}}"
+      dest: "/etc/apache2/sites-enabled/{{item}}"
+    loop:
+    - dev_virtual_host.conf
+    - qa_virtual_host.conf
+    - test_virtual_host.conf
+    notify:
+      - Restart apache
+
+```
+
+
+
 Push the html files that the teams have given you into the right directories.
 
 ```plain

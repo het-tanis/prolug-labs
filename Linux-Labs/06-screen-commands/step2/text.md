@@ -43,7 +43,7 @@ screen -L -Logfile /root/screenlog.log
 Execute a command to log it out
 
 ```plain
-for i in $(seq); do uptime; sleep 1; done
+for i in $(seq 100); do uptime; sleep 1; done
 ```{{exec}}
 
 Detach the screen

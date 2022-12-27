@@ -10,6 +10,7 @@ Install Vault on the server
 
 <details>
 <summary>Tip</summary>
+
 [Instruction Reference for vault install](https://developer.hashicorp.com/vault/tutorials/getting-started/getting-started-install)
 
 </details>

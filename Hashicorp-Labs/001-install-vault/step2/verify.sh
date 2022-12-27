@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ls -l /mnt/finalcheck
+lsof -i :8200

@@ -1,71 +1,40 @@
-So far you've set up an NFS server and share, now we have to connect to it as another system.
+So far you've installed Vault on the server. Do some basic checks to see that it is correctly setup.
 
-Install the nfs-common client.
+Check where the system installed Vault
 
-Mount the node01:/share to /mnt to test.
+Check Vault functionality
 
-Make the node01:/share to /mnt a permanent setting in /etc/fstab.
+Start a dev instance of Vault on your server
 
 <br>
 
 ### Solution
 <details>
 <summary>Solution</summary>
-Install the nfs-common client
+Check where the system put vault binary.
 
 ```plain
-apt -y install nfs-common
+which vault
 ```{{exec}}
 
-Test the mount point to verify we can connect.
+Verify Vault functionality.
 
 ```plain
-mount node01:/share /mnt
+vault
 ```{{exec}}
 
-Let's examine the mount point in our system.
+Make sure you look at some of the capabilities you have with Vault.
+
+Start the vault server in dev mode.
 
 ```plain
-df -h /mnt
+vault server -dev &
 ```{{exec}}
 
-Let's verify we can write into this directory.
+Check the vault server status
 
 ```plain
-touch /mnt/test1
-ls -l /mnt
-```{{exec}}
-
-Remove the mount point so we can mount it via /etc/fstab
-
-```plain
-umount -l /mnt
-```{{exec}}
-
-Edit /etc/fstab and add the line 
-` node01:/share /mnt nfs defaults 0 0 `
-
-```plain
-vi /etc/fstab
-```{{exec}}
-
-Now we use the /etc/fstab to ensure that the mount point correctly mounts on reboot. This is an old system administrator trick.
-
-```plain
-mount -a
-```{{exec}}
-
-If this works, the system is set up correctly. Let's check our mount point again.
-
-```plain
-df -h /mnt
-```{{exec}}
-
-Let's do one last write check to ensure everything is working correctly
-
-```plain
-touch /mnt/finalcheck
-ls -l /mnt/finalcheck
+lsof -i :8200
 ```{{exec}}
 
 If that's all worked, then the system is correctly set up.

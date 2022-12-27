@@ -1,4 +1,4 @@
-Your team has determined they need Vault to test in their Dev environment. Setup the hashicorp repo on Ubuntu and then install vault.
+Your team has determined they need Vault to test in their Dev environment. Setup the Hashicorp repo on Ubuntu and then install vault.
 
 Configure Hashicorp repo.
 

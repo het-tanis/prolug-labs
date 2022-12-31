@@ -21,7 +21,7 @@ Verify that the server is running and then stop it.
 <details>
 <summary>Solution</summary>
 
-Start the vault server in dev mode.
+Start the Vault server in dev mode.
 
 ```plain
 vault server -dev &

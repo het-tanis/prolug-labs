@@ -1,8 +1,8 @@
-Your team has determined they need Vault to test in their Dev environment. Setup the Hashicorp repo on Ubuntu and then install Vault.
+Your team has determined they need Terraform to test in their Dev environment. Setup the Hashicorp repo on Ubuntu and then install Terraform.
 
 Configure Hashicorp repo.
 
-Install Vault on the server
+Install Terraform on the server
 
 <br>
 
@@ -11,7 +11,7 @@ Install Vault on the server
 <details>
 <summary>Tip</summary>
 
-[Instruction Reference for vault install](https://developer.hashicorp.com/vault/tutorials/getting-started/getting-started-install)
+[Instruction Reference for terraform install](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 
 </details>
 
@@ -22,7 +22,7 @@ Install Vault on the server
 Add PGP for the package signing key
 
 ```plain
-sudo apt update && sudo apt install gpg
+apt update && apt install gpg
 ```{{exec}}
 
 Add the HashiCorp GPG key
@@ -43,10 +43,10 @@ Add the repository for HashiCorp
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 ```{{exec}}
 
-Update and install vault
+Update and install terraform
 
 ```plain
-sudo apt update && sudo apt install vault
+apt update && apt install terraform
 ```{{exec}}
 
 

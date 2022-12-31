@@ -48,8 +48,10 @@ Verify the open ports for Vault
 
 ```plain
 lsof -i :8200
-ss -ntulp
+ss -ntulp | grep 820
 ```{{exec}}
+
+Why do you think there is a port 8200 and 8201 for vault, if we're only connecting to the service on port 8200?
 
 Stop vault by killing the above pids
 

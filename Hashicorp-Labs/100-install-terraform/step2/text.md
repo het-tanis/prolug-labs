@@ -23,7 +23,7 @@ terraform -help
 
 Make sure you look at some of the capabilities you have with Terraform.
 
-Check terraform subcommands
+Check Terraform subcommands
 
 ```plain
 terraform -help plan

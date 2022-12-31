@@ -49,7 +49,7 @@ Check open ports
 
 ```plain
 lsof -i :8200
-ss -ntulp
+ss -ntulp | grep 820
 ```{{exec}}
 
 Stop vault by killing the above pids

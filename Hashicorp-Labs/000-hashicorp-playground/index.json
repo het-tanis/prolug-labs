@@ -1,0 +1,24 @@
+{
+    "title": "Let's do Hashicorp Sandbox",
+    "description": "Hashicorp Sandbox",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "foreground": "foreground.sh",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Playground for Hashicorp tools",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        }
+      ],
+	    "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "ubuntu"
+    }
+  }

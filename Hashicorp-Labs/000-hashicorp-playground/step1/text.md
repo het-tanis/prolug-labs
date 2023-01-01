@@ -4,17 +4,7 @@ The Sandbox has hashicorp repository setup and the following tools: Terraform, V
 
 ### Tip
 
-<details>
-<summary>Tip</summary>
-
-[Hashicorp trainint](https://developer.hashicorp.com/)
-
-</details>
-
-### Solution
-<details>
-<summary>Solution</summary>
+[Hashicorp training](https://developer.hashicorp.com/)
 
 Work through the hashicorp labs or do your own testing.
 
-</details>

@@ -1,0 +1,29 @@
+{
+    "title": "Let's do Linux",
+    "description": "DNS and finding resources",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "foreground": "foreground.sh",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Check all DNS tools to find resources",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Change the order in which your system looks up resources",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        }
+      ],
+	    "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

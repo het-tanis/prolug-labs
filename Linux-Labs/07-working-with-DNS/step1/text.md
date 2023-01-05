@@ -36,7 +36,7 @@ cat /etc/resolv.conf
 What nameservers does your system try to use? Enter these into /root/nameservers
 
 ```plain
-cat /etc/resolv.conf | grep nameservers > /root/nameservers
+cat /etc/resolv.conf | grep nameserver > /root/nameservers
 ```{{exec}}
 
 Traceroute is installed on the system. Use traceroute to see if you can map the hops from you to www.google.com

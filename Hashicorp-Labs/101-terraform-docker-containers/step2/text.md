@@ -6,7 +6,6 @@ Verify that you can see the running container.
 
 View your  terraform.tfstate file to see what Terraform tracks in a configuration deployment.
 
-Destroy everything with terraform
 
 <br>
 

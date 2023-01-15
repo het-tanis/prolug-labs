@@ -19,7 +19,7 @@ Check that containerd is running and exposed on your system
 
 ```plain
 systemctl status containerd --no-pager
-netstat -ntulp | grep -i containerd
+ss -ntulp | grep -i containerd
 ```{{exec}}
 
 So containerd is running. Can you check that terraform is installed?

@@ -17,7 +17,13 @@ Deploy 3 containers that are bound internally on port 80 and externally use 8080
 <details>
 <summary>Solution</summary>
 
-Let's start by editing our Terraform configuration.
+Let's start by destroying our old Terraform configuration.
+
+```plain
+terraform destroy --auto-approve
+```{{exec}}
+
+Then let's edit for our new configuration.
 
 ```plain
 vi main.tf

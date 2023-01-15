@@ -64,6 +64,8 @@ terraform fmt
 terraform validate
 ```{{exec}}
 
+We will see an error here. This is because the validate is looking to see if we're done an init and pulled down the provider. That is happening in the next step.
+
 Before we can deploy with Terraform we need to initialize and download all providers.
 
 ```plain

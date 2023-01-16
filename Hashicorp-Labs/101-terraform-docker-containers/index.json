@@ -1,6 +1,6 @@
 {
     "title": "Let's do Hashicorp Terraform",
-    "description": "Using Terraform for Conatiner Deployments",
+    "description": "Using Terraform for Container Deployments",
     "details": {
       "intro": {
         "text": "intro.md",

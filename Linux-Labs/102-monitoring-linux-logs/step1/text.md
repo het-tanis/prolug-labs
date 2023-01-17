@@ -32,7 +32,7 @@ systemctl enable grafana-server --now
 Verify that the server is serving on port 3000 (the default port)
 
 ```plain
-systemctl status grafana-server
+systemctl status grafana-server --no-pager
 ss -ntulp | grep grafana
 ss -ntulp | grep 3000
 ```{{exec}}

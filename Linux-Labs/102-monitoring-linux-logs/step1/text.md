@@ -12,7 +12,13 @@ Install the requred Grafana packages.
 
 ```plain
 apt-get install -y adduser libfontconfig1
+```{{exec}}
+
+```plain
 wget https://dl.grafana.com/enterprise/release/grafana-enterprise_9.3.2_amd64.deb
+```{{exec}}
+
+```plain
 dpkg -i grafana-enterprise_9.3.2_amd64.deb
 ```{{exec}}
 

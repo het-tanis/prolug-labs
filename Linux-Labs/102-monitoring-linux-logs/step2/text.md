@@ -35,7 +35,7 @@ Copy over the loki.service file and restart the systemctl daemon so that Loki ca
 ```plain
 cp /answers/loki.service /etc/systemd/system/loki.service
 systemctl daemon-reload
-```
+```{{exec}}
 
 Review the config file for Loki before starting the server.
 

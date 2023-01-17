@@ -1,0 +1,10 @@
+[Unit]
+Description=Loki Startup
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/opt/loki/loki-linux-amd64 -config.file=/opt/loki/loki-local-config.yaml
+
+[Install]
+WantedBy=default.target

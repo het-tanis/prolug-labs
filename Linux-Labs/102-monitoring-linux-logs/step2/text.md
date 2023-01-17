@@ -47,7 +47,7 @@ Review the service file so that you are confident it is going to properly start 
 
 ```plain
 cat /etc/systemd/system/loki.service
-```
+```{{exec}}
 
 Now that you've checked everything, start Loki daemon.
 

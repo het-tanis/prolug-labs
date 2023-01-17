@@ -10,7 +10,9 @@ Create a dashboard (import 13639) that shows the log files for your server.
 <details>
 <summary>Solution</summary>
 
-Connect to Grafana and log in {TRAFFIC_HOST1_3000}}
+Connect to Grafana and log in {{TRAFFIC_HOST1_3000}}
+
+Create the datasource for Loki in the the Datasource page. URL = http://127.0.0.1:3100 
 
 Import the dashboard 13639 to view logs.
 

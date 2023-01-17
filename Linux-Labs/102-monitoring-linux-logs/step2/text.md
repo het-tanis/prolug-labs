@@ -2,7 +2,7 @@ Your team has decided the log aggregator will be a tool called Loki. Your job is
 
 Install Loki.
 
-Verify Loki is running and exposing port 3000.
+Verify Loki is running and exposing port 3100.
 
 <br>
 

@@ -2,6 +2,8 @@ You've setup all the pieces, now you have to create a dashboard in Grafana and v
 
 Log into Grafana (and change the password if you didn't do it earlier)
 
+Create the datasource for Loki in the the Datasource page. URL = http://127.0.0.1:3100
+
 Create a dashboard (import 13639) that shows the log files for your server.
 
 <br>

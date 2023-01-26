@@ -1,6 +1,9 @@
 ### Lab Activities
+Your team has decided they need to more securely keep their secret information, instead of just passing values at the command line. You know that Ansible Vault can be used to securely store variables.
+
 Verify your /root/hosts file and /root/variables.yaml file
 
+Verify the functionality of the /root/variables.yaml file by executing and giving extra-vars as needed.
 
 <br>
 <details>

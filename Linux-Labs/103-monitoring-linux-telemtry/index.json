@@ -1,0 +1,46 @@
+{
+    "title": "Let's do Linux Configurations",
+    "description": "Grafana Monitoring of Telemetry data with Prometheus and Node Exporter",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "foreground": "foreground.sh",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Install and configure Grafana",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Install and configure node exporter",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        },
+        {
+          "title": "Install and configure Prometheus",
+          "text": "step3/text.md",
+          "verify": "step3/verify.sh"
+        },
+        {
+          "title": "Configure Dashboard and view telemetry data",
+          "text": "step4/text.md",
+          "verify": "step4/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": "node_exporter.service", "target": "/answers"},
+            {"file": "prometheus.service", "target": "/answers"},
+            {"file": "prometheus.yml", "target": "/answers"}
+         ]
+        },
+	    "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

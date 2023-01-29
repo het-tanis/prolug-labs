@@ -56,4 +56,6 @@ sleep 2
 curl http://localhost:9100/metrics
 ```{{exec}}
 
+What data can you see exposed? Don't worry if it's not well formatted for you to process, it's in the correct configuration for Prometheus to scrape.
+
 </details>

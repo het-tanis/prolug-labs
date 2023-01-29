@@ -1,4 +1,4 @@
-Your team has determined they need to monitor telemtry in your environment. You know that Grafana can do that as a visualization tool, so you plan to deploy it on a server as a daemon.
+Your team has determined they need to monitor telemetry in your environment. You know that Grafana can do that as a visualization tool, so you plan to deploy it on a server as a daemon.
 
 Deploy Grafana and ensure that it is running on your server.
 

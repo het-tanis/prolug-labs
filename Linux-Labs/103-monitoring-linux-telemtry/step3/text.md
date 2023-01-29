@@ -1,4 +1,4 @@
-In your reseach you find that the Prometheus can rean telemetry data from Node Exporter. Your tasks will be to deploy and configure Prometheus to poll telemetry data from Node Exporter.
+In your reseach you find that the Prometheus can read telemetry data from Node Exporter. Your tasks will be to deploy and configure Prometheus to poll telemetry data from Node Exporter.
 
 Install Prometheus.
 

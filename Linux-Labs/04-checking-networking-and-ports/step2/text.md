@@ -1,6 +1,6 @@
 Check open ports on the system.
 
-Can you find sshd and containerd listening on your system? If you can, write out to /root/ports.
+Can you find sshd and containerd listening on your system? If you can, write yes into the file /root/ports.
 
 
 <br>

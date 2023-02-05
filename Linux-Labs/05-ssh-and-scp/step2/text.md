@@ -6,6 +6,8 @@ scp sourcetarget destinationtarget
 
 Push the /root/motd file over to node01 at location /etc/motd and then log in to verify that the file has been pushed.
 
+Pull /etc/crontab from node01 to controlplane as file /tmp/node01.crontab
+
 <br>
 
 ### Solution

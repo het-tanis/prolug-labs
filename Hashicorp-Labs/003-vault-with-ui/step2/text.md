@@ -19,6 +19,6 @@ Your team has determined they need Vault to test in their Dev environment. You'r
 
 Follow along from Step 5 of the above link to continue, or see below.
 
-![raft_storage](/assets/raft_storage.png)
+![raft_storage](../assets/raft_storage.png)
 
 </details>

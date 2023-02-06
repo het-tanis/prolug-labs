@@ -2,6 +2,10 @@ Inspect the deployments_practice.yaml file in your home directory
 
 Run this file and inspect the resources it creates.
 
+This is an image that shows what this lab does. Reference it to better understand what you're doing.
+
+![raft_keys](../assets/blue_green.png)
+
 <br>
 <details>
 <summary>Solution</summary>

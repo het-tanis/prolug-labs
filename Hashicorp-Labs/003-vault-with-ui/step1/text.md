@@ -61,7 +61,7 @@ cat /opt/vault/config.hcl
 Start the server with the config file.
 
 ```plain
-vault server -config=config.hcl
+vault server -config=config.hcl &
 ```{{exec}}
 
 Verify that the server is listening on the proper ports.

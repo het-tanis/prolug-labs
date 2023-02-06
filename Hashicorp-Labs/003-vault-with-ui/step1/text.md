@@ -73,7 +73,7 @@ ss -ntulp | grep 820
 
 Connect to the port and verify that the server is running
 
-{{TRAFFIC_HOST1_3000}}
+{{TRAFFIC_HOST1_8200}}
 
 That's it for this portion, setup will be in step 2.
 

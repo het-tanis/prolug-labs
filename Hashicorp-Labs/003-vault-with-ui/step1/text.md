@@ -66,6 +66,8 @@ vault server -config=config.hcl &
 
 Verify that the server is listening on the proper ports.
 
+If you do not see a command prompt, hit enter before continuing.
+
 ```plain
 lsof -i :8200
 ss -ntulp | grep 820

@@ -1,0 +1,2 @@
+Look at you, learning Linux Configurations!
+You installed an antivirus solution, updated it's signature database, and setup a logging script on a cron timer. Continue to use this as a sandbox to continue practicing with the tool.

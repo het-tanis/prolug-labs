@@ -32,7 +32,9 @@ How many log files are being created in each run? Why do you you think this is?
 
 What directory or path is being scanned?
 
-Execute the script with a timer and see what the output is. (Ignore freshclam errors as you know it was updated a few seconds ago.)
+Execute the script with a timer and see what the output is. 
+
+This should take approximately 10 minutes, so let it run and go grab a drink.
 
 ```plain
 time /answers/clamscan.sh
@@ -40,7 +42,7 @@ time /answers/clamscan.sh
 
 How long did the script take to run?
 
-What values do you see in the output? Do they coincide with what you see in /var/log/clamav/clamav.log?
+What values do you see in the output? Did you find any viruses? Does the output coincide with what you see in /var/log/clamav/clamav.log?
 
 Set the script to execute daily (There's more than one way to do this)
 
@@ -61,6 +63,8 @@ The other way to set this to run daily, say at 0100 AM local time, would look li
 ```plain
 crontab -e
 ```{{exec}}
+
+Select your editor of choice from the menu.
 
 Add the following line:
 

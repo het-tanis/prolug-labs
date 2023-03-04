@@ -34,7 +34,7 @@ What directory or path is being scanned?
 
 Execute the script with a timer and see what the output is. 
 
-This should take approximately 10 minutes, so let it run and go grab a drink.
+This should take between 10 and 15 minutes, so let it run and go grab a drink.
 
 ```plain
 time /answers/clamscan.sh

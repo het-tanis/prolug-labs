@@ -68,9 +68,7 @@ Select your editor of choice from the menu.
 
 Add the following line:
 
-```plain
-0 1 * * * /answers/clamscan.sh
-```
+`0 1 * * * /answers/clamscan.sh`
 
 Hit `esc :wq` to exit vi.
 

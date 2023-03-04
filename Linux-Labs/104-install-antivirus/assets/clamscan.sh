@@ -6,7 +6,6 @@
 DAILYLOGFILE="/var/log/clamav/clamav-$(date +'%Y-%m-%d').log";
 LOGFILE="/var/log/clamav/clamav.log";
 
-
 #Scanning and logging to current logfile with a very high nice value
 clamscan -ri / &> "$LOGFILE"
 

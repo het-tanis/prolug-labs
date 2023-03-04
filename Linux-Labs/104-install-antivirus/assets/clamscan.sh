@@ -6,11 +6,6 @@
 DAILYLOGFILE="/var/log/clamav/clamav-$(date +'%Y-%m-%d').log";
 LOGFILE="/var/log/clamav/clamav.log";
 
-#Make sure we have a fresh clam
-/usr/bin/freshclam
-
-#wait for that to finish
-sleep 20
 
 #Scanning and logging to current logfile with a very high nice value
 clamscan -ri / &> "$LOGFILE"

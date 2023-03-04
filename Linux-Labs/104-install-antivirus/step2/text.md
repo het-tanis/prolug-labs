@@ -1,4 +1,4 @@
-You have installed ClamAV in support of your team's PCI-DSS directive by security. You know that anti virus works on signatures, so update the signature database and then verify that the scanning engine works properly.
+You have installed ClamAV in support of your team's PCI-DSS directive by security. You know that antivirus works on signatures, so update the signature database and then verify that the scanning engine works properly.
 
 Update signature database (Freshclam).
 
@@ -13,26 +13,22 @@ Scan your system for vulnerabilities.
 Stop clamav-freshclam so that you can update manually.
 
 ```plain
-ssytemctl status clamav-freshclam --no-pager
+systemctl status clamav-freshclam --no-pager
 systemctl stop clamav-freshclam
 ```{{exec}}
 
-Manually update your virus database
+Manually update your antivirus database
 
 ```plain
 freshclam
 ```{{exec}}
 
+What do you see in the output? What is the relevant information?
+
 Turn on and enable automatic daily antivirus signature updates
 
 ```plain
 systemctl enable clamav-freshclam --now
-```{{exec}}
-
-Create directory to store log results
-
-```plain
-mkdir /var/log/clamav
 ```{{exec}}
 
 Run your first scan against a directory
@@ -46,7 +42,7 @@ How long did the scan take? Is the system time the same as the scanner time?
 Verify that file was written out to
 
 ```plain
-cat /var/log/calmav/clamav.log
+cat /var/log/clamav/clamav.log
 ```{{exec}}
 
 With all of these steps complete we're ready to move on to the automation piece.

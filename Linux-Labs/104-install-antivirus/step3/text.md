@@ -1,5 +1,9 @@
 You've installed and updated your antivirus, now it's time to make it run on a schedule. Test the script found at /answers/clamscan.sh. Set the script to run daily.
 
+Execute the script.
+
+Set the script to run via cron at least daily.
+
 <br>
 
 ### Solution
@@ -28,7 +32,7 @@ How many log files are being created in each run? Why do you you think this is?
 
 What directory or path is being scanned?
 
-Execute the script with a timer and see what the output is.
+Execute the script with a timer and see what the output is. (Ignore freshclam errors as you know it was updated a few seconds ago.)
 
 ```plain
 time /answers/clamscan.sh

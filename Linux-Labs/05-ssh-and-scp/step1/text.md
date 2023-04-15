@@ -14,6 +14,12 @@ ssh node01
 Type in exit to return to the original system
 
 ```plain
+exit
+```{{exec}}
+
+Check system uptime and one layer of debug1.
+
+```plain
 ssh -v node01 'uptime'
 ```{{exec}}
 

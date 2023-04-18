@@ -1,6 +1,8 @@
 ### Lab Activities
 Verify your hosts file 
 
+Create a Jinja2 template file called /root/template.j2 to stamp values on each of the hosts as you execute the playbook.
+
 Create a deploy playbook called /root/template.yml to push the template /root/template.j2 over to all servers as the file /root/template.txt. Verify the file is populated with values as expected.
 <br>
 

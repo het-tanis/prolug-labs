@@ -3,6 +3,8 @@ Verify your hosts file
 
 Create a deploy playbook called /root/template.yml to check the uptime of all servers. 
 
+Create a Jinja2 template file to deploy the /root/report.txt report upon execution of the playbook.
+
 Report back unreachable servers and servers that have been up longer than a day to /root/report.txt on the server of execution.
 <br>
 

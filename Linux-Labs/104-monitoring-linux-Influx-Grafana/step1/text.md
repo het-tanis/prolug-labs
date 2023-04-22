@@ -37,7 +37,7 @@ ss -ntulp | grep grafana
 ss -ntulp | grep 3000
 ```{{exec}}
 
-We can also check the external Web UI is available and change the default password.
+We can also check that the external Web UI is available and change the default password.
 
 {{TRAFFIC_HOST1_3000}}
 

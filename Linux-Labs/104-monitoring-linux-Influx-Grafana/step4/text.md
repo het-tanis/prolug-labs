@@ -15,9 +15,17 @@ Create a dashboard that shows the telemetry information for your server from Inf
 
 Connect to Grafana and log in {{TRAFFIC_HOST1_3000}}
 
-Create the datasource for InfluxDB2 in the the Datasource page. URL = http://127.0.0.1:8086
+Create the datasource for InfluxDB in the the Datasource page. 
+Change the Query Language to Flux
+Set the URL = http://127.0.0.1:8086
+Scroll all the way down and set: Organization, Bucket, and Token.
 
-Create the dashboard.
+If you see "Datasource is working: 3 Buckets found" You know you connected properly.
+
+Create a new Dashboard.
+Select a new Panel.
+Pick the data source InfluxDB.
+Choose the sample query of "Filter by Value".
 
 Verify the dashboard is working properly.
 

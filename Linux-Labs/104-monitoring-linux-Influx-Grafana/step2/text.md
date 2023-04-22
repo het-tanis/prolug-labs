@@ -29,7 +29,7 @@ Start InfluxDB2
 
 ```plain
 systemctl start influxdb      
-
+systemctl enable influxdb
 ```{{exec}}
 
 Verify InfluxDB2 is listening on the correct port.

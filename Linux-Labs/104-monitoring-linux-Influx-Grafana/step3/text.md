@@ -1,4 +1,4 @@
-In your reseach you find that Telegraf can write out to InfluxDB2. So you need to install and configure telegraf to write telemetry data into influxDB2
+In your reseach you find that Telegraf can write out to InfluxDB2. So you need to install and configure telegraf to write telemetry data into influxDB2.
 
 Install Telegraf.
 
@@ -61,14 +61,10 @@ Set the information as follows: (Replace with your url, token, organization, and
 Restart Telegraf and verify it's writing to InfluxDB2
 
 ```plain
-systemctl start telegraf
-systemctl status telegraf
+systemctl restart telegraf
+systemctl status telegraf --no-pager -l
 ```{{exec}}
 
-Verify that telegraf is properly writing out to InfluxDB2
-
-```plain
-tail -20 /var/log/messages
-```{{exec}}
+Look at the output above and verify that telegraf is properly writing out to InfluxDB2.
 
 </details>

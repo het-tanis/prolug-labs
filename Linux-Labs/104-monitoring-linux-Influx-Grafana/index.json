@@ -31,9 +31,6 @@
       ],
 	    "assets": {
 	       "host01": [
-		        {"file": "node_exporter.service", "target": "/answers"},
-            {"file": "prometheus.service", "target": "/answers"},
-            {"file": "prometheus.yml", "target": "/answers"}
          ]
         },
 	    "finish": {

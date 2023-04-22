@@ -1,4 +1,4 @@
-Your team has decided that the data will be collected by influxdb version 2.7. 
+Your team has decided that the data will be collected by Telegraf and sent for aggregation to influxdb version 2.7. 
 
 Install InfluxDB2.
 

@@ -43,7 +43,7 @@ Connect to InfluxDB, set up your organization, bucket, and token. Copy those pie
 
 {{TRAFFIC_HOST1_8086}}
 
-![influxDB2](../assets/influxDB2.png)
+![influxdb2](../assets/InfluxDB2.png)
 
 Once this is complete you have completed this section of the lab.
 

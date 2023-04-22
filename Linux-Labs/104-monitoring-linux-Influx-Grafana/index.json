@@ -29,10 +29,6 @@
           "verify": "step4/verify.sh"
         }
       ],
-	    "assets": {
-	       "host01": [
-         ]
-        },
 	    "finish": {
         "text": "finish.md"
       }

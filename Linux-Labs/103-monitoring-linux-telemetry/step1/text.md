@@ -7,26 +7,37 @@ Deploy Grafana and ensure that it is running on your server.
 ### Solution
 <details>
 <summary>Solution</summary>
+  
+Refer to the [Grafana Docs](https://grafana.com/docs/grafana/latest/setup-grafana/installation/) for latest installation instructions.
 
-Install the requred Grafana packages.
+Install the required packages and Grafana GPG key.
 
 ```plain
-apt-get install -y adduser libfontconfig1
+sudo apt-get install -y apt-transport-https
+sudo apt-get install -y software-properties-common wget
+sudo wget -q -O /usr/share/keyrings/grafana.key https://apt.grafana.com/gpg.key
 ```{{exec}}
 
+Add the Grafana repository.
+  
 ```plain
-wget https://dl.grafana.com/enterprise/release/grafana-enterprise_9.3.2_amd64.deb
+echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
 ```{{exec}}
-
+  
+Finally, we're ready to install Grafana:
+  
 ```plain
-dpkg -i grafana-enterprise_9.3.2_amd64.deb
+sudo apt-get update
+# Install the latest Enterprise release:
+sudo apt-get install grafana-enterprise
 ```{{exec}}
 
 Now that you've installed Grafana, let's make sure it's started.
 
 ```plain
-systemctl daemon-reload
-systemctl enable grafana-server --now
+sudo systemctl daemon-reload
+sudo systemctl start grafana-server
+sudo systemctl status grafana-server
 ```{{exec}}
 
 Verify that the server is serving on port 3000 (the default port)
@@ -37,7 +48,7 @@ ss -ntulp | grep grafana
 ss -ntulp | grep 3000
 ```{{exec}}
 
-We can also check the external Web UI is available and change the default password.
+We can also check that the external Web UI is available and change the default password.
 
 {{TRAFFIC_HOST1_3000}}
 

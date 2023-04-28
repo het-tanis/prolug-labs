@@ -14,7 +14,13 @@ Install the required packages and Grafana GPG key.
 
 ```plain
 sudo apt-get install -y apt-transport-https
+```{{exec}}
+
+```plain
 sudo apt-get install -y software-properties-common wget
+```{{exec}}
+
+```plain
 sudo wget -q -O /usr/share/keyrings/grafana.key https://apt.grafana.com/gpg.key
 ```{{exec}}
 

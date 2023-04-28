@@ -35,7 +35,7 @@ Finally, we're ready to install Grafana:
 ```plain
 sudo apt-get update
 # Install the latest Enterprise release:
-sudo apt-get install grafana-enterprise
+sudo apt-get install -y grafana-enterprise
 ```{{exec}}
 
 Now that you've installed Grafana, let's make sure it's started.

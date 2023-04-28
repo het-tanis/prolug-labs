@@ -14,7 +14,13 @@ Install the required packages and Grafana GPG key.
 
 ```plain
 sudo apt-get install -y apt-transport-https
+```{{exec}}
+
+```plain
 sudo apt-get install -y software-properties-common wget
+```{{exec}}
+
+```plain
 sudo wget -q -O /usr/share/keyrings/grafana.key https://apt.grafana.com/gpg.key
 ```{{exec}}
 
@@ -29,7 +35,7 @@ Finally, we're ready to install Grafana:
 ```plain
 sudo apt-get update
 # Install the latest Enterprise release:
-sudo apt-get install grafana-enterprise
+sudo apt-get install -y grafana-enterprise
 ```{{exec}}
 
 Now that you've installed Grafana, let's make sure it's started.

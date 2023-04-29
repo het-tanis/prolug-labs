@@ -59,7 +59,7 @@ Check if the system has anything ready to update.
 apt update
 ```{{exec}}
 
-This checked the metadata of your packages and saw if there are any upgradable packages. How man packages were upgradable?
+This checked the metadata of your packages and saw if there are any upgradable packages. How many packages were upgradable?
 
 Check which packages are upgradable.
 

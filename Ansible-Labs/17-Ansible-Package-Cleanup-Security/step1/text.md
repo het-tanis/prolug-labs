@@ -39,7 +39,7 @@ Did the playbook execute with no issues? If it did not, run it again and see wha
 Verify the output of the reports that you've run.
 
 ```plain
-for report in $(ls /root/*report*.txt); do echo "checking $report"; cat /root/$report; done
+for report in $(ls /root/*report*.txt); do echo "checking $report"; cat $report; done
 ```{{exec}}
 
 Are the output reports what you expected? Why or why not?

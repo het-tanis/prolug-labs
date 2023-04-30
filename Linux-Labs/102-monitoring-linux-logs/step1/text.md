@@ -43,7 +43,7 @@ Now that you've installed Grafana, let's make sure it's started.
 ```plain
 sudo systemctl daemon-reload
 sudo systemctl start grafana-server
-sudo systemctl status grafana-server
+sudo systemctl status grafana-server --no-pager
 ```{{exec}}
 
 Verify that the server is serving on port 3000 (the default port)

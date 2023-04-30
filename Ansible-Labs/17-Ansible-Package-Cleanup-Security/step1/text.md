@@ -4,6 +4,8 @@ You cleaned up the golden image over in lab [Updating Golden Image](https://kill
 
 Verify your /root/hosts file, /root/remove_packages.j2 and /root/remove_packages.yaml files. 
 
+Remove the bzip2 and containerd packages from all servers to ensure that old software is no longer on your systems and to stop developer abuse of containerd on all systems.
+
 <br>
 <details>
 <summary>Solution</summary>
@@ -37,7 +39,7 @@ Did the playbook execute with no issues? If it did not, run it again and see wha
 Verify the output of the reports that you've run.
 
 ```plain
-for report in `ls /root/*report*.txt; do echo "checking $report"; cat /root/$report; done
+for report in $(ls /root/*report*.txt); do echo "checking $report"; cat /root/$report; done
 ```{{exec}}
 
 Are the output reports what you expected? Why or why not?

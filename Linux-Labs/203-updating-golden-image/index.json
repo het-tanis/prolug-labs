@@ -9,17 +9,17 @@
       },
       "steps": [
         {
-          "title": "Verify current status",
+          "title": "Verify current Image status",
           "text": "step1/text.md",
           "verify": "step1/verify.sh"
         },
         {
-          "title": "Update the system",
+          "title": "Update the Image",
           "text": "step2/text.md",
           "verify": "step2/verify.sh"
         },
         {
-          "title": "Clean up old, unused packages",
+          "title": "Clean up the old, unused packages",
           "text": "step3/text.md",
           "verify": "step3/verify.sh"
         }

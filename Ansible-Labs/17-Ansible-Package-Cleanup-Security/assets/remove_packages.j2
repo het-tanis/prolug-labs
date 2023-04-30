@@ -1,0 +1,21 @@
+This is a system Validation at {{ ansible_date_time.time }} on {{ ansible_date_time.date }}
+
+Unreachable systems:
+----------------------------------------------
+{% for host in ansible_play_hosts_all %}
+{% if host not in ansible_play_hosts %}
+{{ host }}
+{% endif  %}
+{% endfor %}
+
+Removed packages:
+----------------------------------------------
+{% for host in ansible_play_hosts_all %}
+{% if hostvars[host].verify_apps is defined %}
+{% for package in hostvars[host].verify_apps.results %}
+{% if package.rc == 1 %}
+{{ host }} - Package {{ package.item }} was removed.
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}

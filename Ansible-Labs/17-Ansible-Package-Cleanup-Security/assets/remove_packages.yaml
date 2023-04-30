@@ -1,0 +1,40 @@
+---
+
+- name: Package removal for environment
+  hosts: servers
+  vars:
+  gather_facts: True
+  become: True
+  tasks:
+
+  - name: Remove Apps for security reasons
+    apt:
+      pkg: 
+      - containerd
+      - bzip2
+      purge: yes
+      state: absent
+    register: removed_apps
+
+  # - name: Debug Removed Apps
+  #   debug:
+  #     var: removed_apps
+      
+  - name: Verify that the packages were removed
+    shell: "dpkg -l | grep -i {{item}}"
+    loop:
+      - bzip2
+      - containerd
+    failed_when: false
+    register: verify_apps
+
+ # - name: Debug Removed Apps
+ #   debug:
+ #     var: verify_apps
+
+  - name: Report out all removals to just main server
+    template:
+      src: /root/remove_packages.j2
+      dest: "/root/remove_packages_report.{{ansible_date_time.iso8601_basic_short}}.txt"
+    run_once: yes
+    delegate_to: localhost

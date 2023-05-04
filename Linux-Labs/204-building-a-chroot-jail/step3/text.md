@@ -42,8 +42,8 @@ chroot /var/chroot
 ```{{exec}}
 
 ```
-ssh -l someuser 127.0.0.1
-```
+ssh -l jailed 127.0.0.1
+```{{exec}}
 
 Enter the password and then verify that you're in the correct user. Are you still jailed? Exit out and see if your original user is still jailed. How do you exit that jail?
 

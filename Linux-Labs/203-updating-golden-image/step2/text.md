@@ -13,7 +13,6 @@ Verify that your system needs to restart and see if there is a newer kernel than
 <summary>Solution</summary>
 Upgrade your system
 
-Inspect sudoers file.
 ```plain
 time apt upgrade -y
 ```{{exec}}

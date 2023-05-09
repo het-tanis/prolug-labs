@@ -80,9 +80,9 @@ Re-run the playbook and verify the vault is working (you will have to put in the
 ansible-playbook --ask-vault-pass /root/secret-read.yaml
 ```{{exec}}
 
-Now we've secured our credentials and we've read the token. Let's add to our playbook and give vault that token to read the credentials.
-
 Note our token is: `user_connect.json.auth.client_token` in our json output
+
+Now we've secured our credentials and we've read the token. Let's add to our playbook and give Vault that token to read the credentials.
 
 ```
 #Add this below previous playbook task

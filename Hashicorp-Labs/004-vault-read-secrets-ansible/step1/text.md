@@ -30,10 +30,8 @@ vault server -dev &
 Export the values you need. These can be found in the output of the above command
 
 ```plain
-
 export VAULT_ADDR='http://127.0.0.1:8200'
 export VAULT_TOKEN=" <token from output> "
-
 ```
 
 Verify that the server is running

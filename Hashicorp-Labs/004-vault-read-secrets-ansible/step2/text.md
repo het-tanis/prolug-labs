@@ -1,13 +1,8 @@
-You've got vault running and you've created the secret. Now you need to create a programmatic access to access that secret. The method we'll use is username and password.
+Now that you have vault running you need to create a secret. You will be reading this secret from another tool, and in a real environment it could be populate by another process or team.
 
-Enable the vault userpass authentication.
+Create the secret username and password for the application to read.
 
-Create a user for vault.
-
-Assign the user a password.
-
-Create and assign that user a vault policy to read secret/app1/values secret.
-
+Verify that the username and password have been set.
 
 <br>
 
@@ -16,47 +11,24 @@ Create and assign that user a vault policy to read secret/app1/values secret.
 <details>
 <summary>Solution</summary>
 
-Allow vault to use usernames and passwords
+Verify that the secrets engine v2 is running
 
 ```plain
-vault auth enable userpass
+vault secrets list -detailed
 ```{{exec}}
 
-Create the user for vault
+Create the vault secret of the username and password for the application
 
 ```plain
-vault write auth/userpass/users/ansible password=ansible12#$
+vault kv put secret/app1/values username=secretuser password=supersecure
 ```{{exec}}
 
-Create a policy to allow reads of secret/app1/values secret
+Verify that the values have been set.
 
 ```plain
-cat > /root/ansible-policy.hcl <<-EOF
-# Write and manage secrets in key-value secrets engine
-path "secret*" {
-  capabilities = [ "create", "read", "update", "delete", "list", "patch" ]
-}
-EOF
+vault kv get secret/app1/values
 ```{{exec}}
 
-Write the vault policy into vault
-
-```plain
-vault policy write ansible_policy /root/ansible-policy.hcl 
-```{{exec}}
-
-Map the policy to the user ansible
-
-```plain
-vault write /auth/userpass/users/ansible policies=ansible_policy
-```{{exec}}
-
-Verify the mapping of the policy.
-
-```plain
-vault read auth/userpass/users/ansible
-```{{exec}}
-
-With this all set up, you're ready to move on to the next part of the lab.
+Now that you've created those values, it's time to move on to the next step of the lab.
 
 </details>

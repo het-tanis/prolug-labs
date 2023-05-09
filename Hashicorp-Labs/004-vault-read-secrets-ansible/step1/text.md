@@ -1,3 +1,7 @@
+Examine this workflow for the tasks and lab we're about to complete
+
+![workflow](../assets/ansible-workflow.png)
+
 Your team has determined they need Vault to test in their Dev environment. Hashicorp Vault has been installed on the server. 
 
 Start the server in dev mode

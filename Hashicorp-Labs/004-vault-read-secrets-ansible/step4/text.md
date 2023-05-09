@@ -14,6 +14,12 @@ Write the username and password out to a file with a jinja2 template. (Not what 
 <details>
 <summary>Solution</summary>
 
+Llet's make sure Ansible is installed in our environment
+
+```plain
+apt -y install ansible
+```{{exec}}
+
 Create an ansible playbook that can authenticate to vault `/root/secret-read.yaml`
 
 ```plain

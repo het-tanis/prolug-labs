@@ -8,7 +8,7 @@ Break out the playbook and turn off the listener for test on port 8081.
 <details>
 <summary>Solution</summary>
 
-There's no awnsers here. You have to do this one on your own, you can do it manually but know that you're going to be doing that a lot for all those developer teams.
+There's no answers here. You have to do this one on your own, you can do it manually but know that you're going to be doing that a lot for all those developer teams.
 
 Ok, there's an answer found at /answers/individual_web_environment.yaml.
 

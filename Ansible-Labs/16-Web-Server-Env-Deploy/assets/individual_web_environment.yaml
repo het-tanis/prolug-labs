@@ -45,7 +45,7 @@
 
     - name: Push the html for each page over
       copy:
-        src: "/answers/{{env}}"
+        src: "/answers/{{env}}_index.html"
         dest: "/var/www/html_{{env}}/index.html"
       notify:
         - Restart apache

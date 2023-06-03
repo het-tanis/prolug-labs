@@ -1,3 +1,5 @@
+Your team has been using Ansible and decided that they need to have better reusability and modularity to their code. You have been tasked with testing and deploying galaxy to see how inherited roles work in Ansible.
+
 ### Lab Activities
 Verify your /root/hosts file exists.
 

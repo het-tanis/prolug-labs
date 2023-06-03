@@ -1,3 +1,5 @@
+You are a new system engineer for a small Linux based tech company. The other engineers set you up with a tool called screen and gave you a basic configuration file for it. Inspect the configuration and see what advantages you can find for this tool in your daily system activities.
+
 Inspect our /root/.screenrc file
 
 Start screen.

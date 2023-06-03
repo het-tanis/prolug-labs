@@ -1,4 +1,4 @@
-We'll push and pull files around to test scp on the systems.
+You are tasked with pushing the new MOTD message onto a server. You also know that the server has a correct /etc/crontab configuration that you will want to use on other systems.
 
 scp is always "from" "to" on the command line, so the syntax is:
 

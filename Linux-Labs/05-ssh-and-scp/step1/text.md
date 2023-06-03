@@ -1,3 +1,5 @@
+You are a new administrator and need to connect from the main jump server to another server in the organization. You realize you need a better understanding of the ssh connection process.
+
 Connect to the other server and look at the specifics of the ssh connection.
 
 <br>

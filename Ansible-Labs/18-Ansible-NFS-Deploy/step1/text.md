@@ -34,6 +34,12 @@ Copy in the ansible playbook with the inherited roles.
 cp /answers/nfs_deploy.yaml /root/ansible/nfs_deploy.yaml
 ```{{exec}}
 
+Inspect the playbook. Does it make sense that the roles are going to be inherited if certain conditions about the servers are met? Those can come from an inventory or an environment file to define what servers inherit what roles.
+
+```plain
+cat /root/ansible/nfs_deploy.yaml
+```{{exec}}
+
 Copy in the playbook tasks and handlers for the NFS server deploy
 
 ```plain

@@ -2,7 +2,9 @@
 
 You deployed a NFS server by hand over in [Configure NFS Share](https://killercoda.com/het-tanis/course/Linux-Labs/100-configure-nfs-share). Now your team needs to deploy the NFS to multiple new servers through an automated process.
 
-Verify your /root/hosts file, /root/remove_packages.j2 and /root/remove_packages.yaml files. 
+Write or copy over the tasks/main.yml for the role nfs_client and use it to create the client mount points with Ansible.
+
+Verify that the mount point is working properly.
 
 <br>
 <details>
@@ -32,6 +34,9 @@ Check that the mount point has been properly mounted on your local system.
 
 ```plain
 mount | grep -i nfs | grep -i share
+cat /etc/fstab
 ```{{exec}}
+
+Is the filesystem mounted? How does the /etc/fstab entry look to you? Would you have built it that same way?
 
 </details>

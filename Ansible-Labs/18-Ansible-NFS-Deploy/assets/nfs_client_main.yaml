@@ -1,0 +1,15 @@
+---
+# tasks file for nfs_client
+
+- name: Install the nfs client packages
+  apt:
+    name: nfs-common
+    state: latest
+
+- name: mount the nfs server to local system at /mnt
+  mount:
+    path: /mnt
+    src: 'node01:/share'
+    fstype: nfs
+    state: mounted
+

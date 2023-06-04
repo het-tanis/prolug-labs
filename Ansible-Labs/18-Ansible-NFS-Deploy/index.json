@@ -1,0 +1,37 @@
+{
+    "title": "Ansible Playbooks",
+    "description": "Playbook to deploy NFS server and client",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Playbook execution deploy server",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Playbook execution deploy client",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": "hosts", "target": "~/"},
+            {"file": "nfs_deploy.yaml", "target": "/answers"},
+            {"file": "nfs_server_handler_main.yaml", "target": "/answers"},
+            {"file": "nfs_server_task_main.yaml", "target": "/answers"},
+            {"file": "nfs_client_main.yaml", "target": "/answers"}
+         ]
+        },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

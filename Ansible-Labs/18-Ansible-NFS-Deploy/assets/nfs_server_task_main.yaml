@@ -1,0 +1,22 @@
+---
+# tasks file for nfs_server
+
+- name: Deploy the NFS server
+  apt:
+    name: "nfs-kernel-server"
+    state: latest
+
+- name: Create share for nfs server
+  file:
+    path: "/share"
+    state: directory
+    owner: nobody
+    group: nogroup
+
+- name: Setup share in /etc/exports
+  lineinfile:
+    path: /etc/exports
+    line: '/share *(rw,sync,no_subtree_check)'
+    create: yes
+  notify:
+    - Restart nfs

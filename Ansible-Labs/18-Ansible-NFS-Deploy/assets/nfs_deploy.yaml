@@ -6,3 +6,4 @@
   roles:
   - { role: nfs_server, when: type == "server" }
   - { role: nfs_client, when: type == "client" }
+  

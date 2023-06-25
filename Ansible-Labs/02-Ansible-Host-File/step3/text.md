@@ -1,4 +1,4 @@
-Your team is going to be adding new servers to the environment that haven't been built yet. Update your inventory file at /root/hosts to reflect the new envrionments.
+Your team is going to be adding new servers to the environment that haven't been built yet. Update your inventory file at /root/hosts to reflect the new environments.
 
 Update the /root/hosts file
 

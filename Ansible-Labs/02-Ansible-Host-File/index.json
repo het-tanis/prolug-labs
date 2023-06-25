@@ -16,6 +16,11 @@
           "title": "Check functionality and connectivity",
           "text": "step2/text.md",
           "verify": "step2/verify.sh"
+        },
+        {
+          "title": "Add to inventory for future environments",
+          "text": "step3/text.md",
+          "verify": "step3/verify.sh"
         }
       ],
       "finish": {

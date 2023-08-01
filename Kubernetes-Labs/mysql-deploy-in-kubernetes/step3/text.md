@@ -23,12 +23,23 @@ mysql -h mysql-service -uroot -p'Very$ecure1#' -e 'SHOW databases;'
 
 Did this show anything, why or why not?
 
-Let's put information into the database
+Let's put information into the database. Connect like this.
+
+```plain
+mysql -h mysql-service -uroot -p'Very$ecure1#'
+```{{exec}}
 
 ```plain
 use mysql;
 CREATE TABLE persons (personID int, LastName varchar(255), FirstName varchar(255));
 ```
+
+Exit the mysql connection
+
+```plain
+exit
+```{{exec}}
+
 
 What information did we see back? Why is it relevant.
 

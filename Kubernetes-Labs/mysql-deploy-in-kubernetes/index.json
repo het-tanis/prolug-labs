@@ -1,0 +1,39 @@
+{
+    "title": "Kubernetes Deployments",
+    "description": "MySQL Deployment in Kubernetes",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Creating Storage and secret",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Create the service and deployment",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        },
+        {
+          "title": "Testing data writes and persistence",
+          "text": "step3/text.md",
+          "verify": "step3/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": "mysql-storage.yaml", "target": "/assets"},
+            {"file": "mysql-file.yaml", "target": "/assets"}
+		  ]
+	  },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-1node"
+    }
+  }

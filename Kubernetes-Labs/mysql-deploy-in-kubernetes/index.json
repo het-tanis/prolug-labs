@@ -25,8 +25,8 @@
       ],
 	    "assets": {
 	       "host01": [
-		        {"file": "mysql-storage.yaml", "target": "/assets"},
-            {"file": "mysql-file.yaml", "target": "/assets"}
+		        {"file": "mysql-storage.yaml", "target": "/answers"},
+            {"file": "mysql-file.yaml", "target": "/answers"}
 		  ]
 	  },
       "finish": {

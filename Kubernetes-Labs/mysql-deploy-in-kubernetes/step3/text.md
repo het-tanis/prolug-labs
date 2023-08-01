@@ -18,7 +18,7 @@ You will see that you have dropped into a pod bash shell.
 Run a connection test and see if you get data back.
 
 ```plain
-mysql -h mysql-service -uroot -p 'Very$ecure1#' -e 'SHOW databases;'
+mysql -h mysql-service -uroot -p'Very$ecure1#' -e 'SHOW databases;'
 ```{{exec}}
 
 Did this show anything, why or why not?
@@ -26,9 +26,16 @@ Did this show anything, why or why not?
 Let's put information into the database
 
 ```plain
-CREATE TABLE Persons (personID int, LastName varchar(255), FirstName varchar(255));
+use mysql;
+CREATE TABLE persons (personID int, LastName varchar(255), FirstName varchar(255));
 ```
 
 What information did we see back? Why is it relevant.
+
+Test the read of the table you created.
+
+```plain
+mysql -h mysql-service -uroot -p'Very$ecure1#' -e 'use mysql; show tables; select * from persons'
+```{{exec}}
 
 </details>

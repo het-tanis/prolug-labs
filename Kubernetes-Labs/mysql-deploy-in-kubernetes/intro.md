@@ -1,1 +1,1 @@
-#Welcome to ProLUG Kubernetes blue green deployments
+#Welcome to ProLUG Kubernetes mysql deployment

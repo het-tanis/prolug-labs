@@ -1,4 +1,4 @@
-Create a service that exposes the mysql pod to the internal cluster on port 3306. Name it mysql
+Create a service that exposes the mysql pod to the internal cluster on port 3306. Name it mysql-service
 
 Create a deployment that runs a mysql pod that is listening on port 3306. Ensure that the resources come up correctly.
 

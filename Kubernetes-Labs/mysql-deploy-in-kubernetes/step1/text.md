@@ -2,7 +2,6 @@ Your organization is going to start building out three tier apps. You know that 
 
 Create a PV and PVC to store your mysql data. Make sure it is at least 10 GB.
 
-This is an image that shows what this lab does. Reference it to better understand what you're doing.
 
 
 <br>

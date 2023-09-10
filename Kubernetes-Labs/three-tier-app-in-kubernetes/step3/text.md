@@ -17,7 +17,7 @@ cat /root/security/network_policy_deny.yaml
 Examine the network policy to allow app1 pods to communicate in on port 3306
 
 ```plain
-cat /root/security/network_policay_allow_app1.yaml
+cat /root/security/network_policy_allow_app1.yaml
 ```{{exec}}
 
 Apply the polcies.
@@ -27,7 +27,7 @@ kubectl create -f /root/security/network_policy_deny.yaml
 ```{{exec}}
 
 ```plain
-kubectl create -f /root/security/network_policy_deny.yaml
+kubectl create -f /root/security/network_policy_allow_app1.yaml
 ```{{exec}}
 
 Test communication is still working for the application
@@ -46,7 +46,7 @@ kubectl run mysql-client --image=mysql:5.7 -it --rm --restart=Never -- /bin/bash
 ```{{exec}}
 
 ```plain
-mysql -h mysql-service -uroot -p'Very$ecure1#' -e 'use visitors; show tables; select * from persons'
+mysql -h mysql-service.data1.svc.cluster.local -uroot -p'Very$ecure1#' -e 'use visitors; show tables; select * from persons'
 ```{{exec}}
 
 Create one in the app namespace and verify it connects.

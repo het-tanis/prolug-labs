@@ -30,6 +30,7 @@
             {"file": "read_Dockerfile", "target": "/root/flask_read_docker"},
             {"file": "test-app1.yaml", "target": "/root/flask_docker"},
             {"file": "read-app1.yaml", "target": "/root/flask_read_docker"},
+            {"file": "secure-read-app1.yaml", "target": "/root/security"},
             {"file": "network_policy_deny.yaml", "target": "/root/security"},
             {"file": "network_policy_allow_app1.yaml", "target": "/root/security"},
             {"file": "ingress_create.yaml", "target": "/root/setup"},

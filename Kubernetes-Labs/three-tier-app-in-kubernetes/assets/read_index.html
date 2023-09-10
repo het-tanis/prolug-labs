@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Docker</title>
+</head>
+<body>
+    <h1>This is a read of the database</h1>
+    <div>
+    <% for row in results %}
+    <tr>
+       <td>{{ row[0] }}</td>
+       <td>{{ row[1] }}</td>
+    </tr>
+    {% endfor %}
+    </div>
+</body>
+</html>

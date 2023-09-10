@@ -151,13 +151,19 @@ INSERT INTO persons VALUES ('1', 'phillip', 'devnull');
 INSERT INTO persons VALUES ('2', 'het', 'tanis');
 ```
 
+Type `exit` to leave the mysql client
+
 Test the read of the table you created.
 
 ```plain
 mysql -h mysql-service -uroot -p'Very$ecure1#' -e 'use visitors; show tables; select * from persons'
 ```{{exec}}
 
-Exit the pod and run the application path to read data from the database.
+Type `exit` to leave the mysql-client pod.
+
+Now it's time to build the read application in flask to read the data from that database.
+
+
 
 
 

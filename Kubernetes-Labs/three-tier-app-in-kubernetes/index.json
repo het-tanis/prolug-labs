@@ -27,11 +27,11 @@
 	    "assets": {
 	       "host01": [
             {"file": "Dockerfile", "target": "/root/flask_docker"},
-            {"file": "read_Dockerfile", "target": "/root/flask_read_docker/Dockerfile"},
+            {"file": "read_Dockerfile", "target": "/root/flask_read_docker"},
             {"file": "test-app1.yaml", "target": "/root/flask_docker"},
             {"file": "ingress_create.yaml", "target": "/root/setup"},
             {"file": "index.html", "target": "/root/flask_docker/templates"},
-            {"file": "read_index.html", "target": "/root/flask_read_docker/templates"},
+            {"file": "read_index.html", "target": "/root/flask_read_docker"},
             {"file": "mysql-deploy.yaml", "target": "/root/mysql"},
             {"file": "requirements.txt", "target": "/root/flask_docker"},
             {"file": "read_requirements.txt", "target": "/root/flask_read_docker"},

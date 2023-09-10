@@ -100,6 +100,14 @@ curl application.lab.mine:30080/test
 
 Create the mysql portion and populate it with data.
 
+Inspect the mysql deployment and service file
+
+```plain
+cat /root/mysql/mysql-deploy.yaml
+```{{exec}}
+
+Do you see the correct namespace and application selector for the deployment and service?
+
 Deploy the service file provided.
 ```plain
 kubectl create -f /root/mysql/mysql-deploy.yaml
@@ -124,7 +132,7 @@ Now let's load the database with some sample data to read out from our applicati
 Deploy a pod to use to connect to the mysql database
 
 ```plain
-kubectl run mysql-client --image=mysql:5.7 -it --rm --restart=Never -- /bin/bash
+kubectl run mysql-client -n data1 --image=mysql:5.7 -it --rm --restart=Never -- /bin/bash
 ```{{exec}}
 
 You will see that you have dropped into a container bash shell.
@@ -136,16 +144,17 @@ mysql -h mysql-service -uroot -p'Very$ecure1#'
 ```{{exec}}
 
 ```plain
+CREATE DATABASE visitors;
 use visitors;
 CREATE TABLE persons (personID int, FirstName varchar(255), LastName varchar(255));
-INSERT INTO persons VALUES ('phillip', 'devnull');
-INSERT INTO persons VALUSE ('het', 'tanis');
+INSERT INTO persons VALUES ('1', 'phillip', 'devnull');
+INSERT INTO persons VALUSE ('2', 'het', 'tanis');
 ```
 
 Test the read of the table you created.
 
 ```plain
-mysql -h mysql-service -uroot -p'Very$ecure1#' -e 'use mysql; show tables; select * from persons'
+mysql -h mysql-service -uroot -p'Very$ecure1#' -e 'use visitors; show tables; select * from persons'
 ```{{exec}}
 
 Exit the pod and run the application path to read data from the database.

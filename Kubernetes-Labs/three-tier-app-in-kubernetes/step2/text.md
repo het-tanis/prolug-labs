@@ -103,10 +103,13 @@ kubectl get svc -n data1
 kubectl describe svc mysql-service -n data1
 ```{{exec}}
 
+You may have to wait ~15 seconds for the container to create
+
 ```plain
 kubectl get deployments -n data1
 kubectl get pods -o wide -n data1 --show-labels
 ```{{exec}}
+
 
 
 

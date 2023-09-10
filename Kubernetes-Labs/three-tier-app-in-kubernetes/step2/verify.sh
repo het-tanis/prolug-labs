@@ -1,3 +1,3 @@
 #!/bin/bash
 
-kubectl get svc app1-service -n app1
+kubectl get svc test-app1-service -n app1

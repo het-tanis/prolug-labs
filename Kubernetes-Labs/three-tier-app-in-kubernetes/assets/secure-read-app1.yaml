@@ -14,5 +14,6 @@ spec:
    image: localhost:5000/flask_read_docker:latest
    securityContext:
     allowPrivilegeEscalation: false
+    readOnlyRootFilesystem: true
    ports:
    - containerPort: 6000

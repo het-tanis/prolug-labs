@@ -148,7 +148,7 @@ CREATE DATABASE visitors;
 use visitors;
 CREATE TABLE persons (personID int, FirstName varchar(255), LastName varchar(255));
 INSERT INTO persons VALUES ('1', 'phillip', 'devnull');
-INSERT INTO persons VALUSE ('2', 'het', 'tanis');
+INSERT INTO persons VALUES ('2', 'het', 'tanis');
 ```
 
 Test the read of the table you created.

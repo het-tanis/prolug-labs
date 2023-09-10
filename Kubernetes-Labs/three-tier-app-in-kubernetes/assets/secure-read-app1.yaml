@@ -5,6 +5,9 @@ metadata:
    app: read-app1
  name: read-app1
  namespace: app1
+spec:
+ securityContext: 
+   runAsUser: 1000
  nodeName: controlplane
  containers:
  - name: read-app1

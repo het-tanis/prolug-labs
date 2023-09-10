@@ -34,15 +34,11 @@ cat /root/flask_docker/requirements.txt
 
 Check the sample flask application
 
-Check the docker file
-
 ```plain
 cat /root/flask_docker/view.py
 ```{{exec}}
 
 Check the basic index.html to render the test application
-
-Check the docker file
 
 ```plain
 cat /root/flask_docker/templates/index.html
@@ -93,28 +89,26 @@ cat /root/ingress/app1-ingress.yaml
 kubectl create -f /root/ingress/app1-ingress.yaml
 ```{{exec}}
 
-You may choose to write your own deployment and service, if you're preparing for the CKA or CKAD examinations. In that case, make sure the service is named mysql-service.
-
-Do you see the mysql deployment and service? How does the service know to use the deployment pod as it's endpoint?
+Create the mysql portion and populate it with data.
 
 Deploy the service file provided.
 ```plain
-kubectl create -f /answers/mysql-file.yaml
+kubectl create -f /root/mysql/mysql-deploy.yaml
 ```{{exec}}
 
 Inspect the resources that were created
 
 ```plain
-kubectl get svc
-kubectl describe svc mysql-service
+kubectl get svc -n data1
+kubectl describe svc mysql-service -n data1
 ```{{exec}}
 
 ```plain
-kubectl get deployments
-kubectl get pods -o wide --show-labels
+kubectl get deployments -n data1
+kubectl get pods -o wide -n data1 --show-labels
 ```{{exec}}
 
-Do you see that the pod IP is the same IP as the endpoint of the service? Do you see that the label on the pod matches the selector from the service?
+
 
 </details>
 

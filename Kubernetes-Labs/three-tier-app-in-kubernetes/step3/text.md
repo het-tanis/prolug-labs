@@ -52,11 +52,11 @@ mysql -h mysql-service.data1.svc.cluster.local -uroot -p'Very$ecure1#' -e 'use v
 Create one in the app namespace and verify it connects.
 
 ```plain
-kubectl run mysql-client  --image=mysql:5.7 -it --rm --restart=Never -- /bin/bash
+kubectl run mysql-client -n app1 --image=mysql:5.7 -it --rm --restart=Never -- /bin/bash
 ```{{exec}}
 
 ```plain
-mysql -h mysql-service -uroot -p'Very$ecure1#' -e 'use visitors; show tables; select * from persons'
+mysql -h mysql-service.data1.svc.cluster.local -uroot -p'Very$ecure1#' -e 'use visitors; show tables; select * from persons'
 ```{{exec}}
 
 Redeploy the read application in a secure fashion.

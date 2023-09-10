@@ -70,7 +70,7 @@ Inspect the resources that were created.
 
 ```plain
 kubectl get pv
-kubectl get pvc
+kubectl get pvc -n data1
 ```{{exec}}
 
 Check that the ingress controllers are setup and available.

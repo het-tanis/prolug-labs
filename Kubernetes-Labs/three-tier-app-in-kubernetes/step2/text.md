@@ -72,8 +72,19 @@ kubectcl create -f /root/flask_docker/test-app1.yaml
 Create the service for test-app1-service
 
 ```plain
-kubectl expose pod test-app1 --port=6000  --name=test-app1-service -n app1
+kubectl expose pod test-app1 --port=6000  --name=test-app1-service -n test-app1
 ```{{exec}}
+
+Verify the pods is exposed on port 6000
+
+```plain
+kubectcl get pods -n app1 -o wide
+```{{exec}}
+
+```plain
+kubectcl describe service test-app1 -n app1
+```{{exec}}
+
 
 You may choose to write your own deployment and service, if you're preparing for the CKA or CKAD examinations. In that case, make sure the service is named mysql-service.
 

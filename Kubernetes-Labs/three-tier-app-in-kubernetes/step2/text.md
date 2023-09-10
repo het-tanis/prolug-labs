@@ -79,15 +79,24 @@ kubectl get pods -n app1 -o wide
 kubectl describe service test-app1 -n app1
 ```{{exec}}
 
-Create the ingress controller that points to your application
+Check the file for the ingress controller definition that points to your application.
 
 ```plain
 cat /root/ingress/app1-ingress.yaml
 ```{{exec}}
 
+Create the ingress controller that points to your application
+
 ```plain
 kubectl create -f /root/ingress/app1-ingress.yaml
 ```{{exec}}
+
+Test that you are able to see your application in action.
+
+```plain
+curl application.lab.mine:30080/test
+```{{exec}}
+
 
 Create the mysql portion and populate it with data.
 
@@ -109,6 +118,37 @@ You may have to wait ~15 seconds for the container to create
 kubectl get deployments -n data1
 kubectl get pods -o wide -n data1 --show-labels
 ```{{exec}}
+
+Now let's load the database with some sample data to read out from our application.
+
+Deploy a pod to use to connect to the mysql database
+
+```plain
+kubectl run mysql-client --image=mysql:5.7 -it --rm --restart=Never -- /bin/bash
+```{{exec}}
+
+You will see that you have dropped into a container bash shell.
+
+Let's put information into the database. Connect like this.
+
+```plain
+mysql -h mysql-service -uroot -p'Very$ecure1#'
+```{{exec}}
+
+```plain
+use visitors;
+CREATE TABLE persons (personID int, FirstName varchar(255), LastName varchar(255));
+INSERT INTO persons VALUES ('phillip', 'devnull');
+INSERT INTO persons VALUSE ('het', 'tanis');
+```
+
+Test the read of the table you created.
+
+```plain
+mysql -h mysql-service -uroot -p'Very$ecure1#' -e 'use mysql; show tables; select * from persons'
+```{{exec}}
+
+Exit the pod and run the application path to read data from the database.
 
 
 

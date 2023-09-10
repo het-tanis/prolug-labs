@@ -1,6 +1,6 @@
 {
     "title": "Kubernetes Deployments",
-    "description": "MySQL Deployment in Kubernetes",
+    "description": "Kubernetes three tier application",
     "details": {
       "intro": {
         "text": "intro.md",

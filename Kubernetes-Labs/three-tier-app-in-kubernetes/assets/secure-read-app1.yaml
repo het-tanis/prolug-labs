@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ labels:
+   app: read-app1
+ name: read-app1
+ namespace: app1
+spec:
+ securityContext:
+   runAsUser: 1000
+ nodeName: controlplane
+ containers:
+ - name: read-app1
+   image: localhost:5000/flask_read_docker:latest
+   securityContext:
+    allowPrivilegeEscalation: false
+   ports:
+   - containerPort: 6000

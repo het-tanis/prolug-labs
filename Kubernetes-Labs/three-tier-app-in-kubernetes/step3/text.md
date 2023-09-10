@@ -1,52 +1,82 @@
-Now that you've created a mysql deployment and service, it's time to test that you can connect to it.
+Now the application needs security.
 
-Create a mysql-client and ensure that the DB connection is working.
+Create network policies that limit all traffic into data1 to only pods in the namespace app1.
 
-Write a table and read data from it, in mysql.
+Make the app1 test and read pods read only filesystems that are not run as the root user.
 
 <br>
 <details>
 <summary>Solution</summary>
-Deploy a pod to use to connect to the mysql database
+
+Examine the network policy to deny anything into data1
+
+```plain
+cat /root/security/network_policy_deny.yaml
+```{{exec}}
+
+Examine the network policy to allow app1 pods to communicate in on port 3306
+
+```plain
+cat /root/security/network_policay_allow_app1.yaml
+```{{exec}}
+
+Apply the polcies.
+
+```plain
+kubectl create -f /root/security/network_policy_deny.yaml
+```{{exec}}
+
+```plain
+kubectl create -f /root/security/network_policy_deny.yaml
+```{{exec}}
+
+Test communication is still working for the application
+
+Test that you are able to see your application in action.
+
+```plain
+curl application.lab.mine:30080/test
+curl application.lab.mine:30080/read
+```{{exec}}
+
+Create a mysql image in the default namespace and verify that it no longer connects.
 
 ```plain
 kubectl run mysql-client --image=mysql:5.7 -it --rm --restart=Never -- /bin/bash
 ```{{exec}}
 
-You will see that you have dropped into a pod bash shell.
-
-Run a connection test and see if you get data back.
-
 ```plain
-mysql -h mysql-service -uroot -p'Very$ecure1#' -e 'SHOW databases;'
+mysql -h mysql-service -uroot -p'Very$ecure1#' -e 'use visitors; show tables; select * from persons'
 ```{{exec}}
 
-Did this show anything, why or why not?
-
-Let's put information into the database. Connect like this.
+Create one in the app namespace and verify it connects.
 
 ```plain
-mysql -h mysql-service -uroot -p'Very$ecure1#'
+kubectl run mysql-client  --image=mysql:5.7 -it --rm --restart=Never -- /bin/bash
 ```{{exec}}
 
 ```plain
-use mysql;
-CREATE TABLE persons (personID int, LastName varchar(255), FirstName varchar(255));
-```
-
-Exit the mysql connection
-
-```plain
-exit
+mysql -h mysql-service -uroot -p'Very$ecure1#' -e 'use visitors; show tables; select * from persons'
 ```{{exec}}
 
-
-What information did we see back? Why is it relevant.
-
-Test the read of the table you created.
+Redeploy the read application in a secure fashion.
 
 ```plain
-mysql -h mysql-service -uroot -p'Very$ecure1#' -e 'use mysql; show tables; select * from persons'
+kubectl delete pod read-app1 -n app1
 ```{{exec}}
 
-</details>
+Check the new deployment for added security of non-root user and disallowed privilege escalation
+
+```plain
+cat /root/security/secure-read-app1.yaml
+```{{exec}}
+
+Deploy the application and verify connectivity
+
+```plain
+kubectl create -f /root/security/secure-read-app1.yaml
+```{{exec}}
+
+```plain
+curl application.lab.mine:30080/read
+```{{exec}}

@@ -8,10 +8,11 @@
 <body>
     <h1>This is a read of the database</h1>
     <div>
-    <% for row in results %}
+    {% for row in results %}
     <tr>
        <td>{{ row[0] }}</td>
        <td>{{ row[1] }}</td>
+       <td>{{ row[2] }}</td>
     </tr>
     {% endfor %}
     </div>

@@ -163,8 +163,91 @@ Type `exit` to leave the mysql-client pod.
 
 Now it's time to build the read application in flask to read the data from that database.
 
+Move to the right directory
+
+```plain
+cd /root/flask_read_docker
+```{{exec}}
+
+Check the docker file
+
+```plain
+cat /root/flask_read_docker/Dockerfile
+```{{exec}}
 
 
+Check the requirements file for flask and mysql requirements.
+
+```plain
+cat /root/flask_read_docker/requirements.txt
+```{{exec}}
+
+Check the read application
+
+```plain
+cat /root/flask_read_docker/read.py
+```{{exec}}
+
+Check the basic index.html to render the test application
+
+```plain
+cat /root/flask_read_docker/templates/index.html
+```{{exec}}
+
+When you've seen all the files, create the docker image.
+
+```plain
+docker image build -t flask_read_docker .
+```{{exec}}
+
+Tag and push the image to the local repository
+
+```plain
+docker tag flask_read_docker localhost:5000/flask_read_docker
+docker push localhost:5000/flask_read_docker
+```{{exec}}
+
+Create a simple flask application from your new image
+
+```plain
+kubectl create -f /root/flask_read_docker/test-app1.yaml
+```{{exec}}
+
+Create the service for read-app1-service
+
+```plain
+kubectl expose pod read-app1 --port=6000  --name=read-app1-service -n app1
+```{{exec}}
+
+Verify the pods is exposed on port 6000
+
+```plain
+kubectl get pods -n app1 -o wide
+```{{exec}}
+
+```plain
+kubectl describe service read-app1 -n app1
+```{{exec}}
+
+Check the file for the ingress controller definition that points to your application.
+
+```plain
+cat /root/ingress/complete-app1-ingress.yaml
+```{{exec}}
+
+Delete and redeploy the new ingress controller that points to your application
+
+```plain
+kubectl delete ingress -n app1
+kubectl create -f /root/ingress/complete-app1-ingress.yaml
+```{{exec}}
+
+Test that you are able to see your application in action.
+
+```plain
+curl application.lab.mine:30080/test
+curl application.lab.mine:30080/read
+```{{exec}}
 
 
 

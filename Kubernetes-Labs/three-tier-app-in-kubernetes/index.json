@@ -27,7 +27,7 @@
 	    "assets": {
 	       "host01": [
             {"file": "Dockerfile", "target": "/root/flask_docker"},
-            {"file": "flask_pod", "target": "/root/flask_docker"},
+            {"file": "test-app1.yaml", "target": "/root/flask_docker"},
             {"file": "ingress_create.yaml", "target": "/root/setup"},
             {"file": "index.html", "target": "/root/flask_docker/templates"},
             {"file": "mysql-deploy.yaml", "target": "/root/mysql"},

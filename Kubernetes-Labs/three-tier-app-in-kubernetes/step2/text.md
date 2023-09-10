@@ -14,8 +14,65 @@ Test the basic application functionality to the database.
 <summary>Solution</summary>
 Create the flask docker container image for our application.
 
+Move to the right directory
+
 ```plain
-cat /answers/mysql-file.yaml
+cd /root/flask_docker
+```{{exec}}
+
+Check the docker file
+
+```plain
+cat /root/flask_docker/Dockerfile
+```{{exec}}
+
+Check the requirements.txt file
+
+Check the requirements file for flask and mysql requirements
+
+```plain
+cat /root/flask_docker/requirements.txt
+```{{exec}}
+
+Check the sample flask application
+
+Check the docker file
+
+```plain
+cat /root/flask_docker/view.py
+```{{exec}}
+
+Check the basic index.html to render the test application
+
+Check the docker file
+
+```plain
+cat /root/flask_docker/templates/index.html
+```{{exec}}
+
+When you've seen all the files, create the docker image.
+
+```plain
+docker image build -t flask_docker .
+```{{exec}}
+
+Tag and push the image to the local repository
+
+```plain
+docker tag flask_docker localhost:5000/flask_docker
+docker push localhost:5000/flask_docker
+```{{exec}}
+
+Create a simple flask application from your new image
+
+```plain
+kubectcl create -f /root/flask_docker/test-app1.yaml
+```{{exec}}
+
+Create the service for test-app1-service
+
+```plain
+kubectl expose pod test-app1 --port=6000  --name=test-app1-service -n app1
 ```{{exec}}
 
 You may choose to write your own deployment and service, if you're preparing for the CKA or CKAD examinations. In that case, make sure the service is named mysql-service.

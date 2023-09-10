@@ -11,4 +11,4 @@ spec:
     from:
       - namespaceSelector:
           matchLabels:
-            name: app1
+            kubernetes.io/metadata.name: app1

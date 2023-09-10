@@ -12,7 +12,7 @@ Test the basic application functionality to the database.
 <br>
 <details>
 <summary>Solution</summary>
-Inspect the deployment and service file provided.
+Create the flask docker container image for our application.
 
 ```plain
 cat /answers/mysql-file.yaml

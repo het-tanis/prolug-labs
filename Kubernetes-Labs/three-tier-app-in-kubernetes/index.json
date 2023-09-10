@@ -14,7 +14,7 @@
           "verify": "step1/verify.sh"
         },
         {
-          "title": "Create the service and deployment",
+          "title": "Create the application, ingress, and database",
           "text": "step2/text.md",
           "verify": "step2/verify.sh"
         },

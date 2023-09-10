@@ -34,35 +34,60 @@ kubectl create namespace app1
 kubectl create namespace data1
 ```{{exec}}
 
+Create a secret to use with the mysql database
+
 ```plain 
 kubectl create secret generic mysql --from-literal=mysql-root-password='Very$ecure1#' -n data1
 ```{{exec}}
 
-Inspect the storage file provided.
-```plain
-cat /root/mysql/mysql-storage.yaml
-```{{exec}}
-
-Deploy the storage file provided.
-```plain
-kubectl create -f /root/mysql/mysql-storage.yaml
-```{{exec}}
-
-Inspect the resources that were created
+Inspect the secret that was created.
 
 ```plain
 kubectl get secrets -n data1
 ```{{exec}}
 
+Inspect the storage file provided.
+
 ```plain
-kubectl get pv,pvc -n data1
+cat /root/mysql/mysql-storage.yaml
 ```{{exec}}
 
-Check that the ingress controllers are setup 
+What are the two items being created?
+
+Deploy the storage file provided.
+
+```plain
+kubectl create -f /root/mysql/mysql-storage.yaml
+```{{exec}}
+
+Inspect the resources that were created.
+
+```plain
+kubectl get pv
+kubectl get pvc
+```{{exec}}
+
+Check that the ingress controllers are setup and available.
 
 ```plain
 kubectl get all -n ingress-nginx
 ```{{exec}}
+
+Verify that docker registry is running
+
+```plain
+docker ps
+```{{exec}}
+
+You should see docker running on port 5000 for the local image registry.
+
+Verify that there is a host entry in /etc/hosts for our ingress controller to resolve to.
+
+```plain
+grep app /etc/hosts
+```{{exec}}
+
+Do you see the line for the application hostname?
 
 If everything is deployed, you're ready to go onto the next part of this lab.
 

@@ -210,7 +210,7 @@ docker push localhost:5000/flask_read_docker
 Create a simple flask application from your new image
 
 ```plain
-kubectl create -f /root/flask_read_docker/test-app1.yaml
+kubectl create -f /root/flask_read_docker/read-app1.yaml
 ```{{exec}}
 
 Create the service for read-app1-service
@@ -238,7 +238,7 @@ cat /root/ingress/complete-app1-ingress.yaml
 Delete and redeploy the new ingress controller that points to your application
 
 ```plain
-kubectl delete ingress -n app1
+kubectl delete ingress ingress -n app1
 kubectl create -f /root/ingress/complete-app1-ingress.yaml
 ```{{exec}}
 
@@ -249,7 +249,7 @@ curl application.lab.mine:30080/test
 curl application.lab.mine:30080/read
 ```{{exec}}
 
-
+This part of the lab is completed and we're ready to move onto securing our application.
 
 </details>
 

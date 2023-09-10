@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ labels:
+   app: flask
+ name: flask
+ namespace: app1
+spec:
+ nodeName: controlplane
+ containers:
+ - name: flask
+   image: localhost:5000/flask_docker:latest
+   ports:
+   - containerPort: 6000

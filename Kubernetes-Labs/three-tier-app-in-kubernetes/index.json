@@ -1,0 +1,48 @@
+{
+    "title": "Kubernetes Deployments",
+    "description": "MySQL Deployment in Kubernetes",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "foreground": "foreground.sh",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Setup K8s for three tier app",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Create the service and deployment",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        },
+        {
+          "title": "Testing data writes and persistence",
+          "text": "step3/text.md",
+          "verify": "step3/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+            {"file": "Dockerfile", "target": "/root/flask_docker"},
+            {"file": "flask_pod", "target": "/root/flask_docker"},
+            {"file": "ingress_create.yaml", "target": "/root/setup"},
+            {"file": "index.html", "target": "/root/flask_docker/templates"},
+            {"file": "mysql-deploy.yaml", "target": "/root/mysql"},
+            {"file": "requirements.txt", "target": "/root/flask_docker"},
+            {"file": "storage.yaml", "target": "/root/setup"},
+            {"file": "mysql-storage.yaml", "target": "/root/mysql"},
+            {"file": "app1-ingress.yaml", "target": "/root/ingress"},
+            {"file": "view.py", "target": "/root/flask_docker"}
+		  ]
+	  },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2node"
+    }
+  }

@@ -21,20 +21,26 @@ Set up secrets
 <summary>Solution</summary>
 Check and then setup namespaces for your application.
 
-Get current namespaces
+Get current namespaces.
 
 ```plain 
 kubectl get ns
 ```{{exec}}
 
-Create planned namespaces
+Create planned namespaces.
 
 ```plain 
 kubectl create namespace app1
 kubectl create namespace data1
 ```{{exec}}
 
-Create a secret to use with the mysql database
+Check current namespaces again.
+
+```plain 
+kubectl get ns
+```{{exec}}
+
+Create a secret to use with the mysql database.
 
 ```plain 
 kubectl create secret generic mysql --from-literal=mysql-root-password='Very$ecure1#' -n data1

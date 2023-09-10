@@ -26,9 +26,7 @@ Check the docker file
 cat /root/flask_docker/Dockerfile
 ```{{exec}}
 
-Check the requirements.txt file
-
-Check the requirements file for flask and mysql requirements
+Check the requirements file for flask and mysql requirements.
 
 ```plain
 cat /root/flask_docker/requirements.txt
@@ -66,25 +64,34 @@ docker push localhost:5000/flask_docker
 Create a simple flask application from your new image
 
 ```plain
-kubectcl create -f /root/flask_docker/test-app1.yaml
+kubectl create -f /root/flask_docker/test-app1.yaml
 ```{{exec}}
 
 Create the service for test-app1-service
 
 ```plain
-kubectl expose pod test-app1 --port=6000  --name=test-app1-service -n test-app1
+kubectl expose pod test-app1 --port=6000  --name=test-app1-service -n app1
 ```{{exec}}
 
 Verify the pods is exposed on port 6000
 
 ```plain
-kubectcl get pods -n app1 -o wide
+kubectl get pods -n app1 -o wide
 ```{{exec}}
 
 ```plain
-kubectcl describe service test-app1 -n app1
+kubectl describe service test-app1 -n app1
 ```{{exec}}
 
+Create the ingress controller that points to your application
+
+```plain
+cat /root/ingress/app1-ingress.yaml
+```{{exec}}
+
+```plain
+kubectl create -f /root/ingress/app1-ingress.yaml
+```{{exec}}
 
 You may choose to write your own deployment and service, if you're preparing for the CKA or CKAD examinations. In that case, make sure the service is named mysql-service.
 

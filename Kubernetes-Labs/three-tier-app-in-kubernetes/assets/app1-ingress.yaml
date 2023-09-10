@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress
-  namespace: world
+  namespace: app1
   annotations:
     # this annotation removes the need for a trailing slash when calling urls
     # but it is not necessary for solving this scenario
@@ -17,6 +17,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: app1-service
+            name: test-app1-service
             port:
               number: 6000

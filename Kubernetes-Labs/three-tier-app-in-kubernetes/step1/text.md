@@ -1,7 +1,7 @@
 
 This lab is part of a larger presentation given to ProLUG and Redline Perfomance Solutions. It is standalone, but more context can be found on the discord of the ProLUG group.
 
-Your organization has tasked you to build a modern three tire application using Kubernetes. You have decided to use Nginx, Flask, and MySQL to build a basic POC (Proof of Concept) of the idea.
+Your organization has tasked you to build a modern three tier application using Kubernetes. You have decided to use Nginx, Flask, and MySQL to build a basic POC (Proof of Concept) of the idea.
 
 Your organization would like the minimum level of security applied that follows best practice industry standards for Kubernetes pod deployments.
 

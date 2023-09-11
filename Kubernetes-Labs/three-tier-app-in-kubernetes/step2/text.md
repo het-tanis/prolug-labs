@@ -57,6 +57,12 @@ docker tag flask_docker localhost:5000/flask_docker
 docker push localhost:5000/flask_docker
 ```{{exec}}
 
+Check the yaml for you pod definition.
+
+```plain
+cat /root/flask_docker/test-app1.yaml
+```{{exec}}
+
 Create a simple flask application from your new image
 
 ```plain
@@ -174,7 +180,6 @@ Check the docker file
 ```plain
 cat /root/flask_read_docker/Dockerfile
 ```{{exec}}
-
 
 Check the requirements file for flask and mysql requirements.
 

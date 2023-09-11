@@ -27,3 +27,4 @@ spec:
             name: read-app1-service
             port:
               number: 6000
+              

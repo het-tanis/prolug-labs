@@ -17,3 +17,4 @@ spec:
     readOnlyRootFilesystem: true
    ports:
    - containerPort: 6000
+   

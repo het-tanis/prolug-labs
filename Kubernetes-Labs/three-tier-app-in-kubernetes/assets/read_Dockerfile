@@ -17,3 +17,4 @@
       ENTRYPOINT [ "python" ]
 
       CMD ["read.py" ]
+      

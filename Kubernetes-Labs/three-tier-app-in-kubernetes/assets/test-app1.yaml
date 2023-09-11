@@ -12,3 +12,4 @@ spec:
    image: localhost:5000/flask_docker:latest
    ports:
    - containerPort: 6000
+   

@@ -12,3 +12,4 @@ spec:
       - namespaceSelector:
           matchLabels:
             kubernetes.io/metadata.name: app1
+            

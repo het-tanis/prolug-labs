@@ -1,2 +1,1 @@
-#This lab is under construction
-#Welcome to ProLUG Kubernetes mysql deployment
+#Welcome to ProLUG Kubernetes 3 tier deployment application lab

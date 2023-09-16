@@ -1,5 +1,5 @@
 [Unit]
-Description=Loki Startup
+Description=Promtail Service Startup
 Wants=network-online.target
 After=network-online.target
 

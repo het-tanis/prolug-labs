@@ -88,7 +88,7 @@ Put this information in the page.
 
 ```plain
 <html>
-<head><title>Dev Page</title><head>
+<head><title>Dev Page</title></head>
 <body>Dev Environment</body>
 </html>
 ```
@@ -101,7 +101,7 @@ Put this information in the page.
 
 ```plain
 <html>
-<head><title>Test Page</title><head>
+<head><title>Test Page</title></head>
 <body>Test Environment</body>
 </html>
 ```
@@ -114,7 +114,7 @@ Put this information in the page.
 
 ```plain
 <html>
-<head><title>QA Page</title><head>
+<head><title>QA Page</title></head>
 <body>QA Environment</body>
 </html>
 ```

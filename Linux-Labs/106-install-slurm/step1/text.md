@@ -75,13 +75,13 @@ ssh node01 'systemctl restart slurmd'
 Verify that munge is running on controlplane
 
 ```plain
-systemctl status munge
+systemctl status munge --no-page
 ```{{exec}}
 
 Verify that slurmd is running on controlplane and that slurmd is listening on it's defined port.
 
 ```plain
-systemctl status slurmd
+systemctl status slurmd --no-pager
 ss -ntulp | grep -i slurm
 ```{{exec}}
 

@@ -56,6 +56,6 @@ When this has completed, check the file output that was defined.
 cat /root/result.txt
 ```{{exec}}
 
-What is the output and was it expected from the node(s) that this exectued on?
+What is the output and was it expected from the node(s) that this executed on?
 
 </details>

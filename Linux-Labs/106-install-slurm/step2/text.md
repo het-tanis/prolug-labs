@@ -25,6 +25,6 @@ What new information do you see when you add to the sinfo command?
 sinfo -N l
 ```{{exec}}
 
-If you are confident that you cluster is running properly, you can move on to the next stage, which is running simple and batch type jobs against the system.
+If you are confident that you cluster is running properly, you can move on to the next stage, which is running simple and batch type jobs against the cluster.
 
 </details>

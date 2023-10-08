@@ -34,7 +34,7 @@ What happens when you schedule a run against more nodes than you have in the clu
 srun -n 10 hostname
 ```{{exec}}
 
-How did this behave differently than you saw in the other commands?
+How did this behave differently than you saw in the other commands? You may have to kill this command with crtl + c . Does it make sense that you tried to schedule against more nodes than you had, and the system did not react well?
 
 Now it is time to run a batch job and look at the configurations we can set inside of a config file.
 
@@ -44,13 +44,15 @@ Examine the /root/submit.sh file and look at the parameters configured.
 cat /root/submit.sh
 ```{{exec}}
 
-Submit the submit.sh to the cluster for execution.
+Submit the submit.sh to the cluster for execution, and immediately look at the queue to see the job status.
 
 ```plain
-sbatch submit.sh
+sbatch /root/submit.sh; squeue
 ```{{exec}}
 
-When this has completed, check the file output that was defined.
+Can you see the job ID? Can you tell what node this job is executing on?
+
+When this has completed, check the file output that was defined. Verify that the node hostname matches what you saw in your squeue command. Does it? 
 
 ```plain
 cat /root/result.txt

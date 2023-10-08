@@ -23,7 +23,7 @@ apt install slurmd slurmctld -y
 Install Slurmd and Munge daemons on the node01 node.
 
 ```plain
-apt install slurmd -y
+ssh node01 'apt install slurmd -y'
 ```{{exec}}
 
 Copy the over the munge key from controlplane to node01 so that munge is communicating. Slurm requires munge to communicate with the end nodes.
@@ -44,6 +44,15 @@ Now that you have munge working correctly, it's time to configure Slurm. You may
 cp /answers/slurm.conf /etc/slurm-llnl/slurm.conf
 ```{{exec}}
 
+Review the configuration to see the cluster name.
+Review the configuration to see the slurmdctl node.
+Review the configuration to see the partition name.
+Review the configuration to see the nodes definitions
+
+```plain
+cat /answers/slurm.conf 
+```{{exec}}
+
 Copy this config to the other node
 
 ```plain
@@ -61,6 +70,19 @@ Restart the slurmd service on node01
 
 ```plain
 ssh node01 'systemctl restart slurmd'
+```{{exec}}
+
+Verify that munge is running on controlplane
+
+```plain
+systemctl status munge
+```{{exec}}
+
+Verify that slurmd is running on controlplane and that slurmd is listening on it's defined port.
+
+```plain
+systemctl status slurmd
+ss -ntulp | grep -i slurm
 ```{{exec}}
 
 Once this is complete, you have stood up a Slurm cluster of 2 nodes, and you can begin to test in the next section.

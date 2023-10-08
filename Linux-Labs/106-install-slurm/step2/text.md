@@ -11,6 +11,14 @@ Run the command scontrol show config to see the state of the cluster. What infor
 scontrol show config
 ```{{exec}}
 
+Can you find the log location for where slurmd and slurmctld are writing in your cluster?
+
+```plain
+scontrol show config | grep -i log
+```{{exec}}
+
+Where are your logs writing? Why might this information be useful to you as an administrator?
+
 Run the sinfo -N command to see the state of the nodes.
 
 ```plain

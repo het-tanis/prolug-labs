@@ -23,6 +23,6 @@ Run or change the playbooks as you see fit.
 ansible-playbook -i hosts 01_nfs_system.yaml
 ```{{exec}}
 
-Keep working on sandbox practice
+This breaks the first run, but works the second. This is just a sandbox environment, but feel free to play with why that happens.
 
 </details>

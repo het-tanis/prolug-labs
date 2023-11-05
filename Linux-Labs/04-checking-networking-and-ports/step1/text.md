@@ -1,3 +1,5 @@
+You are a new system administrator at a company. You've been tasked with finding out information about a set of servers that has very little to no documentation on it.
+
 Check network information.
 
 Put the name of your network interface into a file called /root/interface.

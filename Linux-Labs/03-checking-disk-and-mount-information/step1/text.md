@@ -1,3 +1,5 @@
+You are a new system administrator at a company. You've been tasked with finding out information about a set of servers that has very little to no documentation on it. 
+
 Check physical disk information.
 
 Echo the number of physical disks you have into /root/disks

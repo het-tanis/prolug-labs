@@ -1,6 +1,10 @@
-Check kernel and package info on the system
+You are a new system administrator at a company. You've been tasked with finding out information about a set of servers that has very little to no documentation on it.
 
-Echo the number of kernel versions that are stored on this system into /root/kernel
+Check kernel and package info on the system.
+
+Echo the number of kernel versions that are stored on this system into /root/kernel.
+
+Find specific versions of the software that the security team has been asking about, specifically ssh server and client.
 
 <br>
 

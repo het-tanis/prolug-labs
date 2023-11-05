@@ -1,6 +1,6 @@
 Your organization is going to start building out three tier apps. You know that mysql can act as a backend to that architecture. You decided to deploy mysql into a Kubernetes cluster.
 
-Create a PV and PVC to store your mysql data. Make sure it is at least 10 GB.
+Create a PV and PVC to store your mysql data. Make sure it is at least 10 GiB.
 
 
 

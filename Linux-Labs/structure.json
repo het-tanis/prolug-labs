@@ -1,0 +1,10 @@
+{
+    "items": [
+      { "path": "01-system-checking" },
+      { "path": "02-checking-kernel-and-packages" },
+      { "path": "03-checking-disk-and-mount-information" },
+      { "path": "04-checking-networking-and-ports" },
+      { "path": "05-ssh-and-scp" },
+      { "path": "06-screen-commands" }
+    ]
+  }

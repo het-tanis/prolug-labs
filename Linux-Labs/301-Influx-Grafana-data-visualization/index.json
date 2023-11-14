@@ -1,6 +1,6 @@
 {
     "title": "Let's do Linux Configurations",
-    "description": "Grafana Monitoring of Telemetry data with Telegraf, InfluxDB, and Grafana",
+    "description": "Data Visualization with Grafana",
     "details": {
       "intro": {
         "text": "intro.md",

@@ -1,0 +1,23 @@
+{
+    "items": [
+      { "path": "01-Install-Ansible" },
+      { "path": "02-Ansible-Host-File" },
+      { "path": "03-Ansible-Ad-Hoc" },
+      { "path": "04-Ansible-Ad-Hoc-lineinfile" },
+      { "path": "05-Ansible-Playbook-Staging" },
+      { "path": "06-Ansible-Playbook-Deployer" },
+      { "path": "07-Ansible-Playbook-Jijna-Templates" },
+      { "path": "08-Ansible-Playbook-Jinja-Reporting" },
+      { "path": "09-Ansible-APIs-and-Debug-Variables" },
+      { "path": "10-Ansible-Vaulting-Password-and-Variables" },
+      { "path": "11-Ansible-MOTD-Push" },
+      { "path": "12-Ansible-System-Facts-Grouping" },
+      { "path": "13-Ansible-Create-Users" },
+      { "path": "14-Ansible-Package-Management" },
+      { "path": "15-Ansible-Galaxy-and-Roles" },
+      { "path": "16-Ansible-Web-Server-Env-Deploy" },
+      { "path": "17-Ansible-Package-Cleanup-Security" },
+      { "path": "18-Ansible-NFS-Deploy" },
+      { "path": "101-Enterprise-Ansible-Sandbox" }
+    ]
+  }

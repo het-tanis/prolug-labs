@@ -5,6 +5,19 @@
       { "path": "03-checking-disk-and-mount-information" },
       { "path": "04-checking-networking-and-ports" },
       { "path": "05-ssh-and-scp" },
-      { "path": "06-screen-commands" }
+      { "path": "06-screen-commands" },
+      { "path": "07-working-with-DNS" },
+      { "path": "100-configure-nfs-share" },
+      { "path": "101-configure-apache-server" },
+      { "path": "102-monitoring-linux-logs" },
+      { "path": "103-monitoring-linux-telemetry" },
+      { "path": "104-monitoring-linux-Influx-Grafana" },
+      { "path": "105-install-antivirus" },
+      { "path": "106-install-slurm" },
+      { "path": "201-attempted-user-login" },
+      { "path": "202-attempted-sudo-access" },
+      { "path": "203-updating-golden-image" },
+      { "path": "204-building-a-chroot-jail" },
+      { "path": "301-Influx-Grafana-data-visualization" }
     ]
   }

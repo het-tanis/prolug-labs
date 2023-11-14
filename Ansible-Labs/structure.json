@@ -15,7 +15,7 @@
       { "path": "13-Ansible-Create-Users" },
       { "path": "14-Ansible-Package-Management" },
       { "path": "15-Ansible-Galaxy-and-Roles" },
-      { "path": "16-Web-Server-Env-Deploy" },
+      { "path": "16-Ansible-Web-Server-Env-Deploy" },
       { "path": "17-Ansible-Package-Cleanup-Security" },
       { "path": "18-Ansible-NFS-Deploy" },
       { "path": "101-Enterprise-Ansible-Sandbox" }

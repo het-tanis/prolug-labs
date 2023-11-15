@@ -21,9 +21,9 @@
 	    "assets": {
 	       "host01": [
 		        {"file": "hosts", "target": "~/"},
-            {"file": "data_gather.yaml", "target": "~/answers"},
-            {"file": "data_gather.j2", "target": "~/answers"},
-            {"file": "main.yml", "target": "~/answers"}
+            {"file": "data_gather.yaml", "target": "/answers"},
+            {"file": "data_gather.j2", "target": "/answers"},
+            {"file": "main.yml", "target": "/answers"}
          ]
         },
       "finish": {

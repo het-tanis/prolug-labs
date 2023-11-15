@@ -7,7 +7,7 @@ Create a directory called ` /root/playbooks/roles `
 
 Create one galaxy inside of /root/playbooks/roles called ` data_gather `.
 
-Update the data_gather roles to properly do their functions, which can be referenced from /answers/ files.
+Update the data_gather roles to properly do it's function, which can be referenced from /answers/ files.
 
 
 <br>

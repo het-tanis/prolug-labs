@@ -56,7 +56,7 @@ cat /root/playbooks/data_gather.yaml
 Copy the main.yml from /answers into main.yml so that it executes correctly.
 
 ```plain
-cp /answers/main.yml /root/playbooks/roles/data_gater/tasks/main.yml
+cp /answers/main.yml /root/playbooks/roles/data_gather/tasks/main.yml
 ```{{exec}}
 
 Now that you've done that examine the playbook to see what is going to happen.
@@ -72,7 +72,7 @@ What is the iso8601_basic_short value going to do when ansible_date_time is call
 Copy the Jinja2 template from /answers into data_gather.j2 so that it can be reported out.
 
 ```plain
-cp /answers/data_gather.j2 /root/playbooks/roles/data_gater/templates/data_gather.j2
+cp /answers/data_gather.j2 /root/playbooks/roles/data_gather/templates/data_gather.j2
 ```{{exec}}
 
 Now that you've done that examine the Jinja2 to see what is going to be reported out

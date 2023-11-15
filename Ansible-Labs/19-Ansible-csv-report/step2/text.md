@@ -1,7 +1,7 @@
 ### Lab Activities
 So now that we have the role and playbook correct, let's execute and see it work.
 
-Test the playbook with and without the different tags ` data_gather `.
+Test the playbook ` data_gather `.
 
 
 <br>

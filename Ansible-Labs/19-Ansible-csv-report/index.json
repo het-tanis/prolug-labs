@@ -1,0 +1,36 @@
+{
+    "title": "Ansible Playbooks",
+    "description": "Ansible to generate CSV Report",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Create roles and templates",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Playbook execution that gathers CSV Data",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": "hosts", "target": "~/"},
+            {"file": "data_gather.yaml", "target": "~/answers"},
+            {"file": "data_gather.j2", "target": "~/answers"},
+            {"file": "main.yml", "target": "~/answers"}
+         ]
+        },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

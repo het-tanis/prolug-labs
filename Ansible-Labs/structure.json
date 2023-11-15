@@ -18,6 +18,7 @@
       { "path": "16-Ansible-Web-Server-Env-Deploy" },
       { "path": "17-Ansible-Package-Cleanup-Security" },
       { "path": "18-Ansible-NFS-Deploy" },
+      { "path": "19-Ansible-csv-report" },
       { "path": "101-Enterprise-Ansible-Sandbox" }
     ]
   }

@@ -1,0 +1,6 @@
+Date,Node Name,Server Make,Server Model,Processor Type and Model,Socket #
+{% for host in ansible_play_hosts_all %}
+{% if hostvars[host].socket is defined %}
+{{ansible_date_time.date}} {{ansible_date_time.time}},{{hostvars[host].ansible_hostname}},{{hostvars[host].ansible_system_vendor}},{{hostvars[host].ansible_product_name}},{{hostvars[host].proc.stdout}},{{hostvars[host].socket.stdout}}
+{% endif %}
+{% endfor %}

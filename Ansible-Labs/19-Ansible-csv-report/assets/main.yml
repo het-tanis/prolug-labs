@@ -1,0 +1,37 @@
+---
+# tasks file for data_gather
+# What are we doing?
+# Gather a bunch of data about the system and
+# show it via a CSV format
+# Server Name: Facts
+# Server Make: Facts
+# Server Model: Facts
+# Proc Type: Command
+# Socket #: Command
+
+- name: gather processor type
+  shell: "lscpu | grep 'Model name' | cut -d: -f2 | awk '{$1=$1};1'"
+  register: proc_type
+
+- name: gather socket number
+  shell: "lscpu | grep 'Socket' | cut -d: -f2 | awk '{$1=$1};1'"
+  register: socket
+
+- name: Debug everything
+  debug:
+    var: "{{ item }}"
+    verbosity: 2
+  loop:
+    - ansible_hostname
+    - ansible_system_vendor
+    - ansible_product_name
+    - proc_type.stdout
+    - socket.stdout
+
+
+- name: Deploy the Template
+  template:
+    src: /root/playbooks/roles/data_gather/templates/data_gather.j2
+    dest: /root/playbooks/reports/report.{{ansible_date_time.iso8601_basic_short}}.csv
+  run_once: true
+  delegate_to: localhost

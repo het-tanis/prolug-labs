@@ -16,7 +16,9 @@ ansible-playbook -i /root/hosts /root/playbooks/data_gather.yaml
 
 When runs, does it show the debug output? How do you know?
 
-Check the output of the report.
+Check the output of the report. 
+
+Is it a properly formatted .csv? How can you tell?
 
 ```plain
 ls -l /root/playbooks/reports/*.csv
@@ -30,5 +32,12 @@ ansible-playbook -vv -i /root/hosts /root/playbooks/data_gather.yaml
 ```{{exec}}
 
 Did you see the debug output of all the variables? What caused this?
+
+Check the output of the reports again to see that there are now more than one.
+
+```plain
+ls -l /root/playbooks/reports/*.csv
+cat /root/playbooks/reports/*.csv
+```{{exec}}
 
 </details>

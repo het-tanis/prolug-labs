@@ -56,7 +56,7 @@ Let's populate that variable with some information
 
 ```plain
 uname
-name=`uname`
+name=$(uname)
 ```{{exec}}
 
 Test the output of a variable named `$name`
@@ -69,12 +69,12 @@ Can you capture whether or not processes are running? Test for httpd and sshd.
 
 ```plain
 ps -ef | grep -i [h]ttpd
-httpdCheck=`echo $?`
+httpdCheck=$(echo $?)
 ```{{exec}}
 
 ```plain
 ps -ef | grep -i [s]shd
-sshdCheck=`echo $?`
+sshdCheck=$(echo $?)
 ```{{exec}}
 
 Can you verify that they're correct? Which one is running and which one is not running?

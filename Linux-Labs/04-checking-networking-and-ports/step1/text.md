@@ -1,5 +1,3 @@
-You are a new system administrator at a company. You've been tasked with finding out information about a set of servers that has very little to no documentation on it.
-
 Check network information.
 
 Put the name of your network interface into a file called /root/interface.
@@ -22,13 +20,13 @@ ip addr
 What is the name of your interface? 
 
 ```plain
-ip addr | grep enp | grep mtu | awk '{print $2}'
+ip addr | grep enp | grep mtu | awk '{print $2}' | sed 's/://'
 ```{{exec}}
 
 Put that value in a file /root/interface.
 
 ```plain
-ip addr | grep enp | grep mtu | awk '{print $2}' > /root/interface
+ip addr | grep enp | grep mtu | awk '{print $2}' | sed 's/://' > /root/interface
 ```{{exec}}
 
 There are other ways to do this, but this will do it with one command.

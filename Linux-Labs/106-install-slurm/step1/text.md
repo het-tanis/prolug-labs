@@ -11,7 +11,7 @@ Install Slurm and have the appropriate daemons running.
 Update your apt repository.
 
 ```plain
-apt-get update -y
+apt update -y
 ```{{exec}}
 
 Install Slurmd, Slurmtcld, and Munge daemons on the controlplane node.

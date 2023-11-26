@@ -1,4 +1,6 @@
-You've installed and updated your antivirus, now it's time to make it run on a schedule. Test the script found at /answers/clamscan.sh. Set the script to run daily.
+You've installed and updated your antivirus, now it's time to make it run on a schedule. Test the script found at /answers/clamscan.sh. 
+
+Set the script to run daily.
 
 Execute the script.
 

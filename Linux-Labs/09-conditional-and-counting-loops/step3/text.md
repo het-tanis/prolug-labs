@@ -21,6 +21,19 @@ done
 ' > /root/file_create.sh
 ```
 
+Set the file to executible for root user and root group.
+
+```plain
+chmod 750 /root/file_create.sh
+```{{exec}}
+
+Execute the script
+
+```plain
+/root/file_create.sh
+```{{exec}}
+
+
 If this works, you can see the files in both locations with this loop.
 
 ```plain

@@ -8,6 +8,7 @@
       { "path": "06-screen-commands" },
       { "path": "07-working-with-DNS" },
       { "path": "08-variables-conditional-logic" },
+      { "path": "09-conditional-and-counting-loops"},
       { "path": "100-configure-nfs-share" },
       { "path": "101-configure-apache-server" },
       { "path": "102-monitoring-linux-logs" },

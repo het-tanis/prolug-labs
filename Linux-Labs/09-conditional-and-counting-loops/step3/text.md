@@ -8,17 +8,16 @@ Create a script that loops over a list of servers, logs into them, and then crea
 <details>
 <summary>Solution</summary>
 
-Create a script that connects over ssh to both servers and creates the neccessary files.
+Create a script that connects over ssh to both servers and creates the neccessary files. use vi or the text editor of your choice to create this script /root/file_create.sh
+
 
 ```plain
-echo '
 #!/bin/bash
 
 for server in $(cat /root/servers.txt)
-  do ssh $server "for i in $(seq 100); do touch /tmp/file$i; done"
+  do ssh $server 'for i in $(seq 100); do touch /tmp/file$i; done'
 done
 
-' > /root/file_create.sh
 ```
 
 Set the file to executible for root user and root group.

@@ -8,7 +8,7 @@ Create a script that loops over a list of servers, logs into them, and then crea
 <details>
 <summary>Solution</summary>
 
-Create a script that connects over ssh to both servers and creates the neccessary files. use vi or the text editor of your choice to create this script /root/file_create.sh
+Create a script that connects over ssh to both servers and creates the necessary files. use vi or the text editor of your choice to create this script /root/file_create.sh
 
 
 ```plain
@@ -20,7 +20,7 @@ done
 
 ```
 
-Set the file to executible for root user and root group.
+Set the file to executable for root user and root group.
 
 ```plain
 chmod 750 /root/file_create.sh
@@ -36,7 +36,7 @@ Execute the script
 If this works, you can see the files in both locations with this loop.
 
 ```plain
-for server in controlplane node01; do ssh $server 'ls /tmp/file*'; done
+for server in controlplane node01; do ssh $server 'hostname;ls /tmp/file* | wc -l'; done
 ```{{exec}}
 
 Do you see the output you expected? Why or why not?

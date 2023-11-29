@@ -54,7 +54,7 @@ grapes" >> fruit.txt
 Read the list from a file.
 
 ```plain
-for item in $(cat fruit.txt); do echo "I am reading $item"; don
+for item in $(cat fruit.txt); do echo "I am reading $item"; done
 ```{{exec}}
 
 Write the two servers in this lab to a file and then loop over the commands to execute to both servers.

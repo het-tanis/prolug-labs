@@ -10,7 +10,7 @@
 # Socket #: Command
 
 - name: gather processor type
-  shell: "lscpu | grep 'Model name' | cut -d: -f2 | awk '{$1=$1};1'"
+  shell: "lscpu | grep 'Model name' | cut -d: -f2 | awk -F, '{print $1}' | awk '{$1=$1};1'"
   register: proc_type
 
 - name: gather socket number

@@ -1,4 +1,6 @@
 ### Lab Activities
+Your team has had mistakes because users don't know what server they've jumped into, specifically DEV or PROD environments. You have decided to push a message of the day file (MOTD) to all servers to help them know what systems they are on.
+
 Verify your /root/hosts file and /root/motd_push.yaml file
 
 Push the motd messages to all servers based on the new variables assigned in the /root/hosts file.

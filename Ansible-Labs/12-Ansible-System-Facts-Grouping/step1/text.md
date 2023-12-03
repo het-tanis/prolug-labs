@@ -1,4 +1,7 @@
 ### Lab Activities
+
+Your team has decided to stamp variables to your servers so that they know information about themselves relative to their job functions.
+
 Verify your /root/hosts file, /root/custom_fact_push.yaml, and /root/group_by.yaml files. You may note that the hosts file has variables set that we will be using to push the correct files in our first playbook. In our second playbook we will be grouping by those facts so that the playbook can dynamically pull facts and group by those facts that servers "know" about themselves in the environment.
 
 Push the custom fact to all servers using custom_fact_push.yaml file

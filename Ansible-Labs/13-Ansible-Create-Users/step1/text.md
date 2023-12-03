@@ -1,4 +1,7 @@
 ### Lab Activities
+
+Your engineering team needs to push service accounts for new users and teams to some of your systems. You have decided to do that in Ansible.
+
 Verify your /root/hosts file, and /root/user_create.yaml files. You may note that the hosts file has variables set that we will be using to push the correct files in our first playbook. 
 
 Push the user prod_engineer to the prod servers and the dev_engineer user to the dev servers. In the dev environment the user is allowed to be in the admin group.

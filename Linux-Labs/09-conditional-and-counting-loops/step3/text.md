@@ -1,6 +1,6 @@
 Now that we've used some loops, we've decided we are going to create a script that uses both of the loop types to create 100 files on both of our servers.
 
-Create a script that loops over a list of servers, logs into them, and then creates 100 files called /tmp/file{{1..100}}.
+Create a script that loops over a list of servers, logs into them, and then creates 100 files called /tmp/file{1..100}.
 
 <br>
 

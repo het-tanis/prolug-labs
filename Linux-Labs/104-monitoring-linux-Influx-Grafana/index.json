@@ -29,6 +29,11 @@
           "verify": "step4/verify.sh"
         }
       ],
+      "assets": {
+        "host01": [
+           {"file": "influx-write.py", "target": "/answers"}
+        ]
+       },
 	    "finish": {
         "text": "finish.md"
       }

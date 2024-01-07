@@ -75,4 +75,8 @@ systemctl status prometheus.service --no-pager
 ps -ef | grep [p]rometheus
 ```{{exec}}
 
+You can also access prometheus via this link:
+
+{{TRAFFIC_HOST1_9090}}
+
 </details>

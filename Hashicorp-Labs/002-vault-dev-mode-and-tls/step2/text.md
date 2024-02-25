@@ -31,7 +31,7 @@ Export the values you need. These can be found in the output of the above comman
 
 ```plain
 
-export VAULT_ADDR='http://127.0.0.1:8200'
+export VAULT_ADDR='https://127.0.0.1:8200'
 export VAULT_CACERT=' <value from output>.pem '
 export VAULT_TOKEN=" <token from output> "
 

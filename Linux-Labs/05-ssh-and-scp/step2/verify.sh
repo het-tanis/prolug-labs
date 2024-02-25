@@ -1,3 +1,4 @@
 #!/bin/bash
 
-cksum /tmp/node01.crontab | grep 638366506
+ORIGINAL=$(ssh node01 'cksum /etc/crontab' | awk '{print $1}')
+cksum /tmp/node01.crontab | grep $ORIGINAL

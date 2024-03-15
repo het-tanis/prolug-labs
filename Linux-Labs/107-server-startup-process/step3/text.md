@@ -15,10 +15,10 @@ ss -ntulp | grep -i tcp | wc -l
 
 If you take a quick look at these, do you know what they all are doing?
 
-Check out the kc-terminal process
+Check out the systemd-resolve process
 
 ```plain
-lsof -i :40200
+lsof -i :53
 ```{{exec}}
 
 See if you can find how it was started?

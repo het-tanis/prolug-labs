@@ -16,6 +16,7 @@
       { "path": "104-monitoring-linux-Influx-Grafana" },
       { "path": "105-install-antivirus" },
       { "path": "106-install-slurm" },
+      { "path": "107-server-startup-process" },
       { "path": "201-attempted-user-login" },
       { "path": "202-attempted-sudo-access" },
       { "path": "203-updating-golden-image" },

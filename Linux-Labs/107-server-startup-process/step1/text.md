@@ -4,7 +4,7 @@ What kernel version and startup parameters were used to start this system?
 
 What hardware does your system currently run on? Processor, NIC, Virtualization?
 
-Use the Solution to follow along and look around a new Linux system for the first time.
+Use the Solution if you do not know the correct answers.
 
 <br>
 

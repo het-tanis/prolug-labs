@@ -13,6 +13,29 @@ What exposed ports do you see and what software are listening on those ports?
 ### Solution
 <details>
 <summary>Solution</summary>
+
+Let's start by looking at everything the kernel did from the time it was first called.
+
+```plain
+dmesg | more
+```{{exec}}
+
+What do you think the important pieces of the system startup are?
+
+Can you find the ethernet and it's associated driver?
+
+```plain
+dmesg | grep -i eth
+```{{exec}}
+
+Can you verify that this has been loaded as a kernel module?
+
+```plain
+lsmod | grep -i virtio_net
+```{{exec}}
+
+What other important kernel modules might you find with lsmod?
+
 Let's see how long the system took to come up to it's runtime target
 
 ```plain

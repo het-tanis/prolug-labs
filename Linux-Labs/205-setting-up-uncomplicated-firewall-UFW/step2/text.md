@@ -1,8 +1,8 @@
 So far you've enabled UFW and verified that you could see the open ports that are allowed to be connected to on your host.
 
-Setup a web server (apache2) on node01
+Setup a web server (apache2) on node01.
 
-Verify from controlplane that you cannot connect on port 80 to node01
+Verify from controlplane that you cannot connect on port 80 to node01.
 
 Allow apache2 (port 80) to be exposed through the UFW.
 
@@ -17,6 +17,9 @@ Install the apache2 web server and verify it is running.
 
 ```plain
 apt -y install apache2
+```{{exec}}
+
+```plain
 ss -ntulp | grep -i apache2
 lsof -i :80
 ```{{exec}}
@@ -28,7 +31,7 @@ exit
 ```{{exec}}
 
 ```plain
-curl node01:80
+timeout 5 curl node01:80
 ```{{exec}}
 
 Why do you think you were unable to connect?
@@ -69,40 +72,11 @@ exit
 
 ```plain
 curl node01:80
+timeout 3 curl node01 | grep "Apache2 Ubuntu Default Page"
 ```{{exec}}
 
 What did you see when it connected?
 
-```plain
-umount -l /mnt
-```{{exec}}
-
-Edit /etc/fstab and add the line 
-` node01:/share /mnt nfs defaults 0 0 `
-
-```plain
-vi /etc/fstab
-```{{exec}}
-
-Now we use the /etc/fstab to ensure that the mount point correctly mounts on reboot. This is an old system administrator trick.
-
-```plain
-mount -a
-```{{exec}}
-
-If this works, the system is set up correctly. Let's check our mount point again.
-
-```plain
-df -h /mnt
-```{{exec}}
-
-Let's do one last write check to ensure everything is working correctly
-
-```plain
-touch /mnt/finalcheck
-ls -l /mnt/finalcheck
-```{{exec}}
-
-If that's all worked, then the system is correctly set up.
+Was it the default apache web page?
 
 </details>

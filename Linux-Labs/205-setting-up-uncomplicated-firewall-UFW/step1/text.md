@@ -17,7 +17,7 @@ SSH over to node01 and check UFW settings.
 ssh node01
 ```{{exec}}
 
-Check the current status of the UFW
+Check the current status of the UFW.
 
 ```plain
 ufw status

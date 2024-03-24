@@ -1,10 +1,10 @@
 Your team has determined they need to run a firewall on all the hosts to protect them from the inevitable compromise of your system. The goal is to have your systems only capable of exposing the ports that you have documented and agreed upon with your security team.
 
-Check the status of the UFW
+Check the status of the UFW.
 
-Turn on and enable the UFW
+Turn on and enable the UFW.
 
-Verify the current state of the UFW
+Verify the current state of the UFW.
 
 <br>
 

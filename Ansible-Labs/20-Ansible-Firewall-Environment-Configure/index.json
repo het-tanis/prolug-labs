@@ -22,7 +22,7 @@
 	       "host01": [
 		        {"file": "hosts", "target": "~/"},
             {"file": "packages_install.yaml", "target": "~/"},
-            {"file": "ufw_setup.yaml", "target": "~/"},
+            {"file": "ufw_setup.yaml", "target": "~/"}
          ]
         },
       "finish": {

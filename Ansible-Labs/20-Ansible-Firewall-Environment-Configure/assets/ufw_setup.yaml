@@ -1,0 +1,38 @@
+---
+
+#Added for InspectorDiameter to remind everyone to inspect the diameter.
+
+- name: UFW Setup
+  hosts: servers
+  vars:
+  gather_facts: True
+  become: True
+  tasks:
+
+  - name: Debug the app var on each server
+    debug:
+      var: app
+      verbosity: 2
+
+  - name: Enable the UFW firewall
+    ufw:
+      state: enabled
+      policy: deny
+
+  - name: Allow Port 22 (SSH)
+    ufw:
+      rule: allow
+      name: OpenSSH
+  
+  - name: Allow Port 80, if web server
+    ufw:
+      rule: allow
+      name: Apache
+    when: "'web' in app" 
+
+  - name: Allow Port 3306, if db server
+    ufw:
+      rule: allow
+      port: '3306'
+      proto: tcp
+    when: "'db' in app" 

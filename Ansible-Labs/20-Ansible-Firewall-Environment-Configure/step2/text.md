@@ -43,9 +43,17 @@ Are they configured like you would expect? Why or why not?
 ```plain
 timeout 3 nc -vz node01 80
 timeout 3 nc -vz node01 22
-timeout 3 nc -vz node01 40200
 timeout 3 nc -vz controlplane 3306
 ssh node01 'timeout 3 nc -vz controlplane 22'
+```{{exec}}
+
+The above should work, the items below should time out.
+
+```plain
+timeout 3 nc -vz node01 40200
+```{{exec}}
+
+```plain
 ssh node01 'timeout 3 nc -vz controlplane 40200'
 ```{{exec}}
 

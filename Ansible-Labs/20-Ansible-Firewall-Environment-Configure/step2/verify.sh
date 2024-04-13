@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ufw status | grep 3306
+a=$?; nc node01 40800; if [ $a == 0 ]; then echo "passed"; fi

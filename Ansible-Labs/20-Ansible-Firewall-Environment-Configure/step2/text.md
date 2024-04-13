@@ -31,6 +31,15 @@ ansible-playbook -i /root/hosts /root/ufw_setup.yaml
 
 Now you can test and see that only the ports that you expect to be available are able to be connected to.
 
+Verify the configurations of the firewalls are different:
+
+```plain
+ufw status
+ssh node01 'ufw status'
+```{{exec}}
+
+Are they configured like you would expect? Why or why not?
+
 ```plain
 timeout 3 nc -vz node01 80
 timeout 3 nc -vz node01 22

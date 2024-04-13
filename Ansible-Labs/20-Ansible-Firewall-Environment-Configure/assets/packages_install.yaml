@@ -19,7 +19,7 @@
       state: present
     when: '"web" in app'
 
-  - name: Install mariadb on the web server
+  - name: Install mariadb on the db server
     apt:
       pkg: 
       - mariadb-server

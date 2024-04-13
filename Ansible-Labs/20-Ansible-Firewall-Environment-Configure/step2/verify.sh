@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/bin/true
+/usr/sbin/ufw status | grep 3306

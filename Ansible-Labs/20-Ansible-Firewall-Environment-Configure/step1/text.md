@@ -1,11 +1,11 @@
 ### Lab Activities
-Your team has a deployment of a web server and database environment. They want to secure the environment so that only the ports that should be expose are exposed on the correct servers. You have researched and found that UFW can do this and you can configure it with Ansible in a playbook.
+Your team has a deployment of a web server and database environment. They want to secure the environment so that only the ports that should be exposed are exposed on the correct servers. You have researched and found that UFW can do this and you can configure it with Ansible in a playbook.
 
 Setup the servers to expose the correct port numbers. 
 
 Web Server - Port 22, 80
 
-DB Server - Port 22, and 3306
+DB Server - Port 22, 3306
 
 Make sure that you can connect to those servers on the exposed ports.
 

@@ -8,12 +8,12 @@
       },
       "steps": [
         {
-          "title": "Create a playbook to push web and database environment",
+          "title": "Create a playbook to push web and database environment.",
           "text": "step1/text.md",
           "verify": "step1/verify.sh"
         },
         {
-          "title": "Remove environment and push only based on tags",
+          "title": "Setup the firewall and verify that only enabled ports can be connected to.",
           "text": "step2/text.md",
           "verify": "step2/verify.sh"
         }

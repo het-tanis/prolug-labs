@@ -7,7 +7,7 @@ Setup the UFW to only allow the correct port numbers.
 
 Web Server - Port 22, 80
 
-DB Server - Port 22, and 3306
+DB Server - Port 22, 3306
 
 You may try to write the playbook yourself, or use the solution below to see the answer and watch it work in your environment.
 
@@ -21,7 +21,7 @@ Check the file /root/ufw_setup.yaml to see how to setup the firewall for the req
 cat /root/ufw_setup.yaml
 ```{{exec}}
 
-Inspect the ufw_setup file. What is the purpose of each of the tasks in the playbook? Which do you expect to run on both servers? Which do you expect to only run on some servers? Why?
+Inspect the ufw_setup.yaml file. What is the purpose of each of the tasks in the playbook? Which do you expect to run on both servers? Which do you expect to only run on some servers? Why?
 
 Run the file to see what happens and verify operations.
 
@@ -35,7 +35,7 @@ Now you can test and see that only the ports that you expect to be available are
 timeout 3 nc -vz node01 80
 timeout 3 nc -vz node01 22
 timeout 3 nc -vz node01 40200
-ssh node01 'timeout 3 nc -vz controlplane 3306'
+timeout 3 nc -vz controlplane 3306
 ssh node01 'timeout 3 nc -vz controlplane 22'
 ssh node01 'timeout 3 nc -vz controlplane 40200'
 ```{{exec}}

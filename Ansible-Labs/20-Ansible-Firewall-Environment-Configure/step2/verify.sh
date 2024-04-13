@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ufw status | grep 3306
+/usr/sbin/ufw status | grep 3306

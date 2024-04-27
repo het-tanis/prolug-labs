@@ -14,14 +14,14 @@ Test each of these counting loops and see their behavior.
 ### Solution
 <details>
 <summary>Solution</summary>
-Create a couting loop over a list of numbers.
+Create a counting loop over a list of numbers.
 
 ```plain
-for i in 1 2 3 4 5; do echo "I am couting over $i"; done
+for i in 1 2 3 4 5; do echo "I am counting over $i"; done
 ```{{exec}}
 
 ```plain
-for dessert in cookie cake pie; do echo "I am couting over $dessert"; done
+for dessert in cookie cake pie; do echo "I am counting over $dessert"; done
 ```{{exec}}
 
 What do you notice about this type of counting? does anything stand out as different than conditonal looping? How?

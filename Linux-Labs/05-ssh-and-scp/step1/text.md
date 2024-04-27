@@ -7,7 +7,7 @@ Connect to the other server and look at the specifics of the ssh connection.
 ### Solution
 <details>
 <summary>Solution</summary>
-Check your ip address
+Check your connection to node01.
 
 ```plain
 ssh node01

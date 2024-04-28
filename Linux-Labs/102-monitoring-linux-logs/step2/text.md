@@ -24,11 +24,18 @@ cd /opt/loki
 Download and unpackage a current version of Loki
 
 ```plain
-curl -O -L "https://github.com/grafana/loki/releases/download/v2.9.4/loki-linux-amd64.zip"
+curl -O -L "https://github.com/grafana/loki/releases/download/v2.9.7/loki-linux-amd64.zip"
 unzip "loki-linux-amd64.zip"
 chmod a+x "loki-linux-amd64"
 wget https://raw.githubusercontent.com/grafana/loki/main/cmd/loki/loki-local-config.yaml
 ```{{exec}}
+
+You need to comment out the two lines in /opt/loki/loki-local-config.yaml to continue with the lab
+
+```plain
+frontend:
+  encoding: protobuf
+```
 
 Copy over the loki.service file and restart the systemctl daemon so that Loki can run on your system.
 

@@ -1,0 +1,11 @@
+{
+    "items": [
+      { "path": "blue-green-deployments" },
+      { "path": "canary-deployments" },
+      { "path": "CKA-Troubleshooting" },
+      { "path": "CKA-Troubleshooting2" },
+      { "path": "Kafka-deployment-in-kubernetes" },
+      { "path": "mysql-deploy-in-kubernetes" },
+      { "path": "three-tier-app-in-kubernetes" }
+    ]
+  }

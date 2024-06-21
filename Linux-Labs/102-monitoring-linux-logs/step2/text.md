@@ -30,7 +30,15 @@ chmod a+x "loki-linux-amd64"
 wget https://raw.githubusercontent.com/grafana/loki/main/cmd/loki/loki-local-config.yaml
 ```{{exec}}
 
-You need to comment out the two lines in /opt/loki/loki-local-config.yaml to continue with the lab
+You need to comment out the following lines in /opt/loki/loki-local-config.yaml to continue with the lab
+
+```plain
+pattern_ingester:
+  enabled: true
+  metric_aggregation:
+    enabled: true
+    log_push_observations: true
+```
 
 ```plain
 frontend:

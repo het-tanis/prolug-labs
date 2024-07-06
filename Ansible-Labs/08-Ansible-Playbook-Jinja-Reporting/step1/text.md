@@ -1,3 +1,5 @@
+You have been using Ansible and have decided to work with the templating tool that comes with it. You are going to use Jinja2 to stamp a report back to your controlplane node letting you know how the run went on all of the individual servers. After you complete this testing you expect to run this against hundreds of nodes and need to know the nodes that it did or didn't complete on.
+
 ### Lab Activities
 Verify your hosts file 
 

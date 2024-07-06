@@ -1,3 +1,7 @@
+Your team has decided they need a tool they can use to control and operate the many servers you have in your environment. You have been tasked with evaluating Ansible.
+
+You know that individual modules can be called in ad hoc mode. So you decide to try running some commands against your test inventory of servers.
+
 ### Lab Activities
 Verify your hosts file and test ad hoc commands to your servers
 

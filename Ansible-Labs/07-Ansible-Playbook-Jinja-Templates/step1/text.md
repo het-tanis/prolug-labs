@@ -1,3 +1,7 @@
+You have been using Ansible and have decided to work with the templating tool that comes with it. You are going to use Jinja2 to stamp when activities and deployments happen on your servers.
+
+Your team wants to also verify that certain conditions exist when the deployments occur. You figure out how to use Jinja2 for that task.
+
 ### Lab Activities
 Verify your hosts file 
 

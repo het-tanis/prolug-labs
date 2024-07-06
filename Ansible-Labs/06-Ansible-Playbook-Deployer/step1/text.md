@@ -1,3 +1,7 @@
+Your team has decided they need a tool they can use to control and operate the many servers you have in your environment. You have been tasked with evaluating Ansible.
+
+You are adding to your original deploy file and now want to execute the installer on all systems. Make sure that the playbook runs to completion and sets the environment as you need it.
+
 ### Lab Activities
 Verify your hosts file 
 

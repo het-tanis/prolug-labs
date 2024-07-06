@@ -1,3 +1,7 @@
+Your team has decided they need a tool they can use to control and operate the many servers you have in your environment. You have been tasked with evaluating Ansible.
+
+You decide to practice more of the ad hoc mode and deploy a configuration file that you need in your environment. You find that there's a value that needs to change on different servers, so you figure out how to do that task.
+
 ### Lab Activities
 Verify your /root/hosts file and /root/configfile.cfg
 

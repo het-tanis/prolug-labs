@@ -12,7 +12,7 @@
     - name: "Debug variables to view contents"
       debug:
         msg: "{{ item }} is in variable list"
-      with_items:
+      loop:
         - "{{ username }}"
         - "{{ password }}"
 

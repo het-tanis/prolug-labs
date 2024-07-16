@@ -6,7 +6,7 @@ Verify that rsyslog is installed and running on both systems.
 
 Configure rsyslog on controlplane to capture UDP on the default port 514.
 
-Verify that rsyslog is listening on UPD port 514.
+Verify that rsyslog is listening on UDP port 514.
 
 Configure rsyslog on node01 to send logs over UDP to controlplane
 

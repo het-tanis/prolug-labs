@@ -32,7 +32,7 @@ Restart the rsyslog service on controlplane
 systemctl restart rsyslog
 ```{{exec}}
 
-Verify that the logs from node01 are going to the correct place.
+Verify that the logs from node01 are going to the correct place. Now that you've sent them to a new location.
 
 ```plain
 tail -f /var/log/node01/messages.log

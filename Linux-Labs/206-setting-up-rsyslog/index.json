@@ -1,0 +1,29 @@
+{
+    "title": "Let's do Linux Security",
+    "description": "Setup rsyslog to capture and send logs",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "foreground": "foreground.sh",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Verify rsyslog is running. Set it to listen and forward logs",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Send logs to different files",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        }
+      ],
+	    "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

@@ -22,6 +22,7 @@
       { "path": "203-updating-golden-image" },
       { "path": "204-building-a-chroot-jail" },
       { "path": "205-setting-up-uncomplicated-firewall-UFW" },
+      { "path": "206-setting-up-rsyslog" },
       { "path": "301-Influx-Grafana-data-visualization" }
     ]
   }

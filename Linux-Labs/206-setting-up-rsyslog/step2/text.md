@@ -21,7 +21,7 @@ vi /etc/rsyslog.d/30-remote.conf
 Add the following lines to your new file.
 
 ```plain
-$template RemoteLogs,"/var/log/%HOSTNAME%/messages.log
+$template RemoteLogs,"/var/log/%HOSTNAME%/messages.log"
 if ($fromhost-ip != "127.0.0.1") then ?RemoteLogs
 &~
 ```

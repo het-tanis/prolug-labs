@@ -1,4 +1,4 @@
-Your team has determined that they need to centralize logging in the environment. This is a Secure Technical Implementation Guide (STIG) for govenment systems. But, in your case, it's just a good practice and your team has been losing remediation time by not being able to see logs on systems until after the systems are back up. 
+Your team has determined that they need to centralize logging in the environment. This is a Secure Technical Implementation Guide (STIG) for government systems. But, in your case, it's just a good practice and your team has been losing remediation time by not being able to see logs on systems until after the systems are back up. 
 
 Your management has been coming around talking about MTTR and MTTD. You don't know what that means, but you know that getting logs to a central place will help make it better and management will leave you alone.
 

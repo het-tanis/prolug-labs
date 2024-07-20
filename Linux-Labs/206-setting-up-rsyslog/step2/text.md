@@ -23,7 +23,7 @@ Add the following lines to your new file.
 ```plain
 $template RemoteLogs,"/var/log/%HOSTNAME%/messages.log"
 if ($fromhost-ip != "127.0.0.1") then ?RemoteLogs
-&~
+& stop
 ```
 
 Restart the rsyslog service on controlplane

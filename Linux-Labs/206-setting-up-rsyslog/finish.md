@@ -1,4 +1,4 @@
-Look at you, learning Linux Security
+Look at you, learning Linux Security!
 You set up system logging and were able to see data flow from node01 into controlplane for centralized logging.
 
 Check https://attack.mitre.org/techniques/T1070/ for more information about why we want to track logs in real time.

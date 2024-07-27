@@ -6,6 +6,7 @@
       { "path": "04-checking-networking-and-ports" },
       { "path": "05-ssh-and-scp" },
       { "path": "06-screen-commands" },
+      { "path": "06.5-tmux-commands" },
       { "path": "07-working-with-DNS" },
       { "path": "08-variables-conditional-logic" },
       { "path": "09-conditional-and-counting-loops"},

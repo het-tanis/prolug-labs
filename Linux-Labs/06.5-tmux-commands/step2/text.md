@@ -27,13 +27,17 @@ Reconnect to that session
 tmux a -t 0
 ```{{exec}}
 
-Kill your last tmux session
+Kill your last tmux session, and list your session.
 
 ```plain
 tmux kill-session
-```
+```{{exec}}
 
-Create a new session
+```plain
+tmux list-sessions
+```{{exec}}
+
+Create a new session for tmux
 
 ```plain
 tmux 
@@ -67,12 +71,12 @@ Attach to the last session once again and cancel the process with `ctrl+c`
 
 ```plain
 tmux a
-```
+```{{exec}}
 
 Close all tmux sessions
 
 ```plain
 tmux kill-server
-```
+```{{exec}}
 
 </details>

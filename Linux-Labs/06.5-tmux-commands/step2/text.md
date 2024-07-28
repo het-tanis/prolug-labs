@@ -9,6 +9,7 @@ Create a new tmux session and enable pane logging to /root/logs-tmux.log
 ### Solution
 <details>
 <summary>Solution</summary>
+
 Detatch from tmux session
 
 ```plain
@@ -27,7 +28,7 @@ Reconnect to that session
 tmux a -t 0
 ```{{exec}}
 
-Kill your last tmux session, and list your session.
+Kill your last tmux session, and list your sessions.
 
 ```plain
 tmux kill-session

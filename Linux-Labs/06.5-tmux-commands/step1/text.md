@@ -52,7 +52,7 @@ ctrl + b and %
 
 Jump between the horizontal tmux sessions
 
-```
+```plain
 ctrl + b and [Arrow Keys] < ^ >
 ```
 

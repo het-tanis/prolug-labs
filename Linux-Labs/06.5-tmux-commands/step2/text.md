@@ -2,7 +2,7 @@ Detatch from tmux session and verify it is still there
 
 Reconnect and then kill the session
 
-Create a new tmux session with logging enabled to /root/tmuxlog.log
+Create a new tmux session and enable pane logging to /root/logs-tmux.log
 
 <br>
 
@@ -18,7 +18,7 @@ ctrl + b and d
 Verify that tmux session is still running
 
 ```plain
-tmux -ls
+tmux ls
 ```{{exec}}
 
 Reconnect to that session
@@ -27,22 +27,23 @@ Reconnect to that session
 tmux a -t 0
 ```{{exec}}
 
-Kill each window sessions, remember to press `y` after being prompted.
+Kill your last tmux session
 
 ```plain
-ctrl + b and y
+tmux kill-session
 ```
 
 Create a new session
 
 ```plain
 tmux 
-```
-Log sesion output to a file
+```{{exec}}
+
+Log the output of a pane to a file
 
 ```plain
 tmux pipe-pane -o "exec cat >>$HOME/'logs-tmux.log'"
-```
+```{{exec}}
 
 Execute a command that keeps on running
 
@@ -56,10 +57,22 @@ Detach the tmux session
 ctrl + b and d
 ```
 
-View the pane log
+View the output associated with that pane
 
-```
+```plain
 cat $HOME/'logs-tmux.log'
 ```{{exec}}
+
+Attach to the last session once again and cancel the process with `ctrl+c`
+
+```plain
+tmux a
+```
+
+Close all tmux sessions
+
+```plain
+tmux kill-server
+```
 
 </details>

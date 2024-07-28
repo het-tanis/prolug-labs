@@ -52,7 +52,7 @@ ctrl + b and %
 
 Jump between the horizontal tmux sessions
 
-```
+```plain
 ctrl + b and [Arrow Keys] < ^ >
 ```
 
@@ -73,6 +73,12 @@ Move between the windows
 
 ```plain
 ctrl+b and 0
+```
+
+View all windows
+
+```plain
+ctrl+b and w
 ```
 
 </details>

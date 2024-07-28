@@ -1,14 +1,17 @@
-Detatch from tmux session and verify it is still there
+Tmux session detachment and attachment, killing tmux sessions.
 
-Reconnect and then kill the session
+Creating new tmux sessions
 
-Create a new tmux session and enable pane logging to /root/logs-tmux.log
+Creating logs for panes within windows to /root/logs-tmux.log
+
+Leaving behind processes with tmux
 
 <br>
 
 ### Solution
 <details>
 <summary>Solution</summary>
+
 Detatch from tmux session
 
 ```plain
@@ -27,13 +30,17 @@ Reconnect to that session
 tmux a -t 0
 ```{{exec}}
 
-Kill your last tmux session
+Kill your last tmux session, and list your sessions.
 
 ```plain
 tmux kill-session
-```
+```{{exec}}
 
-Create a new session
+```plain
+tmux list-sessions
+```{{exec}}
+
+Create a new session for tmux
 
 ```plain
 tmux 
@@ -67,12 +74,12 @@ Attach to the last session once again and cancel the process with `ctrl+c`
 
 ```plain
 tmux a
-```
+```{{exec}}
 
 Close all tmux sessions
 
 ```plain
 tmux kill-server
-```
+```{{exec}}
 
 </details>

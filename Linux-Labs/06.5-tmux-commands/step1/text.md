@@ -38,19 +38,19 @@ tmux ls
 
 In Tmux a command usually starts with a prefix key `ctrl+b` and than a key to activate an action.
 
-Split the tmux Horizontally
+Create a new pane horizontaly
 
 ```plain
 ctrl + b and "
 ```
 
-Split the tmux Vertically
+Create a new pane vertically
 
 ```plain
 ctrl + b and %
 ```
 
-Jump between the horizontal tmux sessions
+Jump between your panes in your window
 
 ```plain
 ctrl + b and [Arrow Keys] < ^ >
@@ -69,13 +69,14 @@ ctrl + b and c
 ctrl + b and ,
 ```
 
-Move between the windows by number
+Move between windows in your session by number
 
 ```plain
 ctrl+b and 0
 ```
 
-View all sessions and windows move with your arrow keys and press `enter` to select your window.
+View all sessions and their associated windows and panes.
+Move with your arrow keys and press `enter` to select your window.
 
 ```plain
 ctrl+b and w

@@ -75,7 +75,7 @@ Move between the windows by number
 ctrl+b and 0
 ```
 
-View all windows, move with your arrow keys and press `enter` to select your window.
+View all sessions and windows move with your arrow keys and press `enter` to select your window.
 
 ```plain
 ctrl+b and w

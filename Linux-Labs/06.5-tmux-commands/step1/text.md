@@ -69,13 +69,13 @@ ctrl + b and c
 ctrl + b and ,
 ```
 
-Move between the windows
+Move between the windows by number
 
 ```plain
 ctrl+b and 0
 ```
 
-View all windows
+View all windows, move with your arrow keys and press `enter` to select your window.
 
 ```plain
 ctrl+b and w

@@ -15,7 +15,7 @@ Create multiple tmux panes and windows, rename them, and move between them.
 Install tmux
 
 ```plain
-dnf install tmux -y
+apt -y install tmux
 ```{{exec}}
 
 Verify your /root/.tmux.conf file

@@ -75,4 +75,10 @@ Move between the windows
 ctrl+b and 0
 ```
 
+View all windows
+
+```plain
+ctrl+b and w
+```
+
 </details>

@@ -64,10 +64,11 @@ Detach the tmux session
 ctrl + b and d
 ```
 
-View the output associated with that pane
+Let's follow the output associated with that pane with `tail -f`
+Press `ctrl+c` to exit out of `tail -f`
 
 ```plain
-cat $HOME/'logs-tmux.log'
+tail -f $HOME/'logs-tmux.log'
 ```{{exec}}
 
 Attach to the last session once again and cancel the process with `ctrl+c`

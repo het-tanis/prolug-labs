@@ -1,8 +1,10 @@
-Detatch from tmux session and verify it is still there
+Tmux session detachment and attachment, killing tmux sessions.
 
-Reconnect and then kill the session
+Creating new tmux sessions
 
-Create a new tmux session and enable pane logging to /root/logs-tmux.log
+Creating logs for panes within windows to /root/logs-tmux.log
+
+Leaving behind processes with tmux
 
 <br>
 

@@ -27,23 +27,23 @@ Reconnect to that session
 tmux a -t 0
 ```{{exec}}
 
-Close a window with all it's pane
+Kill all tmux sessions
 
 ```plain
-ctrl + b and y
+tmux kill-server
 ```
 
 Create a new session
 
 ```plain
 tmux 
-```
+```{{exec}}
 
 Log the output of a pane to a file
 
 ```plain
 tmux pipe-pane -o "exec cat >>$HOME/'logs-tmux.log'"
-```
+```{{exec}}
 
 Execute a command that keeps on running
 
@@ -59,8 +59,14 @@ ctrl + b and d
 
 View the output associated with that pane
 
-```
+```plain
 cat $HOME/'logs-tmux.log'
 ```{{exec}}
+
+Attach to the last session once again and cancel the process with `ctrl+c`
+
+```plain
+tmux a
+```
 
 </details>

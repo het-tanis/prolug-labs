@@ -27,23 +27,14 @@ Download and unpackage a current version of Loki
 curl -O -L "https://github.com/grafana/loki/releases/download/v2.9.7/loki-linux-amd64.zip"
 unzip "loki-linux-amd64.zip"
 chmod a+x "loki-linux-amd64"
-wget https://raw.githubusercontent.com/grafana/loki/main/cmd/loki/loki-local-config.yaml
+
 ```{{exec}}
 
-You need to comment out the following lines in /opt/loki/loki-local-config.yaml to continue with the lab
+Copy over the loki config file from the /answers directory
 
 ```plain
-pattern_ingester:
-  enabled: true
-  metric_aggregation:
-    enabled: true
-    log_push_observations: true
-```
-
-```plain
-frontend:
-  encoding: protobuf
-```
+cp /answers/loki-local-config.yaml /opt/loki
+```{{exec}}
 
 Copy over the loki.service file and restart the systemctl daemon so that Loki can run on your system.
 

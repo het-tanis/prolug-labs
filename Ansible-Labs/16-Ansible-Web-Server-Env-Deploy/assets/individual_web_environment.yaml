@@ -16,8 +16,9 @@
     apt:
       name: "apache2"
       state: latest
-    
+
   - name: Block for Present deploy State
+    when: deploy == "absent"
     block:
 
     - name: Create directories for environments
@@ -74,12 +75,10 @@
 
     - name: Remove the Virtual Directives files into the correct place
       file:
-        path: "/answers/{{env}}_virtual_host.conf"
+        path: "/var/www/html_{{env}}/index.html"
         state: absent
       notify:
         - Restart apache
-
-    when: deploy == "absent"
 
   handlers:
 
@@ -87,5 +86,3 @@
     systemd:
       state: restarted
       name: apache2
-  
-  

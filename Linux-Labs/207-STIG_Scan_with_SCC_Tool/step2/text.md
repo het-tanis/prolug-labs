@@ -26,7 +26,7 @@ cd /root/SCC/Sessions/*/Results/SCAP
 Copy over the *ALL* .html file to the /var/www/html direcotry
 
 ```plain
-cp *ALL* /var/www/html/index.html
+cp *All* /var/www/html/index.html
 ```{{exec}}
 
 Go to the top right of your lab environment and Select 

@@ -29,10 +29,10 @@ Copy over the *ALL* .html file to the /var/www/html direcotry
 cp *All* /var/www/html/index.html
 ```{{exec}}
 
-Go to the top right of your lab environment and Select 
-"Traffic / Ports"
+Click on this link to access your score.
 
-Hit the "Port 80" button.
+{{TRAFFIC_HOST1_80}}
+
 
 View your STIG Score and see what remediations you have for Cat I, Cat II, and CAT III findings.
 

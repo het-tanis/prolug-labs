@@ -1,6 +1,6 @@
 {
     "title": "Let's do Linux Security",
-    "description": "STIG Report of a Server with SCC Tool",
+    "description": "OS STIG Report of a Server with SCC Tool",
     "details": {
       "intro": {
         "text": "intro.md",

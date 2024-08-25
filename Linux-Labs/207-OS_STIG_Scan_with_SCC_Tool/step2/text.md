@@ -34,6 +34,6 @@ Click on this link to access your score.
 {{TRAFFIC_HOST1_80}}
 
 
-View your STIG Score and see what remediations you have for Cat I, Cat II, and CAT III findings.
+View your STIG Score and see what remediations you have for CAT I, CAT II, and CAT III findings.
 
 </details>

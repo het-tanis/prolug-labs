@@ -1,4 +1,4 @@
-Your team has to integrate with a U.S. Government system. There is a security requirement that you need to STIG (Secure Technical Implemenation Guide) your servers to a certain score. You have decided to use the SCC tool to scan your servers to see where they are currently at before any remediation.
+Your team has to integrate with a U.S. Government system. There is a security requirement that you need to STIG (Security Technical Implementation Guide) your servers to a certain score. You have decided to use the SCC tool to scan your servers to see where they are currently at before any remediation.
 
 Download and install the SCC tool.
 

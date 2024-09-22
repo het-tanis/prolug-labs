@@ -18,7 +18,7 @@
       state: latest
 
   - name: Block for Present deploy State
-    when: deploy == "absent"
+    when: deploy == "present"
     block:
 
     - name: Create directories for environments
@@ -51,9 +51,8 @@
       notify:
         - Restart apache
 
-    when: deploy == "present"
-
   - name: Block for Absent deploy State
+    when: deploy == "absent"
     block:
 
     - name: Delete directories for environments

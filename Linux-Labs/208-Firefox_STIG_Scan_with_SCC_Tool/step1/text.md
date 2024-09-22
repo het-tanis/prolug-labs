@@ -1,4 +1,4 @@
-Your team has to integrate with a U.S. Government system. There is a security requirement that you need to STIG (Secure Technical Implemenation Guide) your Firefox Browsers to a certain score. Your first task is to identify what your score is. Then, you can use that to plan a course of action to remediate your findings.
+Your team has to integrate with a U.S. Government system. There is a security requirement that you need to STIG (Security Technical Implemenation Guide) your Firefox Browsers to a certain score. Your first task is to identify what your score is. Then, you can use that to plan a course of action to remediate your findings.
 
 Download and install the SCC tool.
 

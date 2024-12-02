@@ -29,40 +29,11 @@ tar xvfz node_exporter-*.*-amd64.tar.gz
 cd node_exporter-*.*-amd64
 ```{{exec}}
 
-Download the example systemd setup from their github repository into a new directory named `config_files`
-
-```
-git clone https://github.com/prometheus/node_exporter.git config_files
-```{{exec}}
-
-Copy over the `node_exporter.service` and `node_exporter.socket` file to the systemd directory
-
 ```plain
-cp /opt/node_exporter/node_exporter-*.*-amd64/config_files/examples/systemd/node_exporter.service /etc/systemd/system/node_exporter.service
-
-cp /opt/node_exporter/node_exporter-*.*-amd64/config_files/examples/systemd/node_exporter.socket /etc/systemd/system/node_exporter.socket
+cp /answers/node_exporter.service 
 ```{{exec}}
 
 Copy the sysconfig settings from config_files and the binary for node_explorer as indicated in node_exporter.service
-
-```
-cp node_exporter /usr/sbin/
-cp /opt/node_exporter/node_exporter-*.*-amd64/config_files/examples/systemd/sysconfig.node_exporter /etc/sysconfig/node_exporter
-```{{exec}}
-
-Create a directory named /var/lib/node_exporter/textfile_collector
-
-```
-mkdir -p /var/lib/node_exporter/textfile_collector
-```{{exec}}
-
-Create a user for node_exporter and apply ownerships to files needed
-
-```
-useradd -s /sbin/nologin node_exporter
-chown -R node_exporter:node_exporter /var/lib/node_exporter/textfile_collector
-chown -R node_exporter:node_exporter /etc/sysconfig/node_exporter
-```{{exec}}
 
 Review the service file so that you are confident it is going to properly start Node Exporter.
 

@@ -29,11 +29,11 @@ tar xvfz node_exporter-*.*-amd64.tar.gz
 cd node_exporter-*.*-amd64
 ```{{exec}}
 
+
 ```plain
-cp /answers/node_exporter.service 
+cp /answers/node_exporter.service /etc/systemd/system/node_exporter.service
 ```{{exec}}
 
-Copy the sysconfig settings from config_files and the binary for node_explorer as indicated in node_exporter.service
 
 Review the service file so that you are confident it is going to properly start Node Exporter.
 

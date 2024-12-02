@@ -47,6 +47,7 @@ Copy the sysconfig settings from config_files and the binary for node_explorer a
 
 ```
 cp node_exporter /usr/sbin/
+mkdir /etc/sysconfig
 cp /opt/node_exporter/node_exporter-*.*-amd64/config_files/examples/systemd/sysconfig.node_exporter /etc/sysconfig/node_exporter
 ```{{exec}}
 

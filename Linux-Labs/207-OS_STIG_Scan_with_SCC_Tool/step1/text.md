@@ -21,7 +21,7 @@ cd /root/scc
 Download the SCC tool from the Govenment site.
 
 ```plain
-wget https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/scc-5.10_ubuntu18_ubuntu20_amd64_bundle.zip -O scc-5.10_ubuntu18_ubuntu20_amd64_bundle.zip
+wget https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/scc-5.10.1_ubuntu18_ubuntu20_amd64_bundle.zip -O scc-5.10_ubuntu18_ubuntu20_amd64_bundle.zip
 ```{{exec}}
 
 Unzip the scc tool.

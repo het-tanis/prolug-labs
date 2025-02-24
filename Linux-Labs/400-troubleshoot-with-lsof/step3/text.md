@@ -11,13 +11,15 @@ Use the lsof to check the processes using a directory.
 lsof /mnt
 ```{{exec}}
 
+You should see no processes using the /mnt directory. There is no output.
+
 Move to the /mnt directory
 
 ```plain
 cd /mnt
 ```{{exec}}
 
-Use the lsof to check the processes using a directory.
+Use lsof to check the processes using a directory.
 
 ```plain
 lsof /mnt
@@ -55,7 +57,7 @@ Now try to use pwd to see the directory you're in.
 pwd
 ```{{exec}}
 
-What error do you see? Can you fix it?
+What error do you see? Can you fix it? (Note: IF you do not see an error, this is because this is an unsafe action you're doing that is not recommended. I just had you do it to see the behavior.)
 
 ```plain
 cd /mnt
@@ -145,5 +147,7 @@ man lsof
 ```{{exec}}
 
 What does the -ac mean?
+
+Use "q" to exit.
 
 </details>

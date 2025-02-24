@@ -51,17 +51,17 @@ umount -l /mnt
 
 Did this work?
 
-Now try to use pwd to see the directory you're in.
+Now try to use df -h . to see information about the directory you're in.
 
 ```plain
-pwd
+df -h .
 ```{{exec}}
 
 What error do you see? Can you fix it? (Note: IF you do not see an error, this is because this is an unsafe action you're doing that is not recommended. I just had you do it to see the behavior.)
 
 ```plain
 cd /mnt
-pwd
+df -h .
 ```{{exec}}
 
 Did the error go away? Is the filesystem properly unmounted from the other node?

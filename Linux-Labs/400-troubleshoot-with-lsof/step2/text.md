@@ -4,7 +4,6 @@ Install the nfs-common client.
 
 Mount the node01:/share to /mnt to test.
 
-Make the node01:/share to /mnt a permanent setting in /etc/fstab.
 
 <br>
 

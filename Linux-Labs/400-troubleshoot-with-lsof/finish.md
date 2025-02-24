@@ -1,0 +1,1 @@
+Look at you, learning the lsof command in Linux! You used the command to troubleshoot a problem and then look at what filesystem interactions are happening with processes.

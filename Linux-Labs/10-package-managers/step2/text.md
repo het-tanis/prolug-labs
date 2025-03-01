@@ -1,4 +1,4 @@
-Use apt to install packages that you need on the system. Use apt to download all the updates that the system needs. Then, after review upgrade all the packages on the system and verify that everything worked correctly.
+Use apt to install packages that you need on the system. Use apt to download all the updates that the system needs. Then, after you review, upgrade all the packages on the system and verify that everything worked correctly.
 
 <br>
 

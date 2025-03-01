@@ -1,2 +1,2 @@
 Look at you, learning Linux!
-You executed some conditional and counting loops, understood how and when to use each, and then deployed them in a script. For more information click [here](https://tldp.org/HOWTO/pdf/Bash-Prog-Intro-HOWTO.pdf)
+You used the tools apt and dpkg to inspect current software in your system. You then added and removed software from predefined repositories. Then you added and trusted a third party respository to inspect software that you could add to your system from a third party source.

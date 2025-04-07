@@ -38,7 +38,7 @@ About how long did the playbook run for?
 
 Did the playbook break, or did it complete execution?
 
-If it does fail, where is it failing? If it's on a handler, does that really matter to the hardening of a system? Does the answer chagne if it's a virtual or physical machine?
+If it does fail, where is it failing? If it's on a handler, does that really matter to the hardening of a system? Does the answer change if it's a virtual or physical machine?
 
 
 </details>

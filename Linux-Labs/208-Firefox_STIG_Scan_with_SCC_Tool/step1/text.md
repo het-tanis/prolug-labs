@@ -23,25 +23,25 @@ cd /root/scc
 Download the SCC tool from the Govenment site.
 
 ```plain
-wget https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/scc-5.10.1_ubuntu18_ubuntu20_amd64_bundle.zip -O scc-5.10.1_ubuntu18_ubuntu20_amd64_bundle.zip
+wget https://dl.dod.cyber.mil/wp-content/uploads/stigs/zip/scc-5.10.2_ubuntu18_ubuntu20_amd64_bundle.zip -O scc-5.10.2_ubuntu18_ubuntu20_amd64_bundle.zip
 ```{{exec}}
 
 Unzip the scc tool.
 
 ```plain
-unzip scc-5.10.1_ubuntu18_ubuntu20_amd64_bundle.zip
+unzip scc-5.10.2_ubuntu18_ubuntu20_amd64_bundle.zip
 ```{{exec}}
 
 Change to the correct unzipped directory.
 
 ```plain
-cd /root/scc/scc-5.10.1_ubuntu18_amd64/
+cd /root/scc/scc-5.10.2_ubuntu18_amd64/
 ```{{exec}}
 
 Install the package with the dpkg installer.
 
 ```plain
-dpkg -i scc-5.10.1.ubuntu.18_amd64.deb
+dpkg -i scc-5.10.2.ubuntu.18_amd64.deb
 ```{{exec}}
 
 Watch installer. Where does it say that the package has been installed?
@@ -70,7 +70,7 @@ Look at the menu and Acknowledge the change log by hitting Enter key.
 
 Select Option 1: Configure SCAP content.
 
-Use the numbers to deselect 1 and 2, so you only have "MOZ_Firefox_Linux" selected.
+Use the numbers to deselect 1, 2, and 3, so you only have "MOZ_Firefox_Linux" selected.
 
 Hit 0 and Enter to return to the main menu.
 

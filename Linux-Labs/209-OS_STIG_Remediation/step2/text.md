@@ -1,6 +1,6 @@
 You are now ready to run the playbook and see the effect on the server.
 
-Make the script to kick off the playbook executible
+Make the script to kick off the playbook executable.
 
 Execute the script and watch the Ansible playbook run.
 

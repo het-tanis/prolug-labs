@@ -1,4 +1,5 @@
 Look at you, learning Linux Security!
-You set up the SCC tool and implemented a Security scan of your system for STIG Compliance.
 
-Then you reviewed your information via the apache2 web server.
+Congratulations on exploring the DoD Ansible playbook for OS STIG remediation! You've successfully downloaded, unpacked, and investigated its default values and tasks, gaining a foundational understanding of how it automates security hardening.
+
+You are now prepared to execute the playbook and observe its impact on your system, a critical step in meeting U.S. Government security requirements.

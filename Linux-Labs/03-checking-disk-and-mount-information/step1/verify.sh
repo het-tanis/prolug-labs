@@ -1,4 +1,4 @@
 #!/bin/bash
 
 grep 1 /root/disks
-grep 3 /root/partitions
+grep 4 /root/partitions

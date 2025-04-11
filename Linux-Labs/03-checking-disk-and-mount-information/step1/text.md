@@ -34,7 +34,7 @@ And, if you need the answer:
 
 ```plain
 echo 1 > /root/disks
-echo 3 > /root/partitions
+echo 4 > /root/partitions
 ```{{exec}}
 
 </details>

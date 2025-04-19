@@ -1,18 +1,57 @@
-You've setup the jail and verified that there is little to no functionality in the jail. We need to make the jail useful for a user. We have to give the basic pieces for the user to have functionality we want to give them.
+Your team is planning on building a bastion system. You have tested functionality of the jail in a previous lab. For this lab you are going to simulate an air-gapped system connection via a bastion.
 
-Copy in the correct system files for user functionality.
+![bastion](../assets/bastion.png)
 
-Copy in the correct binaries you want to give them: curl, and ssh. (you already gave bash)
+Build a jail on node01 at `/var/chroot/`.
 
-Copy in the link libraries needed for curl, and ssh to work properly. (you already gave them bash)
+Add basic framework to the jail so that you can populate it with functionality.
 
-Copy in the right environment files and home directory that allow a user session to run commands properly.
+Change your root to /var/chroot and see what functionality you have.
+
 
 <br>
 
 ### Solution
 <details>
 <summary>Solution</summary>
+
+Ensure you are on node01.
+
+```plain
+ssh node01
+```{{exec}}
+Create the chroot filesystem.
+
+```plain
+mkdir /var/chroot
+```{{exec}}
+
+Create the directory structure of the jail.
+
+```plain
+mkdir -p /var/chroot/{bin,lib64,dev,etc,home,usr/bin,lib/x86_64-linux-gnu}
+```{{exec}}
+
+Check the directories have been created.
+
+```plain
+ls -l /var/chroot
+```{{exec}}
+
+What directories do you see? Is there anything about these directories that you know about that would make sense to give a user?
+
+Move in the minimum executibles for chroot to work properly.
+
+```plain
+cp /usr/bin/bash /var/chroot/bin/bash
+```{{exec}}
+
+The binary cannot work properly without the link libraries. Copy those in to get basic bash shell functionality.
+
+```plain
+for package in $(ldd /bin/bash | awk '{print $(NF -1)}'); do cp $package /var/chroot/$package; done
+```{{exec}}
+
 Copy over the system files.
 
 ```plain
@@ -71,6 +110,12 @@ There's one last set of libraries that are needed for your user to have network 
 cp -r /lib/x86_64-linux-gnu/*nss* /var/chroot/lib/x86_64-linux-gnu/
 ```{{exec}}
 
-You've set up your environment so hit submit to move on and test.
+Exit node01
+
+```plain
+exit
+```{{exec}}
+
+You've set up your environment so hit submit to move on and start building the bastion portion.
 
 </details>

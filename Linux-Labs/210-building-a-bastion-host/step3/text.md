@@ -29,13 +29,18 @@ Enter your password 12345678
 
 Follow your prompts and see if you can get into freeuser with password 12345678 back on controlplane.
 
+```plain
+id
+hostname
+```{{exec}}
+
 If everything works, exit back out and see that you do not stop in the bastion, you leave the whole system. You should be back on controlplane.
 
 ```plain
 exit
 ```{{exec}}
 
-Test the timeout functionality of your server. Test that you cannot leave that script/shell by any other means. If that all validates then continue on.
+Test the timeout functionality of your server by sitting idle for 21 seconds. Test that you cannot leave that script/shell by any other means. If that all validates then continue on.
 
 Hit submit to finish this lab.
 

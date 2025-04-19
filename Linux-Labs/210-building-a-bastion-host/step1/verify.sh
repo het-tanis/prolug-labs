@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ls -l /var/chroot/etc
+ssh node01 'ls -l /var/chroot/etc'

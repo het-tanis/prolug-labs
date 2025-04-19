@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ls -l /var/chroot/bin/bastion.sh
+ssh node01 'ls -l /var/chroot/bin/bastion.sh'

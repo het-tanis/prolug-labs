@@ -61,7 +61,7 @@ Save the file with :wq or 'Shift + ZZ'
 Restart the ssh daemon
 
 ```plain
-systemctl restart sshd
+systemctl restart ssh
 ```{{exec}}
 
 Make a bastion.sh script and put it in the correct location for the jaileduser to execute it.
@@ -85,7 +85,7 @@ case $input in
 
 1 )
   echo "You are being sent to Rocky1"
-  /bin/ssh freeuser@controlplane
+  /usr/bin/ssh freeuser@controlplane
   exit 0;
   ;;
 2 )

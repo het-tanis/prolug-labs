@@ -23,7 +23,7 @@ Connect to node01 as the jaileduser
 
 ```plain
 ssh jaileduser@node01
-```{{}}
+```{{exec}}
 
 Enter your password 12345678
 

@@ -27,7 +27,7 @@ dpkg -l | grep -i bzip2
 which bzip2
 ```{{exec}}
 
-Is bzip2 installed on your system? Can you find the executible?
+Is bzip2 installed on your system? Can you find the executable?
 
 Remove the unwanted packages
 

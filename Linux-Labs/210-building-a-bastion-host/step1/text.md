@@ -40,7 +40,7 @@ ls -l /var/chroot
 
 What directories do you see? Is there anything about these directories that you know about that would make sense to give a user?
 
-Move in the minimum executibles for chroot to work properly.
+Move in the minimum executables for chroot to work properly.
 
 ```plain
 cp /usr/bin/bash /var/chroot/bin/bash

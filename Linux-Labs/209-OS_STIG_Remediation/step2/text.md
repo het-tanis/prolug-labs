@@ -22,7 +22,7 @@ Verify the enforce.sh file is correct.
 more enforce.sh
 ```{{exec}}
 
-Make the enforce.sh script executible.
+Make the enforce.sh script executable.
 
 ```plain
 chmod 755 enforce.sh

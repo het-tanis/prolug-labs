@@ -5,12 +5,16 @@ Review the playbook for enterprise patching.
 <details>
 <summary>Solution</summary>
 
-Go 
+Look at the playbook and see the roles that are going to run
 
 ```plain
-ansible-playbook -i hosts 01_nfs_system.yaml
+cat 04_enterprise_patching.yaml
 ```{{exec}}
 
-Keep working on sandbox practice
+What roles are being executed? 
+
+Move into each of those directories and look at the tasks that are being performed. Do they make sense to you?
+
+Move on to executing the playbook for patching
 
 </details>

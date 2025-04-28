@@ -1,28 +1,16 @@
 ### Lab Activities
 
-This is still just the the Enterprise Ansible Playground.
+Execute the 04_enterprise_patching.yaml and verify the results.
+
 <br>
 <details>
 <summary>Solution</summary>
 
-clone the git of HPC_Deploy
-
 ```plain
-git clone https://github.com/het-tanis/HPC_Deploy.git
+ansible-playbook -i /root/HPC_Deploy/hosts /root/HPC_Deploy/04_enterprise_patching.yaml
 ```{{exec}}
 
-Change into that directory
+Does this execute and what output do you see?
 
-```plain
-cd HPC_Deploy
-```{{exec}}
-
-Run or change the playbooks as you see fit.
-
-```plain
-ansible-playbook -i hosts 01_nfs_system.yaml
-```{{exec}}
-
-Keep working on sandbox practice
 
 </details>

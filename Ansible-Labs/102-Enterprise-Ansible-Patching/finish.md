@@ -1,3 +1,3 @@
 Look at you, learning Ansible!
 
-You prepared an environment and then ran enterprise patching using Ansible playbooks.
+You have reviewed and patched a fleet of servers with Ansible. Reflect on the roles that were used and how you could improve them to make a better playbook.

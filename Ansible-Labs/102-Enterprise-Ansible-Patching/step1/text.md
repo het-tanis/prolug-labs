@@ -20,7 +20,7 @@ cd HPC_Deploy
 Run the playbook to set up the environment.
 
 ```plain
-ansible-playbook -i /root/HPC_Deploy/hosts 03_package_update_or_install.yaml --extra-vars "action=install"
+ansible-playbook -v -i /root/HPC_Deploy/hosts 03_package_update_or_install.yaml --extra-vars "action=install"
 ```{{exec}}
 
 Watch this playbook run and then look at the roles that are inherited. 

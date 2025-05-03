@@ -1,0 +1,10 @@
+[Unit]
+Description=Promtail Service Startup
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/opt/promtail/promtail-linux-amd64 -config.file=/opt/promtail/promtail-local-config.yaml
+
+[Install]
+WantedBy=default.target

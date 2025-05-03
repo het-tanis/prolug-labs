@@ -50,7 +50,7 @@ Verify that everything is working properly
 kubectl get all -n kafka
 ```{{exec}}
 
-Wait and run that command a few times to see taht zookeeper is started. Descibe the services and pods to see their details.
+Wait and run that command a few times to see that zookeeper is started. Descibe the services and pods to see their details.
 
 ```plain
 kubectl describe -n kafka svc zookeeper-service

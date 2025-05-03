@@ -1,91 +1,53 @@
-Your team is integrating Kafka with an existing Loki infrastructure for passing log messages. Your task is to stand up Kafka in a kubernetes cluster. For more information about the steps provided, view the kafka lab [here](https://killercoda.com/het-tanis/course/Kubernetes-Labs/Kafka-deployment-in-kubernetes)
-
+Your team has set up Apache Kafka and tested basic functionality. Now you need to set promtail to read the messages going into the topic System_Logs and send them up into loki for storage and later use.
 
 <br>
 
 <details>
-<summary>Tip</summary>
-
-Answers file can be found at /answers
-
-</details>
-
-<details>
 <summary>Solution</summary>
 
-Create the namespace kafka
+Run a loop that generates messages into Kafka
 
 ```plain
-kubectl create ns kafka
+while true; do random_number=$(( (RANDOM % 10) + 1 )); echo "This is my message at $random_number $(date)" | kcat -P -b node01:31000 -t System_Logs; sleep 3; done
 ```{{exec}}
 
-Verify that your namespace is created
+Open a new tab at the top of the terminal.
+
+In the new tab, reconfigure promtail to read from Kafka and send messages down into Loki
 
 ```plain
-kubectl get all -n kafka
+cd /opt/promtail
 ```{{exec}}
 
-Create zookeeper deployment and services
+vi promtail-local-config.yaml 
 
 ```plain
-kubectl create -f /answers/zookeeper.yaml
+vi promtail-local-config.yaml 
 ```{{exec}}
 
-Verify that everything is working properly
+Modify the file to pull from kafka topic System_Logs
 
 ```plain
-kubectl get all -n kafka
-```{{exec}}
+- job_name: kafka
+  kafka:
+    brokers:
+    - node01:31000
+    topics:
+    - System_Logs
+    labels:
+      job: kafka
+```
 
-Wait 60 seconds and run that command a few times to see that zookeeper is started. Descibe the services and pods to see their details.
+Save by using ":wq" or "Shift + ZZ"
 
-```plain
-kubectl describe -n kafka svc zookeeper-service
-```{{exec}}
-
-Next we deploy Kafka
-
-Deploy the service and deployment.
-
-```plain
-kubectl create -f /answers/kafka.yaml
-```{{exec}}
-
-Wait 30 seconds and then verify that the service is pointed to the pod IP address as an endpoint.
+Restart Promtail
 
 ```plain
-kubectl describe svc kafka-service -n kafka
-kubectl get pods -o wide -n kafka
+systemctl restart promtail
 ```{{exec}}
 
-The pod named kafka-broker-... should have the matching IP to the endpoint of the kafka-service
+Go back over to your Grafana Loki dashboard.
 
-Install kafkacat tool
-
-```plain
-apt -y install kafkacat
-```{{exec}}
-
-For the communication to work, we have just one last thing to do, modify our /etc/hosts and make sure the port is forwarded from localhost to port 9092.
-
-```plain
-kubectl port-forward $(kubectl get pods -n kafka | grep kafka | awk '{print $1}') 9092 -n kafka &
-echo "127.0.0.1 localhost kafka-broker" >> /etc/hosts
-```{{exec}}
-
-Hit enter after this command.
-
-Send a message into kafka with kcat
-
-```plain
-echo "This is my message at $(date)" | kcat -P -b node01:31000 -t System_Logs
-```{{exec}}
-
-Now we consume that message from kafka. 
-
-```plain
-timeout 3 kcat -C -b node01:31000 -t System_Logs
-```{{exec}}
-
+Refresh the page and verify that the app drop down has Kafka and watch Promtail pull your messages from Kafka and write into Loki.
 
 </details>

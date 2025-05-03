@@ -1,2 +1,2 @@
 Look at you, learning Linux Configuration!
-You created a log monitoring solution with Grafana, Loki, and Promtail. You created a dashboard to visualize your logs.
+You integrated Kafka with an existing Loki -> Grafana solution using promtail to pull the messages from the System_Logs topic and view them via a dashboard.

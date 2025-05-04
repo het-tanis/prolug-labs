@@ -1,3 +1,9 @@
+Your team is going to be integrating an Apache Kafka message bus with existing infrastructure. You are setting up a new environment to facilitate the deployment. 
+
+Examine the proposed architecture and deploy these components for this lab.
+
+![Apache_Kafka](../assets/kafka_infrastructure.png)
+
 Your team has determined they need to offload and monitor Linux logs in your environment. You know that Grafana can do that as a visualization tool, so you plan to deploy it on a server as a daemon.
 
 Deploy Grafana and ensure that it is running on your server.

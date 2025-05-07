@@ -21,7 +21,7 @@ apt install -y software-properties-common wget
 ```{{exec}}
 
 ```plain
-sudo wget -q -O /usr/share/keyrings/grafana.key https://apt.grafana.com/gpg.key
+wget -q -O /usr/share/keyrings/grafana.key https://apt.grafana.com/gpg.key
 ```{{exec}}
 
 Add the Grafana repository.
@@ -41,9 +41,15 @@ apt install -y grafana-enterprise
 Now that you've installed Grafana, let's make sure it's started.
 
 ```plain
-sudo systemctl daemon-reload
-sudo systemctl start grafana-server
-sudo systemctl status grafana-server --no-pager
+systemctl daemon-reload
+```{{exec}}
+
+```plain
+systemctl start grafana-server
+```{{exec}}
+
+```plain
+systemctl status grafana-server --no-pager
 ```{{exec}}
 
 Verify that the server is serving on port 3000 (the default port)

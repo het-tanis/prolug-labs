@@ -46,7 +46,7 @@ systemctl restart fail2ban
 ```{{exec}}
 
 ```plain
-systemctl status fail2ban
+systemctl status fail2ban --no-pager
 ```{{exec}}
 
 Test the fail2ban is properly working by trying to connect back to the controlplane server from node01 as a fake account.

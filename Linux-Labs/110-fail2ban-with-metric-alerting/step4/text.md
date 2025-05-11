@@ -37,6 +37,8 @@ Hit save rule and exit in top right
 
 Verify that the lab triggers the alert into Discord. If the alert is not firirg, go back to step 1 and ensure that you have node01 in sshd jail, by repeating the login attempts to failure. 
 
+You may have to wait upwards of 3 minutes for the event to fire into Discord.
+
 
 
 

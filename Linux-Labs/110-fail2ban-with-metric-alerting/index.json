@@ -1,0 +1,53 @@
+{
+    "title": "Let's do Linux Configurations",
+    "description": "Fail2ban with Alerting",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "foreground": "foreground.sh",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Install and configure fail2ban",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Install and configure Telegraf, influxdb, and Grafana",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        },
+        {
+          "title": "Install and node_exporter, and prometheus",
+          "text": "step3/text.md",
+          "verify": "step3/verify.sh"
+        },
+        {
+          "title": "Configure Dashboards for influxdb and prometheus",
+          "text": "step4/text.md",
+          "verify": "step4/verify.sh"
+        },
+        {
+          "title": "Configure alerts to send to Discord",
+          "text": "step5/text.md",
+          "verify": "step5/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": "loki.service", "target": "/answers"},
+            {"file": "loki-local-config.yaml", "target": "/answers"},
+            {"file": "promtail.service", "target": "/answers"},
+            {"file": "promtail-local-config.yaml", "target": "/answers"},
+            {"file": "loki-write.py", "target": "/answers"}
+         ]
+        },
+	    "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

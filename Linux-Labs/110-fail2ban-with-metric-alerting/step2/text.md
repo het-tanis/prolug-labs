@@ -140,10 +140,10 @@ Set the information as follows: (Replace with your url, token, organization, and
    token = "mXA4HiqkssvKaNMtGmEyGPa7h8bpV7hwgjqRJKtBz79qpbQSbIzsaClRJgyuIhBxyw5Lb8qF2Jt1yy_-2qUTA=="
 #
 #   ## Organization is the name of the organization you wish to write to.
-   organization = "influxtest"
+   organization = "lab"
 #
 #   ## Destination bucket to write into.
-   bucket = "influxdata"
+   bucket = "test"
 ```
 
 Also fix the section on telegraf so that it can read fail2ban information:

@@ -36,11 +36,9 @@
       ],
 	    "assets": {
 	       "host01": [
-		        {"file": "loki.service", "target": "/answers"},
-            {"file": "loki-local-config.yaml", "target": "/answers"},
-            {"file": "promtail.service", "target": "/answers"},
-            {"file": "promtail-local-config.yaml", "target": "/answers"},
-            {"file": "loki-write.py", "target": "/answers"}
+		        {"file": "node_exporter.service", "target": "/answers"},
+            {"file": "prometheus.service", "target": "/answers"},
+            {"file": "prometheus.yml", "target": "/answers"}
          ]
         },
 	    "finish": {

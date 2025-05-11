@@ -146,6 +146,35 @@ Set the information as follows: (Replace with your url, token, organization, and
    bucket = "influxdata"
 ```
 
+Also fix the section on telegraf so that it can read fail2ban information:
+
+```plain
+# # Read metrics from fail2ban.
+ [[inputs.fail2ban]]
+#   ## Use sudo to run fail2ban-client
+   use_sudo = true 
+```
+
+Give the fail2ban user sudo permissions to read from the client.
+
+```plain
+vi /etc/sudoers.d/telegraf
+```{{exec}}
+
+Add the following three lines (sudo does not require restart):
+
+```plain
+Cmnd_Alias FAIL2BAN = /usr/bin/fail2ban-client status, /usr/bin/fail2ban-client status *
+telegraf  ALL=(root) NOEXEC: NOPASSWD: FAIL2BAN
+Defaults!FAIL2BAN !logfile, !syslog, !pam_session
+```
+
+To verify sudoers us:
+
+```plain
+sudo -l -U telegraf
+```{{exec}}
+
 Restart Telegraf and verify it's writing to InfluxDB2
 
 ```plain

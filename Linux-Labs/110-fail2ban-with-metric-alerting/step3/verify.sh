@@ -1,3 +1,3 @@
 #!/bin/bash
 
-systemctl status promtail.service --no-pager
+systemctl status node_exporter.servicee --no-pager

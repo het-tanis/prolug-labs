@@ -1,3 +1,3 @@
 #!/bin/bash
 
-systemctl status loki.service --no-pager
+systemctl status telegraf.service --no-pager

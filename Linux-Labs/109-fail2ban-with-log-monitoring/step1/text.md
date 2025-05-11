@@ -18,16 +18,22 @@ Verify the version number of fail2ban client
 fail2ban-client --version
 ```{{exec}}
 
+Configure fail2ban for sshd jail.
+
 ```plain
 vi /etc/fail2ban/jail.conf
 ```{{exec}}
 
 #Uncomment [sshd] and enter the following lines under [sshd] section
-    [sshd]
+
+
+```plain
+     [sshd]
      enabled = true
      maxretry =  5
      findtime = 10
      bantime = 4h
+```
 
 #Check the rest of the file and ensure that there is no [sshd] config later in the file, delete or comment it out.
 
@@ -76,7 +82,7 @@ Do you see the IP address that you expect? Why do you think that is?
 Unban the ip address from the logs. You must manually enter the correct IP address below from the upper output
 
 ```plain
-faile2ban-client set sshd unban <the IP from the logs>
+fail2ban-client set sshd unbanip <the IP from the logs>
 ```
 
 Test that the unban has happened correctly.

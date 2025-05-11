@@ -20,6 +20,6 @@ Import the dashboard 13639 to view logs.
 
 Verify the dashboard is working properly.
 
-Change the app field to fail2ban and re-test your failure condition from node01, from earlier. Do you see the logs passing through to Loki?
+Change the app field to fail2ban and re-test your failure condition from node01, from earlier. Do you see the logs passing through to Loki? Filter in loki on NOTICE. Do you see the ban and unban occurring?
 
 </details>

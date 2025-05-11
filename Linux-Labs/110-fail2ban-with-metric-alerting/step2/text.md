@@ -1,10 +1,6 @@
-Install Telegraf, influxdb, and Grafana on the system.
+Install Grafana, Influxdb, and Telegraf on the system.
 
 <br>
-
-### Solution
-<details>
-<summary>Solution</summary>
 
 Install the required packages and Grafana GPG key.
 
@@ -184,4 +180,3 @@ systemctl status telegraf --no-pager -l
 
 Look at the output above and verify that telegraf is properly writing out to InfluxDB2.
 
-</details>

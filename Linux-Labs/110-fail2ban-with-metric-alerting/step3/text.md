@@ -1,125 +1,30 @@
-Install node_exporter and prometheus on the system.
+Setup the Influxdb connection in Grafana
 
-<br>
+You've setup all the pieces, now you have to create a dashboard in Grafana and verify that everything is working end to end.
 
-### Solution
-<details>
-<summary>Solution</summary>
+Log into Grafana (and change the password if you didn't do it earlier)
 
-Create the directory where we will install Node Exporter.
+Create the datasource for InfluxDB2 in the the Datasource page. URL = http://127.0.0.1:8086
+You also need to know all of your client token, organization, and bucket information.
 
-```plain
-mkdir /opt/node_exporter
-```{{exec}}
+Create a dashboard that shows the telemetry information for your server from InfluxDB2.
 
-`cd` into that directory to set up the server.
+Connect to Grafana and log in {{TRAFFIC_HOST1_3000}}
 
-```plain
-cd /opt/node_exporter
-```{{exec}}
+Create the datasource for InfluxDB in the the Datasource page. 
+Change the Query Language to Flux
+Set the URL = http://127.0.0.1:8086
+Scroll all the way down and set: Organization, Bucket, and Token.
 
-Download and unpackage a current version of Node Exporter and move to the extracted folder.
+If you see "Datasource is working: 3 Buckets found" You know you connected properly.
 
-```plain
-wget https://github.com/prometheus/node_exporter/releases/download/v1.5.0/node_exporter-1.5.0.linux-amd64.tar.gz
-tar xvfz node_exporter-*.*-amd64.tar.gz
-cd node_exporter-*.*-amd64
-```{{exec}}
+Create a new Dashboard.
+Select a new Panel.
+Pick the data source InfluxDB.
+Choose the sample query of "Filter by Value".
 
+Verify the dashboard is working properly.
 
-```plain
-cp /answers/node_exporter.service /etc/systemd/system/node_exporter.service
-```{{exec}}
+Save the dashboard and call it Fail2ban_monitor.
 
 
-Review the service file so that you are confident it is going to properly start Node Exporter.
-
-```plain
-cat /etc/systemd/system/node_exporter.service
-```{{exec}}
-
-Now that you've checked everything reload the systemd configuration manager and start Node Exporter daemon.
-
-```plain
-systemctl daemon-reload
-systemctl enable node_exporter.service --now
-```{{exec}}
-
-Verify that Node Exporter is running and exposing the proper port.
-
-```plain
-systemctl status node_exporter --no-pager
-sleep 2
-curl http://localhost:9100/metrics
-```{{exec}}
-
-What data can you see exposed? Don't worry if it's not well formatted for you to process, it's in the correct configuration for Prometheus to scrape.
-
-Setup your server for Prometheus install
-
-```plain
-useradd prometheus
-```{{exec}}
-
-```plain
-mkdir /var/lib/prometheus
-```{{exec}}
-
-Download and extract Prometheus and required tools.
-
-```plain
-wget https://github.com/prometheus/prometheus/releases/download/v2.42.0-rc.0/prometheus-2.42.0-rc.0.linux-amd64.tar.gz  -P /tmp
-tar xvfz /tmp/prometheus-2.42.0-rc.0.linux-amd64.tar.gz -C /var/lib/prometheus/ --strip-components=1
-cp /var/lib/prometheus/prometheus /usr/bin/prometheus
-```{{exec}}
-
-Change ownership of /var/lib/prometheus so that prometheus user can start the service
-
-```plain
-chown -R prometheus:prometheus /var/lib/prometheus/
-```{{exec}}
-
-Create a directory and copy over the configuration for prometheus
-
-```plain
-mkdir /etc/prometheus
-cp /answers/prometheus.yml /etc/prometheus/prometheus.yml
-```{{exec}}
-
-View the file and look at the configuration
-
-```plain
-cat /etc/prometheus/prometheus.yml
-```{{exec}}
-
-Copy over the prometheus.service file so that systemd can control and start prometheus
-
-```plain
-cp /answers/prometheus.service /etc/systemd/system/prometheus.service
-```{{exec}}
-
-View the file and look at the configuration
-
-```plain
-cat /etc/systemd/system/prometheus.service
-```{{exec}}
-
-Start the Prometheus Service
-
-```plain
-systemctl daemon-reload
-systemctl start prometheus
-```{{exec}}
-
-Verify that Prometheus is working
-
-```plain
-systemctl status prometheus.service --no-pager
-ps -ef | grep [p]rometheus
-```{{exec}}
-
-You can also access prometheus via this link:
-
-{{TRAFFIC_HOST1_9090}}
-
-</details>

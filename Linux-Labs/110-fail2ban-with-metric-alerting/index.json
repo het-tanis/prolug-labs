@@ -19,19 +19,14 @@
           "verify": "step2/verify.sh"
         },
         {
-          "title": "Install and node_exporter, and prometheus",
+          "title": "Configure Dashboard for influxdb",
           "text": "step3/text.md",
           "verify": "step3/verify.sh"
         },
         {
-          "title": "Configure Dashboards for influxdb and prometheus",
+          "title": "Configure alerts to send to Discord",
           "text": "step4/text.md",
           "verify": "step4/verify.sh"
-        },
-        {
-          "title": "Configure alerts to send to Discord",
-          "text": "step5/text.md",
-          "verify": "step5/verify.sh"
         }
       ],
 	    "assets": {

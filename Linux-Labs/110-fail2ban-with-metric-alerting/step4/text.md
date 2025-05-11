@@ -1,46 +1,44 @@
-Setup Prometheus connection in Grafana
+You must have a Discord webhook for this part to work. Running a discord server is free, or if you're part of ProLUG, there are webhooks available for use in the server.
 
-You've setup all the pieces, now you have to create a dashboard in Grafana and verify that everything is working end to end.
+Setup the Grafana alerting to Discord.
 
-Log into Grafana (and change the password if you didn't do it earlier)
+Under Alerting: Create contact point for Discord
 
-Create the datasource for Prometheus in the the Datasource page. URL = http://127.0.0.1:9090
+Set name: Discord
+Integration: Discord
+Webhook: Collect from your discord channel or ProLUG Discord.
+Test to Discord -> It will write in the ProLUG Sandbox channel if you use that webhook from the lab.
+"Save contact point"
 
-Create a dashboard (import 159) that shows the telemetry information for your server.
+Under Alerting: Alert Rules create a New Rule Alert
+Section 1: Name: Discord test
+Section 2: Query: from Influxdb
+Enter condition from dashboard above
 
-Connect to Grafana and log in {{TRAFFIC_HOST1_3000}}
+```plain
+from(bucket: "test")
+  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)
+  |> filter(fn: (r) => r["_measurement"] == "fail2ban")
+  |> filter(fn: (r) => r["jail"] == "sshd")
+  |> filter(fn: (r) => r["_field"] == "banned")
+  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)
+  |> yield(name: "mean")
+```
 
-Create the datasource for Prometheus in the the Datasource page. URL = http://127.0.0.1:9090 
+Alert condition is when last is above 0 - You will see that it is currently firing, if you have a jailed user from first lab section.
 
-Import the dashboard 159 to view the metric data.
+Section 3: Set a new folder to Alerts
+Section 4: Set evaluation behavior Name to Alert
 
-Verify the dashboard is working properly.
+Section 5: set contact point to Discord.
+Section 6: Set summary to your name and fail2ban jail set
 
-Setup the Influxdb connection in Grafana
+Hit save rule and exit in top right
 
-You've setup all the pieces, now you have to create a dashboard in Grafana and verify that everything is working end to end.
+Verify that the lab triggers the alert into Discord. If the alert is not firirg, go back to step 1 and ensure that you have node01 in sshd jail, by repeating the login attempts to failure. 
 
-Log into Grafana (and change the password if you didn't do it earlier)
 
-Create the datasource for InfluxDB2 in the the Datasource page. URL = http://127.0.0.1:8086
-You also need to know all of your client token, organization, and bucket information.
 
-Create a dashboard that shows the telemetry information for your server from InfluxDB2.
 
-Connect to Grafana and log in {{TRAFFIC_HOST1_3000}}
-
-Create the datasource for InfluxDB in the the Datasource page. 
-Change the Query Language to Flux
-Set the URL = http://127.0.0.1:8086
-Scroll all the way down and set: Organization, Bucket, and Token.
-
-If you see "Datasource is working: 3 Buckets found" You know you connected properly.
-
-Create a new Dashboard.
-Select a new Panel.
-Pick the data source InfluxDB.
-Choose the sample query of "Filter by Value".
-
-Verify the dashboard is working properly.
 
 

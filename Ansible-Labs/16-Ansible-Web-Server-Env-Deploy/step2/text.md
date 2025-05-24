@@ -18,7 +18,7 @@ Copy that file over
 cp /answers/individual_web_environment.yaml /root/individual_web_environment.yaml
 ```{{exec}}
 
-Inspect that file and see how it is different than the other file. What is the use of block and when conditions doing in this file?
+Inspect that file and see how it is different than the other file. What are the instances of `block` and `when` conditions doing in this file?
 
 ```plain
 cat /root/individual_web_environment.yaml

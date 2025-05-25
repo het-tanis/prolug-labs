@@ -26,7 +26,7 @@ As of Ubuntu 24.04 this is now the location that the default repositories for th
 You want to add a tool called Grafana to your servers. Grafana has their own repositories that are not configured on your system. So, you can configure that repository on your server.
 
 ```plain
-echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://apt.grafana.com stable main" | tee -a /etc/apt/sources.list.d/grafana.list
 ```{{exec}}
 
 This command will drop the contents of the echo into a file in your /etc/apt/sources.list.d directory. There is a gpg key that is used to sign packages and establishes a trust between your system and the software items you download from that repository.

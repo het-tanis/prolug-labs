@@ -5,6 +5,6 @@ You tested and verified that you were able to pass the user through to the far s
 
 Reflect on how your understanding of this topic reflects the image here.
 
-![bastion](assets/bastion.png)
+![bastion](./assets/bastion.png)
 
 What do you need to go learn more about or spend more time with now to be more effective?

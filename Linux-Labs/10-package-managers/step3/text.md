@@ -21,7 +21,7 @@ You have another directory that extends the use of that list. Examine that direc
 ls /etc/apt/sources.list.d
 ```{{exec}}
 
-Because this is empty, we know that there are no additional repositories configured.
+As of Ubuntu 24.04 this is now the location that the default repositories for the system are defined.
 
 You want to add a tool called Grafana to your servers. Grafana has their own repositories that are not configured on your system. So, you can configure that repository on your server.
 

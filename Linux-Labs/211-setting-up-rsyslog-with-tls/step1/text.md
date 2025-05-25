@@ -1,4 +1,4 @@
-Your team has determined that they need to centralize logging in the environment. This is a Security Technical Implementation Guide (STIG) for government systems. 
+Your team has determined that they need to centralize logging in the environment. This is a Security Technical Implementation Guide (STIG) requirement for government systems. 
 
 Your previous setup of rsyslog did not encrypt the traffic between systems and was called out in a red team finding. You know that TLS can be set up, but your organization doesn't have a PKI infrastructure.
 

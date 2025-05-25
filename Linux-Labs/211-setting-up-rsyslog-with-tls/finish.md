@@ -3,6 +3,4 @@ You set up system logging and were able to see data flow from node01 into contro
 
 Check https://attack.mitre.org/techniques/T1070/ for more information about why we want to track logs in real time.
 
-Check https://en.wikipedia.org/wiki/Mean_time_to_repair to figure out what management was talking about earlier.
-
 Dig into: https://www.rsyslog.com/doc/tutorials/tls.html to see even more explanation of the setup for this lab.

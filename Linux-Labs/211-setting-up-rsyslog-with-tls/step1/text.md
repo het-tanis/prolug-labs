@@ -1,8 +1,6 @@
-Your team has determined that they need to centralize logging in the environment. This is a Security Technical Implementation Guide (STIG) for government systems. But, in your case, it's just a good practice and your team has been losing remediation time by not being able to see logs on systems until after the systems are back up. 
+Your team has determined that they need to centralize logging in the environment. This is a Security Technical Implementation Guide (STIG) for government systems. 
 
 Your previous setup of rsyslog did not encrypt the traffic between systems and was called out in a red team finding. You know that TLS can be set up, but your organization doesn't have a PKI infrastructure.
-
-Verify that rsyslog is installed and running on both systems.
 
 Setup the certificates
 
@@ -44,11 +42,13 @@ Generate self-signed cert
 certtool --generate-self-signed --load-privkey ca-key.pem --outfile ca.pem
 ```{{exec}}
 
+```plain
   Select defaults
   Organization name: ProLUG
   Make expiration 90 days
   Select defaults
   Select "y" for Is the above information ok?
+```
 
 Verify both ca-key.pem and ca.pem have been created
 ```plain
@@ -57,7 +57,7 @@ ls -l
 
 What permissions do you see on these files?
 
-#Generate a new private key for controlplane
+Generate a new private key for controlplane
 
 ```plain
 certtool --generate-privkey --outfile key.pem
@@ -75,12 +75,14 @@ Sign the certificate request for controlplane
 certtool --generate-certificate --load-request request.pem --outfile cert.pem --load-ca-certificate ca.pem --load-ca-privkey ca-key.pem
 ```{{exec}}}
 
+```plain
   Make expiration 60 days
   Is this a TLS web client certificate? (y/N): y
   Enter a dnsName of the subject of the certificate: controlplane
   Make expiration 60 days
   Accept all other defaults
   Select "y" for Is the above information ok?
+```
 
 Validate any information by checking the cert
 
@@ -98,6 +100,11 @@ chmod 640 /usr/local/share/ca-certificates/key.pem
 Verify all permissions
 ```plain
 ls -l
+```{{exec}}
+
+Copy the correct file over to node01
+```plain
+scp /usr/local/share/ca-certificates/ca.pem node01:/usr/local/share/ca-certificates/ca.pem 
 ```{{exec}}
 
 Configure rsyslog on controlplane to capture TCP on the default port 6514.

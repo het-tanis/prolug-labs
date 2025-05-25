@@ -9,7 +9,7 @@
       },
       "steps": [
         {
-          "title": "Verify rsyslog is running. Set up TLS. Configure rsyslog to catch logs on 6514",
+          "title": "Set up TLS and configure rsyslog on 6514/TCP",
           "text": "step1/text.md",
           "verify": "step1/verify.sh"
         },

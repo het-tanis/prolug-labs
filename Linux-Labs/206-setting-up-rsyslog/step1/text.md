@@ -28,7 +28,7 @@ ssh node01 'dpkg -l | grep -i rsyslog'
 ```{{exec}}
 
 ```plain
-systemctl status rsyslog
+systemctl status rsyslog --no-pager
 ```{{exec}}
 
 ```plain

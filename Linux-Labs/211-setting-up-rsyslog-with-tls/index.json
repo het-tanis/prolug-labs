@@ -1,0 +1,29 @@
+{
+    "title": "Let's do Linux Security",
+    "description": "Setup rsyslog to capture and send logs using TLS",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "foreground": "foreground.sh",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Verify rsyslog is running. Set up TLS. Configure rsyslog to catch logs on 6514",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Setup rsyslog on node01 to sent logs over TLS",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        }
+      ],
+	    "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

@@ -1,0 +1,2 @@
+Look at you, learning Linux Configuration!
+You created a telemetry monitoring solution with Grafana, Prometheus and Node Exporter. You then set the Alertmanager up to send an alert out to a webhook when a threshold was crossed.

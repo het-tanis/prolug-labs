@@ -69,6 +69,10 @@ Generate a certificate request for controlplane
 certtool --generate-request --load-privkey key.pem --outfile request.pem
 ```{{exec}}
 
+```plain
+  Accept all defaults
+```
+
 Sign the certificate request for controlplane
 
 ```plain
@@ -79,7 +83,6 @@ certtool --generate-certificate --load-request request.pem --outfile cert.pem --
   Make expiration 60 days
   Is this a TLS web client certificate? (y/N): y
   Enter a dnsName of the subject of the certificate: controlplane
-  Make expiration 60 days
   Accept all other defaults
   Select "y" for Is the above information ok?
 ```
@@ -149,7 +152,7 @@ systemctl restart rsyslog
 ```{{exec}}
 
 ```plain
-systemctl status rsyslog
+systemctl status rsyslog --no-pager
 ```{{exec}}
 
 Verify that your system is listening on port 6514 for TCP traffic.

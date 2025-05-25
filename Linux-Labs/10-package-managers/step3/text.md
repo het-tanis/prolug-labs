@@ -10,7 +10,7 @@ When you did your apt update, your system checked repositories for newer package
 
 ```plain
 cd /etc/apt
-grep -v '^#' sources.list
+grep -v '^#' /etc/apt/sources.list.d/ubuntu.sources
 ```{{exec}}
 
 Do you recognize these repositories from your update and upgrade?

@@ -49,6 +49,31 @@ Test your connection
 ssh -i ProLUG prolug@node01
 ```{{exec}}
 
+Look at where the key was pushed to in the prolug user home directory.
+
+```plain
+ls -ld /home/prolug/.ssh
+```{{exec}}
+
+What is the permission that is set on the .ssh directory?
+
+```plain
+cd /home/prolug/.ssh
+```{{exec}}
+
+```plain
+ls -l
+```{{exec}}
+
+What is the name of the file in .ssh directory?
+What permissions do you see on the file?
+
+```plain
+cat authorized_key
+```{{exec}}
+
+What was pushed into authorized keys?
+
 Exit back to controlplane
 
 ```plain

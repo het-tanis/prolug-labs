@@ -1,4 +1,4 @@
-Your team is trying to better adhere to NIST SP 800-57. [here](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r5.pdf) Recently a key was found for root that had not been changed for over 15 years. 
+Your team is trying to better adhere to NIST SP 800-57. Which can be reviewed [here](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r5.pdf). Recently a key was found for root that had not been changed for over 15 years. 
 
 You have decided to learn more about how key management works in Linux.
 
@@ -6,7 +6,7 @@ You have decided to learn more about how key management works in Linux.
 
 2. Verify that the keys are cryptographically similar.
 
-3. Regenerate a public that has been lost for a private key that you have kept protected.
+3. Regenerate a public key that has been lost for a private key that you have kept protected.
 
 <br>
 

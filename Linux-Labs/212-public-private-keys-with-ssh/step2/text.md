@@ -1,6 +1,8 @@
-So far you have enabled rsyslog collection on controlplane on TCP Port 6514. 
+You have verified the basics of your key operation, but now you want to test them between two machines.
 
-Now you must configure the node01 server to securely send logs over the correct port.
+1. Create a user to push the key to and test with.
+
+2. Push the key and validate that it works for allowing access to the user on the remote system.
 
 <br>
 
@@ -47,6 +49,12 @@ Test your connection
 ssh -i ProLUG prolug@node01
 ```{{exec}}
 
+Exit back to controlplane
+
+```plain
+exit
+```{{exec}}
+
 Verify that the key is the one being used with -v
 
 ```plain
@@ -54,6 +62,12 @@ ssh -v -i ProLUG prolug@node01
 ```{{exec}}
 
 Do you see your key being accepted in the verbose debug1 output?
+
+Exit back to controlplane
+
+```plain
+exit
+```{{exec}}
 
 
 </details>

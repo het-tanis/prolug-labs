@@ -30,6 +30,7 @@
       { "path": "205-setting-up-uncomplicated-firewall-UFW" },
       { "path": "206-setting-up-rsyslog" },
       { "path": "211-setting-up-rsyslog-with-tls" },
+      { "path": "212-public-private-keys-with-ssh" },
       { "path": "207-OS_STIG_Scan_with_SCC_Tool" },
       { "path": "208-Firefox_STIG_Scan_with_SCC_Tool"},
       { "path": "209-OS_STIG_Remediation"},

@@ -69,7 +69,7 @@ What is the name of the file in .ssh directory?
 What permissions do you see on the file?
 
 ```plain
-cat authorized_key
+cat authorized_keys
 ```{{exec}}
 
 What was pushed into authorized keys?

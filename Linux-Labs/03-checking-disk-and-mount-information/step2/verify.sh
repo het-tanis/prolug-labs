@@ -1,4 +1,4 @@
 #!/bin/bash
 
-grep 1 /root/disks
-grep 3 /root/partitions
+grep /dev/vda1 /root/fstype
+grep /etc/fstab /root/mountinfo

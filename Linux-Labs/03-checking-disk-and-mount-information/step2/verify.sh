@@ -1,4 +1,3 @@
 #!/bin/bash
 
-grep 1 /root/disks
-grep 3 /root/partitions
+grep '/etc/fstab' /root/mountinfo

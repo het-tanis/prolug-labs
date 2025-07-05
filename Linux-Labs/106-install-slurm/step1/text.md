@@ -41,7 +41,7 @@ ssh node01 'systemctl restart munge'
 Now that you have munge working correctly, it's time to configure Slurm. You may use the link [here](https://slurm.schedmd.com/configurator.html) to build one in the web tool, or you may copy the answer file from /answers/slurm.conf provided in this lab.
 
 ```plain
-cp /answers/slurm.conf /etc/slurm-llnl/slurm.conf
+cp /answers/slurm.conf /etc/slurm/slurm.conf
 ```{{exec}}
 
 Review the configuration to see the cluster name.
@@ -56,7 +56,7 @@ cat /answers/slurm.conf
 Copy this config to the other node
 
 ```plain
-scp /etc/slurm-llnl/slurm.conf node01:/etc/slurm-llnl/slurm.conf
+scp /etc/slurm/slurm.conf node01:/etc/slurm/slurm.conf
 ```{{exec}}
 
 Restart the slurm services on controlplane

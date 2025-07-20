@@ -1,4 +1,4 @@
-Your team is testing fail2ban to protect the sshd process in your server. You have decide to build a proof of concept (POC) of the system and tie it into your Grafana monitoring solution.
+Your team is testing fail2ban to protect the sshd process in your server. You have decided to build a proof of concept (POC) of the system and tie it into your Grafana monitoring solution.
 
 <br>
 

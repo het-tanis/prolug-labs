@@ -10,6 +10,7 @@
     - name: Pulling SWAPI and get results from the webpage
       uri:
         url: https://swapi.dev/api/people/
+        validate_certs: false
         return_content: yes
       register: swapi
 

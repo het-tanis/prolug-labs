@@ -1,0 +1,3 @@
+[servers]
+controlplane type=client
+node01 type=server

@@ -3,6 +3,7 @@
 You have decided to verify and test Python on your system.
 
 Verify your version of Python
+
 Test that you can execute and import modules
 
 
@@ -29,7 +30,7 @@ import os
 ```{{exec}}
 
 ```plain
-import numpy
+import matplotlib
 ```{{exec}}
 
 If this failed, why might that be? You can correct it, if you like, but you are not required to for the lab.

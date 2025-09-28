@@ -5,7 +5,9 @@ This lab is designed as part of a larger set of instruction that is free from th
 You have found yourself in a bash shell. Ensure that you can execute simple commands and interact with your environment.
 
 Verify version of bash
+
 Verify shell PID
+
 Loop over a list of servers with ssh
 
 <br>
@@ -19,7 +21,7 @@ which bash
 ```{{exec}}
 
 ```plain
-/usr/bin/bash
+/usr/bin/bash --version
 ```{{exec}}
 
 Verify your shell PID
@@ -37,7 +39,7 @@ echo $SHELL
 Loop over your target servers
 
 ```plain
-for server in controlplane node01; do timeout 10 ssh $server 'uptime'; done
+for server in controlplane node01; do timeout 10 ssh $server 'hostname; uptime'; done
 ```{{exec}}
 
 

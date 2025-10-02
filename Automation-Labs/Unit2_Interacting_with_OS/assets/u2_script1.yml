@@ -12,7 +12,7 @@
         content: |
           #!/bin/bash
           head -n 10 /etc/passwd
-      mode: '0755'
+        mode: '0755'
 
     - name: Create generated_script 2
       copy:
@@ -20,4 +20,4 @@
         content: |
           #!/bin/bash
           date +"%Y-%m-%d %H:%M:%S"
-      mode: '0755'
+        mode: '0755'

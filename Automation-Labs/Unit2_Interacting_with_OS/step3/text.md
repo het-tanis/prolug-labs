@@ -33,7 +33,7 @@ What are you shown?
 Inspect the file and see if you can make it name the file differently or populate different content.
 
 ```plain
-cat /root/u2_script2.py
+cat /root/u2_script2.yml
 ```{{exec}}
 
 Note: Modify with vi or vim. You may have to RTFM to continue.

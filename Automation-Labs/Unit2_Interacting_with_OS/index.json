@@ -30,7 +30,9 @@
             {"file": "u2_script1.sh", "target": "~/", "chmod": "+x"},
             {"file": "u2_script2.py", "target": "~/", "chmod": "+x"},
             {"file": "u2_script2.sh", "target": "~/", "chmod": "+x"},
-            {"file": "u2_script1.py", "target": "~/", "chmod": "+x"}
+            {"file": "u2_script1.py", "target": "~/", "chmod": "+x"},
+            {"file": "u2_script1.yml", "target": "~/"},
+            {"file": "u2_script2.yml", "target": "~/"}
          ]
         },
       "finish": {

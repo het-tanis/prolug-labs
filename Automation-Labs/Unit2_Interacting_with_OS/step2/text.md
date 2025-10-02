@@ -33,7 +33,7 @@ Run the u2_script2.py and look at what it shows you.
 
 What are you shown?
 
-Inspect the file and see if you can make it use a different shell, maybe one you've seen from other output in this lab.
+Inspect the file and see if you can make it use a different user shell, maybe one you've seen from other output in this lab.
 
 ```plain
 cat /root/u2_script2.py

@@ -1,0 +1,23 @@
+---
+
+- hosts: localhost
+  become: True
+  vars:
+  gather_facts: True
+  tasks:
+  
+    - name: Create generated_script 1
+      copy:
+        dest: /root/u2_generatedscript1.sh
+        content: |
+          #!/bin/bash
+          head -n 10 /etc/passwd
+      mode: '0755'
+
+    - name: Create generated_script 2
+      copy:
+        dest: /root/u2_generated_script2.sh
+        content: |
+          #!/bin/bash
+          date +"%Y-%m-%d %H:%M:%S"
+      mode: '0755'

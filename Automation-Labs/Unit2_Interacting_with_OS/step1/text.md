@@ -44,7 +44,11 @@ Run the u2_script2.sh and look at what it shows you.
 /root/u2_script2.sh
 ```{{exec}}
 
-What are you shown?
+What happened in the script? Did it work correctly?
+
+```plain
+ls -l /root
+```{{exec}}
 
 Inspect the file and see if you can make it use a different date format. You may have to read the man pages for date command.
 

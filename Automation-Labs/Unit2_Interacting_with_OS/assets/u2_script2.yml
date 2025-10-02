@@ -1,0 +1,24 @@
+---
+
+- hosts: localhost
+  become: True
+  vars:
+  gather_facts: True
+  tasks:
+  
+  #run the generated  scripts
+    - name: Run generated_script 1
+      command: /root/u2_generatedscript1.sh
+      register: script1_output
+
+    - name: Display output of generated_script 1
+      debug:
+        var: script1_output.stdout
+
+    - name: Run generated_script 2
+      command: /root/u2_generated_script2.sh
+      register: script2_output
+
+    - name: Display output of generated_script 2
+      debug:
+        var: script2_output.stdout

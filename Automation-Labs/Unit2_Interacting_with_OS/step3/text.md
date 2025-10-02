@@ -1,53 +1,41 @@
 ### Lab Activities
 
-You have decided to verify and test Ansible on your system.
-
-Verify your version of Ansible
-
-Check other Ansible commands that are on the system
-
-Check your modules that are available
+You have decided to interact with the operating system using Ansible. Execute some playbooks to see their functionality.
 
 <br>
 <details>
 <summary>Solution</summary>
 
-Verify your version of Ansible
+Run the u2_script1.yml and look at what it shows you.
+
 ```plain
-ansible --version
+ansible /root/u2_script1.yml
 ```{{exec}}
 
-Check other ansible commands on your system
+What are you shown?
 
-Type in ansible- and then hit <tab>
-```plain
-ansible- #hit<tab>
-```
-
-Check modules in ansible
+Inspect the file and see if you can modify it to show the first and last 15 lines.
 
 ```plain
-ansible-doc -l
+cat /root/u2_script1.yml
 ```{{exec}}
 
-hit "q" to exit
+Note: Modify with vi or vim. You may have to RTFM to continue.
+
+Run the u2_script2.yml and look at what it shows you.
 
 ```plain
-ansible-doc -l | wc -l
+/root/u2_script2.yml
 ```{{exec}}
 
-Check for the copy modules
+What are you shown?
+
+Inspect the file and see if you can make it name the file differently or populate different content.
 
 ```plain
-ansible-doc -l | grep -i copy
+cat /root/u2_script2.py
 ```{{exec}}
 
-Can you find ansible.builtin.copy? How might you find out what that module does?
-
-```plain
-ansible-doc -s ansible.builtin.copy
-```{{exec}}
-
-What is shown by this command? use "q" to exit
+Note: Modify with vi or vim. You may have to RTFM to continue.
 
 </details>

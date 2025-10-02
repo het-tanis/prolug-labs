@@ -1,6 +1,6 @@
 {
-    "title": "Automation Labs - Unit 1 - Tools",
-    "description": "Test and execute your automation tools",
+    "title": "Automation Labs - Unit 2 - Interacting with the OS",
+    "description": "Execute your Automation tools to interact with the OS",
     "details": {
       "intro": {
         "text": "intro.md",

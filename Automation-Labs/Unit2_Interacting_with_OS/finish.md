@@ -1,2 +1,2 @@
 Look at you, learning automation!
-You inspected your tools, their versions, and executed basic commands to verify functionality.
+You interacted with the operating system using your different automation tools.

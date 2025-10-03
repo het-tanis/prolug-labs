@@ -1,6 +1,6 @@
 ### Lab Activities
 
-This lab is designed as part of a larger set of instruction that is free from the Professional Linux Users Group (ProLUG). The lab book for this course can be found here: https://professionallinuxusersgroup.github.io/pcae/unitindex.html
+This lab is designed as part of a larger set of instruction that is free from the Professional Linux Users Group (ProLUG). The lab book for this course can be found here: https://professionallinuxusersgroup.github.io/course-books/pcae/unitindex
 
 You have found yourself in a bash shell. Bash natively interacts with the Linux OS via built-in tools, and native tools.
 

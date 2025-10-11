@@ -33,7 +33,8 @@
             {"file": "u3_script_user_generator.sh", "target": "~/", "chmod": "+x"},
             {"file": "simple_servers_list", "target": "~/"},
             {"file": "hosts_example2", "target": "~/"},
-            {"file": "hosts_example3", "target": "~/"}        
+            {"file": "hosts_example3", "target": "~/"},
+            {"file": "users.csv", "target": "~/"}
           ]
         },
       "finish": {

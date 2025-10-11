@@ -49,7 +49,7 @@ How might you strip the header off as you use the data?
 If you need to regenerate the data use this script.
 
 ```plain
-/root/u3_script_user_genearator.sh
+/root/u3_script_user_generator.sh
 ```{{exec}}
 
 Does it repopulate the data?

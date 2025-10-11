@@ -1,0 +1,15 @@
+[servers]
+controlplane
+node01
+
+[test_env]
+controltest type=client
+node01test  type=server
+
+[prod_env]
+controlprod type=client
+node01prod  type=server
+
+[non-prod:children]
+servers
+test_env

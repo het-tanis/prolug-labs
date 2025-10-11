@@ -1,0 +1,46 @@
+{
+    "title": "Automation Labs - Unit 3 - Inventories",
+    "description": "Execute your Automation tools to interact with inventories",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "foreground": "foreground.sh",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Execute Bash commands to utilize inventories",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Execute Python commands to utilize inventories",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        },
+        {
+          "title": "Execute Ansible commands to utilize inventories",
+          "text": "step3/text.md",
+          "verify": "step3/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": "hosts", "target": "~/"},
+            {"file": "u3_script.sh", "target": "~/", "chmod": "+x"},
+            {"file": "u3_script.py", "target": "~/", "chmod": "+x"},
+            {"file": "u3_script.yml", "target": "~/"},
+            {"file": "u3_script_user_generator.sh", "target": "~/", "chmod": "+x"}
+            {"file": "simple_servers_list", "target": "~/"},
+            {"file": "hosts_example2", "target": "~/"},
+            {"file": "hosts_example3", "target": "~/"}        
+          ]
+        },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

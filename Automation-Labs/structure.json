@@ -1,6 +1,7 @@
 {
     "items": [
       { "path": "Unit1_Tools" },
-      { "path": "Unit2_Interacting_with_OS" }
+      { "path": "Unit2_Interacting_with_OS" },
+      { "path": "Unit3_Inventories" }}
     ]
   }

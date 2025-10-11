@@ -13,7 +13,7 @@ Use the tool ansible-inventory to parse and understand your inventories.
 Run the u3_script.yml and look at what it shows you.
 
 ```plain
-ansible-playbook /root/u2_script1.yml
+ansible-playbook /root/u3_script.yml
 ```{{exec}}
 
 What are you shown?

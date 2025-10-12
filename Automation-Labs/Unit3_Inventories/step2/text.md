@@ -9,7 +9,7 @@ Run the scripts and modify them to fit your needs.
 <details>
 <summary>Solution</summary>
 
-Run the u3_script1.py and look at what it shows you.
+Run the u3_script.py and look at what it shows you.
 
 ```plain
 /root/u3_script.py

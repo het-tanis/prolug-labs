@@ -4,7 +4,7 @@ This lab is designed as part of a larger set of instruction that is free from th
 
 You have found yourself in a bash shell. You are trying to better understand inventories so you can run your automations by inputting values given to you from other parts of your organization.
 
-Run the .sh script and attempt to 
+Run the .sh script and attempt to understand what it is doing.
 
 <br>
 <details>

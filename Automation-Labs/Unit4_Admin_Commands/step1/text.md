@@ -1,5 +1,7 @@
 ### Lab Activities
 
+LAB IS STILL IN PROGRESS, NOT COMPLETED YET
+
 This lab is designed as part of a larger set of instruction that is free from the Professional Linux Users Group (ProLUG). The lab book for this course can be found here: https://professionallinuxusersgroup.github.io/course-books/pcae/unitindex
 
 You have found yourself in a bash shell. You are trying to better understand inventories so you can run your automations by inputting values given to you from other parts of your organization.

@@ -1,62 +1,28 @@
 ### Lab Activities
 
-You have decided to interact with Ansible inventories. 
+The team needs a quick re-tooling in their dev environment. You've been so successful they come directly to you to get what they need set up. 
 
-Execute some playbooks to see their functionality.
+They need the following
 
-Use the tool ansible-inventory to parse and understand your inventories.
+A user named svc_ansible set up on webservers with a home directory in /var/chroot/svc_ansible instead of the normal location. The user must be added to the admin or wheel group and have the uid of 10001.
 
 <br>
 <details>
 <summary>Solution</summary>
 
-Run the u3_script.yml and look at what it shows you.
+Create the directory.
 
 ```plain
-ansible-playbook /root/u3_script.yml
+ansible webservers -i /root/hosts -m file -a "path=/var/chroot/svc_ansible state=directory" 
 ```{{exec}}
 
-What are you shown?
-
-Can you modify this output so show other interesting parts of the API calls? If you had to pull a specific field, could you do it? Again, you don't know how data might come to you in your organization, so this is an exercise in parsing things different ways.
-
-Inspect your current inventory files.
+Create the svc_ansible user and give them the correct settings in the environments needed.
 
 ```plain
-cat /root/hosts
+ansible webservers -i /root/hosts -m user -a "name=svc_ansible home=/var/chroot/svc_ansible uid=10001 groups=admin"
 ```{{exec}}
 
-```plain
-cat /root/hosts_example2
-```{{exec}}
-
-```plain
-cat /root/hosts_example3
-```{{exec}}
-
-What file type are these? (https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html)?
-
-What other file types might you use for inventories?
-
-Do you have a preference on how the data are formatted, or where the variables are located on these?
-
-Do you think some of this looks better formatted or do you prefer it as yaml?
-
-Check the yaml versions of these files.
-
-```plain
-ansible-inventory -i /root/hosts --list -y
-```{{exec}}
-
-```plain
-ansible-inventory -i /root/hosts_example2 --list -y
-```{{exec}}
-
-```plain
-ansible-inventory -i /root/hosts_example3 --list -y
-```{{exec}}
-
-This is a very high level review of the many ansible-inventory commands. It is recommended that you parse and play with these files more, as the concepts will continue to be built on in later labs.
+What warnings do you see here? Might you need to fix these? How would you do the fix, if you needed one?
 
 
 </details>

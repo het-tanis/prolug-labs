@@ -1,30 +1,30 @@
 ### Lab Activities
 
-You have decided to verify the functionality of Python on your system to pull in and parse user information. 
-
-Run the scripts and modify them to fit your needs.
+The team is happy that the system is updated and working properly. Now they have provided you a new file that they urgently need pushed into the qa environment. See if you can push that file for them with admin and one-off commands.
 
 
 <br>
 <details>
 <summary>Solution</summary>
 
-Run the u3_script.py and look at what it shows you.
+Verify the web page as it currently exists.
 
 ```plain
-/root/u3_script.py
+curl node01:8082
 ```{{exec}}
 
-What are you shown?
-
-Inspect the file and see if you can figure out what it was doing.
+Push the update via ansible
 
 ```plain
-cat /root/u3_script.py
+ansible webservers -i /root/hosts -m copy -a "src=/answers/fixed_qa_index.html dest=/var/www/html_qa/index.html"
 ```{{exec}}
 
-Note: Modify with vi or vim. Can you make this show the lowest 10 items, ordered by magnitude?
+Check that the page updated.
 
-Can you generate a python script that parses the /root/users.csv file? (What resources might you use to do this?)
+```plain
+curl node01:8082
+```{{exec}}
+
+But wait, did this require a restart of the apache web service? Why or why not? What is different here?
 
 </details>

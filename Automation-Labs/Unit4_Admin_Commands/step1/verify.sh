@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/bin/true
+curl -s node01:8080

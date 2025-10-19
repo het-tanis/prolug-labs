@@ -1,7 +1,5 @@
 ### Lab Activities
 
-LAB IS STILL IN PROGRESS, NOT COMPLETED YET
-
 This lab is designed as part of a larger set of instruction that is free from the Professional Linux Users Group (ProLUG). The lab book for this course can be found here: https://professionallinuxusersgroup.github.io/course-books/pcae/unitindex
 
 Your deployement teams have recently created a web server for a dev team. You get a ticket that one of the environments is not as is expected. Use ad-hoc and one off administration commands to fix the environment and get it in the correct operational state.

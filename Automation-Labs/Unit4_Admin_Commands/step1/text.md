@@ -36,7 +36,7 @@ curl node01:8082
 
 Or maybe even more automation mindset like this
 ```plain
-for port in 8080 8081 8082; do curl node01:$port; do; done
+for port in 8080 8081 8082; do curl node01:$port; done
 ```{{exec}}
 
 How might you find what broken in the deployment? We saw it run from start to finish, why didn't the deployer fail?
@@ -69,6 +69,10 @@ If you check the system, did that fix it? Why or why not?
 
 ```plain
 nmap node01
+```{{exec}}
+
+```plain
+for port in 8080 8081 8082; do curl node01:$port; done
 ```{{exec}}
 
 So you've corrected this, but someone needs to go back and fix the original deployment from the team (and maybe fix that name). Inspect the file and see if you can find where it went wrong.

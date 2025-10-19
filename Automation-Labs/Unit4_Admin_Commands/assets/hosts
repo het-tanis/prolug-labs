@@ -1,3 +1,6 @@
 [servers]
 controlplane type=client
 node01 type=server
+
+[webservers]
+node01

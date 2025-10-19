@@ -34,7 +34,9 @@
             {"file": "simple_servers_list", "target": "~/"},
             {"file": "hosts_example2", "target": "~/"},
             {"file": "hosts_example3", "target": "~/"},
-            {"file": "users.csv", "target": "~/"}
+            {"file": "users.csv", "target": "~/"},
+            {"file": "broken_web_environment.yaml", "target": "~/"},
+            {"file": "web_environment.yaml", "target": "~/"}
           ]
         },
       "finish": {

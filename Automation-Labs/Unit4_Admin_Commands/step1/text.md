@@ -4,63 +4,77 @@ LAB IS STILL IN PROGRESS, NOT COMPLETED YET
 
 This lab is designed as part of a larger set of instruction that is free from the Professional Linux Users Group (ProLUG). The lab book for this course can be found here: https://professionallinuxusersgroup.github.io/course-books/pcae/unitindex
 
-You have found yourself in a bash shell. You are trying to better understand inventories so you can run your automations by inputting values given to you from other parts of your organization.
+Your deployement teams have recently created a web server for a dev team. You get a ticket that one of the environments is not as is expected. Use ad-hoc and one off administration commands to fix the environment and get it in the correct operational state.
 
-Run the .sh script and attempt to understand what it is doing.
+The expected state:
+
+dev - port 8080
+
+test - port 8081
+
+qa - port 8082
 
 <br>
 <details>
 <summary>Solution</summary>
 
-Your organization has an API to hit to pull the names of servers. To simulate this, we are using earthquakes from the USGS in an API that should always be available. 
-
-Execute the api call and see if you can read the data.
+Simulate the deployment (this is what would have happened before the ticket was put in, you're running it to setup the lab and watch the output.)
 
 ```plain
-/root/u3_script.sh
+ansible-playbook -i /root/hosts broken_web_environment.yaml
 ```{{exec}}
 
-What are the data showing?
+What environment is deployed? What problems do you see compared to what you expected to see?
 
-What does the script look like in bash?
+Can you check that the environment is working as expected or not?
 
 ```plain
-cat /root/u3_script.sh
+curl node01:8080
+curl node01:8081
+curl node01:8082
 ```{{exec}}
 
-What tools or techniques were used to gather this data? Could you modify the api to call something else?
+Or maybe even more automation mindset like this
+```plain
+for port in 8080 8081 8082; do curl node01:$port; do; done
+```{{exec}}
 
-Could you pipe this output to call only the fields between the "-", specifically the second field?
+How might you find what broken in the deployment? We saw it run from start to finish, why didn't the deployer fail?
 
-Read the provided users.csv file. This represents some data sent over to you by a project manager or other non-technical resource in your organization. They used a format they got the data in, and now you're going to have to use it.
+Did the wrong port get set somehow? How might you find that incorrect port?
 
 ```plain
-cat /root/users.csv
+nmap node01
 ```{{exec}}
 
-What do you notice about this data format? Can you parse this for just the first and third fields?
+Looks like someone fat-fingered, or otherwise incorrectly set port 8087 instead of 8082. Can you fix that with some one-off commands to get the environment correct?
 
 ```plain
-cat /root/users.csv | awk -F , '{print $1,$3}'
+ansible webservers -i /root/hosts -m lineinfile -a "path=/etc/apache2/ports.conf regexp='Listen 8087' line='Listen 8082'" 
 ```{{exec}}
 
-Does this look correct to you? How might you use this data? 
-
-How might you strip the header off as you use the data?
-
-If you need to regenerate the data use this script.
+If you check the system, did that fix it? Why or why not?
 
 ```plain
-/root/u3_script_user_generator.sh
+nmap node01
 ```{{exec}}
 
-Does it repopulate the data?
+Remember we always have to restart the service to re-read a config file. We can do that with another one-off admin command.
 
 ```plain
-cat /root/users.csv
+ansible webservers -i /root/hosts -m service -a "name=apache2 state=restarted"
 ```{{exec}}
 
-Can you modify this script and generate other data? (use this as reference: https://documenter.getpostman.com/view/19878710/2s93Jrwk3R)
+If you check the system, did that fix it? Why or why not?
 
+```plain
+nmap node01
+```{{exec}}
+
+So you've corrected this, but someone needs to go back and fix the original deployment from the team (and maybe fix that name). Inspect the file and see if you can find where it went wrong.
+
+```plain
+cat /root/broken_web_environment.yaml
+```{{exec}}
 
 </details>

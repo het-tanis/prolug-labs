@@ -33,7 +33,7 @@
             {"file": "dev_index.html", "target": "/answers/"},
             {"file": "qa_index.html", "target": "/answers/"},
             {"file": "test_index.html", "target": "/answers/"},
-            {"file": "fixed_qa_environment", "target": "/answers/"},
+            {"file": "fixed_qa_index.html", "target": "/answers/"},
             {"file": "u4_script.sh", "target": "~/", "chmod": "+x"},
             {"file": "u4_script.py", "target": "~/", "chmod": "+x"},
             {"file": "u4_script.yml", "target": "~/"},

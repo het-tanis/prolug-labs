@@ -62,7 +62,7 @@ Add in the creation of a pod.
         metadata:
           namespace: daily-test
         kind: Pod
-         spec:
+        spec:
           containers:
           - name: nginx
             image: nginx

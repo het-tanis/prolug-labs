@@ -1,0 +1,56 @@
+{
+    "title": "Automation Labs - Unit 7 - Kubernetes Automation",
+    "description": "Learn how to automate Kubernetes tasks using various ansible techniques.",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "foreground": "foreground.sh",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Install ansible kubernetes module",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Build an environment in Kubernetes",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        },
+        {
+          "title": "Cleaning up the environment",
+          "text": "step3/text.md",
+          "verify": "step3/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": "hosts", "target": "~/"},
+            {"file": "dev_virtual_host.conf", "target": "/answers/"},
+            {"file": "qa_virtual_host.conf", "target": "/answers/"},
+            {"file": "test_virtual_host.conf", "target": "/answers/"},
+            {"file": "dev_index.html", "target": "/answers/"},
+            {"file": "qa_index.html", "target": "/answers/"},
+            {"file": "test_index.html", "target": "/answers/"},
+            {"file": "fixed_qa_index.html", "target": "/answers/"},
+            {"file": "u4_script.sh", "target": "~/", "chmod": "+x"},
+            {"file": "u4_script.py", "target": "~/", "chmod": "+x"},
+            {"file": "u4_script.yml", "target": "~/"},
+            {"file": "u3_script_user_generator.sh", "target": "~/", "chmod": "+x"},
+            {"file": "simple_servers_list", "target": "~/"},
+            {"file": "hosts_example2", "target": "~/"},
+            {"file": "hosts_example3", "target": "~/"},
+            {"file": "users.csv", "target": "~/"},
+            {"file": "broken_web_environment.yaml", "target": "~/"},
+            {"file": "web_environment.yaml", "target": "~/"}
+          ]
+        },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

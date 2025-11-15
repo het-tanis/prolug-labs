@@ -1,0 +1,68 @@
+---
+
+- name: Web Environment
+  hosts: webservers
+  vars:
+  gather_facts: True
+  become: True
+  tasks:
+
+  - name: Install Apache2 Server
+    apt:
+      name: "apache2"
+      state: latest
+    
+  - name: Create directories for environments
+    file:
+      path: "/var/www/html_{{item}}"
+      state: directory
+    loop:
+    - dev
+    - test
+    - qa
+    notify:
+      - Restart apache
+  
+  - name: Add the Listener ports to /etc/apache2/ports.conf
+    lineinfile:
+      path: /etc/apache2/ports.conf
+      insertafter: '^Listen'
+      state: present
+      line: "{{item}}"
+    loop:
+    - 'Listen 8080'
+    - 'Listen 8081'
+    - 'Listen 8082'
+    notify:
+      - Restart apache
+
+  - name: Push the Virtual Directives files into the correct place
+    copy:
+      src: "/answers/{{item}}"
+      dest: "/etc/apache2/sites-enabled/{{item}}"
+    loop:
+    - dev_virtual_host.conf
+    - qa_virtual_host.conf
+    - test_virtual_host.conf
+    notify:
+      - Restart apache
+
+  - name: Push the html for each page over
+    copy:
+      src: "/answers/{{item.name}}"
+      dest: "/var/www/html_{{item.env}}/index.html"
+    loop:
+    - { env: 'dev', name: 'dev_index.html'}
+    - { env: 'test', name: 'test_index.html'}
+    - { env: 'qa', name: 'qa_index.html'}
+    notify:
+      - Restart apache
+
+  handlers:
+
+  - name: Restart apache
+    systemd:
+      state: restarted
+      name: apache2
+  
+  

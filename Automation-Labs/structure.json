@@ -3,6 +3,7 @@
       { "path": "Unit1_Tools" },
       { "path": "Unit2_Interacting_with_OS" },
       { "path": "Unit3_Inventories" },
-      { "path": "Unit4_Admin_Commands" }
+      { "path": "Unit4_Admin_Commands" },
+      { "path": "Unit7_Kubernetes_Automation"}
     ]
   }

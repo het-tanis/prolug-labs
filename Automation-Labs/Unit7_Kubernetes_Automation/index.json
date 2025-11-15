@@ -1,6 +1,6 @@
 {
     "title": "Automation Labs - Unit 7 - Kubernetes Automation",
-    "description": "Learn how to automate Kubernetes tasks using various ansible techniques.",
+    "description": "Learn how to automate Kubernetes tasks using various Ansible techniques.",
     "details": {
       "intro": {
         "text": "intro.md",

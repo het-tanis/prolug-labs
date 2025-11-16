@@ -77,7 +77,7 @@ Add this last part and delete the namespace.
       name: daily-test
       api_version: v1
       kind: Namespace
-      state: present
+      state: absent
 ```
 
 Execute and verify that the namespace no longer exists.

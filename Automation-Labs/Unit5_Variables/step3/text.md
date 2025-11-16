@@ -41,7 +41,7 @@ vi facts_push.yaml
       path: /etc/ansible/facts.d
       state: directory
 
-  - name: Push over the prod_patching.fact
+  - name: Push over the patching.fact
     copy:
       src: /root/patching.fact
       dest: "/etc/ansible/facts.d/patching.fact"

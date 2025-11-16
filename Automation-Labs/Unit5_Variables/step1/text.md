@@ -91,7 +91,7 @@ Switching gears a little here, let's look at the variables Ansible can read abou
 ansible servers -i /root/hosts -m setup
 ```{{exec}}
 
-What does Ansible know about the differen servers?
+What does Ansible know about the different servers?
 
 Filter down to just distribution information
 

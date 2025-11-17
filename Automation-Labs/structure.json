@@ -5,6 +5,6 @@
       { "path": "Unit3_Inventories" },
       { "path": "Unit4_Admin_Commands" },
       { "path": "Unit5_Variables" },
-      { "path": "Unit7_Kubernetes_Automation"}
+      { "path": "Unit8_Kubernetes_Automation"}
     ]
   }

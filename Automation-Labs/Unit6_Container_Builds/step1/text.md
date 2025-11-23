@@ -59,9 +59,109 @@ docker tag flask_docker localhost:5000/flask_docker
 docker push localhost:5000/flask_docker
 ```{{exec}}
 
+Run your docker image and test that you are able to see your application.
 
+```plain
+docker run -d -p 6000:6000 flask_docker
+```{{exec}}
 
+Verify that you are seeing the applicaton
 
-Now, think about all the ways that variables can be passed into Ansible. Where else might you get these variables passed in as you create these environments? What other ways can teams present variables to your automations?
+```plain
+curl 127.0.0.1:6000
+```{{exec}}
+
+Your team also wants to explore building with a tool called apptainer. You want to see a simple apptainer image run, so you decide to build one out. 
+
+Add the repository for apptainer
+
+```plain
+add-apt-repository -y ppa:apptainer/ppa
+```{{exec}}
+
+Install apptainer
+```plain
+apt update && apt install -y apptainer apptainer-suid
+```{{exec}}
+
+Verfiy your apptainer is installed and on a version you expect.
+
+```plain
+apptainer --version
+```{{exec}}
+
+Define and build out a apptainer .def file
+
+```plain
+cd /root
+vi my_image.def
+```{{exec}}
+
+Copy in the following lines
+
+```plain
+Bootstrap: docker
+From: ubuntu:24.04
+
+%post
+    apt-get update
+    apt-get install -y cowsay
+    echo "Hello from inside the container!" > /message.txt
+
+%runscript
+    cat /message.txt
+    cowsay "Apptainer is awesome!"
+```
+
+Build a .sif file for an apptainer image.
+
+```plain
+apptainer build my_image.sif my_image.def
+```{{exec}}
+
+Rum the image as a container.
+
+```plain
+apptainer run my_image.sif
+```{{exec}}
+
+Check if this works, or if there is an error. Can you fix the error?
+
+The fix for the error comes from a pathing issue in the cowsay installation. Fix the pathing and rebuild.
+
+```plain
+vi my_image.def
+```{{exec}}
+
+Copy in the following lines
+
+```plain
+Bootstrap: docker
+From: ubuntu:24.04
+
+%post
+    apt-get update
+    apt-get install -y cowsay
+    echo "Hello from inside the container!" > /message.txt
+
+%runscript
+    cat /message.txt
+    /usr/games/cowsay "Apptainer is awesome!"
+```
+
+Build a .sif file for an apptainer image.
+
+```plain
+apptainer build my_image.sif my_image.def
+```{{exec}}
+
+Rum the image as a container.
+
+```plain
+apptainer run my_image.sif
+```{{exec}}
+
+If this properly prints to the screen, you have fixed your image.
+
 
 </details>

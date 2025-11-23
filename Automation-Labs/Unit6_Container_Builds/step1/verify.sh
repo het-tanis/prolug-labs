@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker images | grep "flask_docker" >/dev/null 2>&1"
+curl 127.0.0.1:6000 | grep "Flask App"

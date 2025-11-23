@@ -149,7 +149,7 @@ From: ubuntu:24.04
     /usr/games/cowsay "Apptainer is awesome!"
 ```
 
-Build a .sif file for an apptainer image.
+Build a .sif file for an apptainer image. You will have to hit "y" to overwrite the current container.
 
 ```plain
 apptainer build my_image.sif my_image.def
@@ -163,5 +163,6 @@ apptainer run my_image.sif
 
 If this properly prints to the screen, you have fixed your image.
 
+Look around and find some other instances or use cases of apptainer, now that you have a working and installed copy of it on your system.
 
 </details>

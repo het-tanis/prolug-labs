@@ -1,0 +1,60 @@
+{
+    "title": "Automation Labs - Unit 6 - Container Builds",
+    "description": "Learn how to automate container builds using various techniques.",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "foreground": "foreground.sh",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Download and update container images",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Use Packer to build a Docker image",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        },
+        {
+          "title": "Trigger a pipeline to build a Docker image",
+          "text": "step3/text.md",
+          "verify": "step3/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": "hosts", "target": "~/"},
+            {"file": "Dockerfile", "target": "/root/docker"},
+            {"file": "index.html", "target": "/root/docker/templates"},
+            {"file": "requirements.txt", "target": "/root/docker"},
+            {"file": "view.py", "target": "/root/docker"},
+            {"file": "dev_virtual_host.conf", "target": "/answers/"},
+            {"file": "qa_virtual_host.conf", "target": "/answers/"},
+            {"file": "test_virtual_host.conf", "target": "/answers/"},
+            {"file": "dev_index.html", "target": "/answers/"},
+            {"file": "qa_index.html", "target": "/answers/"},
+            {"file": "test_index.html", "target": "/answers/"},
+            {"file": "fixed_qa_index.html", "target": "/answers/"},
+            {"file": "u4_script.sh", "target": "~/", "chmod": "+x"},
+            {"file": "u4_script.py", "target": "~/", "chmod": "+x"},
+            {"file": "u4_script.yml", "target": "~/"},
+            {"file": "u3_script_user_generator.sh", "target": "~/", "chmod": "+x"},
+            {"file": "simple_servers_list", "target": "~/"},
+            {"file": "hosts_example2", "target": "~/"},
+            {"file": "hosts_example3", "target": "~/"},
+            {"file": "users.csv", "target": "~/"},
+            {"file": "broken_web_environment.yaml", "target": "~/"},
+            {"file": "web_environment.yaml", "target": "~/"}
+          ]
+        },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

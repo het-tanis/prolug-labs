@@ -1,43 +1,14 @@
 ### Lab Activities
 
-One of your support teams has limited capabilites to deploy into your environments. They have been complaining of problems with deployments every few weeks. You set out to create an automation that tests that you can:
+Your team has decided to use Hashicorp Packer as a tool for accurately building and pushing images in your environment. You have decided to use it to push your simple flask app, and test the capabilities of putting it into a CI/CD pipeline.
 
-1. Create a namespace
-
-2. Deploy a resource
-
-3. Delete that resource
-
-4. Delete the namespace
-
-You intend to run this automation daily as their service account so that you can verify their capabilities daily and try to catch any issues before their team does.
-
+Build the same container that you did with docker in step 1, but with the name packer prepended to it.
 
 <br>
 <details>
 <summary>Solution</summary>
 
 Start by creating your automation file.
-
-vi unit7_kubernetes_test_creation.yaml
-
-```plain
-- hosts: localhost
-  gather_facts: true
-  vars:
-  tasks:
-   
-  - name: Create a k8s namespace
-    kubernetes.core.k8s:
-      name: daily-test
-      api_version: v1
-      kind: Namespace
-      state: present
-```
-
-Verify you can create the namespace.
-
-
 
 ```plain
 ansible-playbook unit7_kubernetes_test_creation.yaml

@@ -2,7 +2,7 @@
 
 This lab is designed as part of a larger set of instruction that is free from the Professional Linux Users Group (ProLUG). The lab book for this course can be found here: https://professionallinuxusersgroup.github.io/course-books/pcae/unitindex
 
-Your deployement teams have been looking for ways to deploy different environments. You know that your Ansible playbooks are static and need to be reused for different environments. You decide to research the use of variables in Ansible.
+Your deployment teams have been looking for ways to deploy different environments. You know that your Ansible playbooks are static and need to be reused for different environments. You decide to research the use of variables in Ansible.
 
 Examine variable use in Ansible.
 
@@ -105,6 +105,6 @@ What does Ansible know about the version of the server? Can you find the kernel 
 ansible servers -i /root/hosts -m setup -a "filter=ansible_kernel*"
 ```{{exec}}
 
-What information about the kernel is shown? Are teh two systems that you're using in this lab the same? Why or why not?
+What information about the kernel is shown? Are the two systems that you're using in this lab the same? Why or why not?
 
 </details>

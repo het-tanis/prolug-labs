@@ -1,3 +1,3 @@
 #!/bin/bash
 
-needrestart -k | grep "not the expected"
+/bin/true

@@ -1,6 +1,6 @@
 {
-    "title": "Automation Labs - Unit 8 - Kubernetes Automation",
-    "description": "Learn how to automate Kubernetes tasks using various Ansible techniques.",
+    "title": "Automation Labs - Unit 7 - Container Environments",
+    "description": "Learn how to automate Container Environments using various tools.",
     "details": {
       "intro": {
         "text": "intro.md",

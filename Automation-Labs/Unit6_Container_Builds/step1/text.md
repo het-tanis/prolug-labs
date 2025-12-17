@@ -1,5 +1,7 @@
 ### Lab Activities
 
+THIS LAB IS UNDER CONSTRUCTION
+
 This lab is designed as part of a larger set of instruction that is free from the Professional Linux Users Group (ProLUG). The lab book for this course can be found here: https://professionallinuxusersgroup.github.io/course-books/pcae/unitindex
 
 Your development teams have decided to build their own container images. You have decided to work on different container image tools to practice modifying containers that are publicly available. Your goal is to modify them with your own requirements list of additional software and also your custom application code.

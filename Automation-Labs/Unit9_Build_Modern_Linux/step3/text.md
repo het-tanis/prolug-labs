@@ -87,7 +87,7 @@ Make sure you hit "esc" :wq or some other "save" inside of vi.
 Run the playbook and verify that it modifies the image.
 
 ```plain
-ansible -i /root/ansible/chroots /root/ansible/package.yaml
+ansible-playbook -i /root/ansible/chroots /root/ansible/package.yaml
 ```{{exec}}
 
 Do you see the proper change applied to the chroot environment? 

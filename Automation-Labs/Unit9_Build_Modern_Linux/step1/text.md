@@ -69,6 +69,8 @@ cd warewulf
 make 
 ```{{exec}}
 
+This next step will take some time, so feel free to step away for a few minutes.
+
 ```plain
 time make install 
 ```{{exec}}

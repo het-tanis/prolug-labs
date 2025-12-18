@@ -20,6 +20,8 @@ Download and the Rocky 9 Image.
 time wwctl image import --build docker://ghcr.io/warewulf/warewulf-rockylinux:9 my-rocky-image
 ```{{exec}}
 
+Approximately how long did this take to download?
+
 Test that the image has been loaded into Warewulf.
 
 ```plain

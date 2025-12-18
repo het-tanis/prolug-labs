@@ -2,7 +2,7 @@
 
 This lab is designed as part of a larger set of instruction that is free from the Professional Linux Users Group (ProLUG). The lab book for this course can be found here: https://professionallinuxusersgroup.github.io/course-books/pcae/unitindex
 
-Your development teams have decided to deploy Linux in a modern, containerless way.
+Your development teams have decided to deploy Linux in a modern container based, stateless way.
 
 Verify Ansible.
 

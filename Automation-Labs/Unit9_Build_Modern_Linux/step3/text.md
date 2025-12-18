@@ -24,7 +24,11 @@ vi the file that we want to change.
 vi resolv.conf
 ```{{exec}}
 
-Add in the line nameserver 8.8.8.8.
+Add in the line 
+
+```plain
+nameserver 8.8.8.8.
+```
 
 Make sure you hit "esc" :wq or some other "save" inside of vi.
 
@@ -47,7 +51,7 @@ Add the following lines to this file
 
 ```plain
 [chroots]
-/var/local/warewulf/chroots/my-rocky-image/rootfs/ansible_connection=chroot
+/var/local/warewulf/chroots/my-rocky-image/rootfs/ ansible_connection=chroot
 ```
 
 Make sure you hit "esc" :wq or some other "save" inside of vi.

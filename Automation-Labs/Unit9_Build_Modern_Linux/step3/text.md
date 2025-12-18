@@ -15,7 +15,7 @@ You've installed Warewulf and downloaded an image. Test that you can do the foll
 Manually modify the "my-rocky-image" image from outside of Warewulf and the chroot environment.
 
 ```plain
-cd /var/local/warewulf/chroots/my-rocky-image/etc/
+cd /var/local/warewulf/chroots/my-rocky-image/rootfs/etc/
 ```{{exec}}
 
 vi the file that we want to change.
@@ -99,5 +99,19 @@ Build the image in warewulf
 ```plain
 wwctl image build my-rocky-image
 ```{{exec}}
+
+Verify that your changes have been put into effect.
+
+```plain
+wwctl image shell my-rocky-image
+```{{exec}}
+
+```plain
+rpm -qi telnet
+```{{exec}}
+
+Can you see that the package was recently installed?
+
+You may now complete the lab.
 
 </details>

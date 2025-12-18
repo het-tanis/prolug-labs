@@ -27,7 +27,7 @@ vi resolv.conf
 Add in the line 
 
 ```plain
-nameserver 8.8.8.8.
+nameserver 8.8.8.8
 ```
 
 Make sure you hit "esc" :wq or some other "save" inside of vi.

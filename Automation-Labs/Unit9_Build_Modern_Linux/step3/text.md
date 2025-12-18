@@ -70,16 +70,16 @@ Add the following lines
   hosts: chroots
   become: true  
 
-     tasks:
-      - name: Ensure telnet package is installed
-        package:
-          name: telnet
-          state: present
+  tasks:
+    - name: Ensure telnet package is installed
+      package:
+        name: telnet
+        state: present
 
-      - name: Remove tftp-server from image		  
-        ansible.builtin.package:
-          name: tftp-server
-          state: absent
+    - name: Remove tftp-server from image		  
+      ansible.builtin.package:
+        name: tftp-server
+        state: absent
 ```
 
 Make sure you hit "esc" :wq or some other "save" inside of vi.

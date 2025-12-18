@@ -4,7 +4,7 @@ This lab is designed as part of a larger set of instruction that is free from th
 
 Your development teams have decided to deploy Linux in a modern, containerless way.
 
-Install and verify Ansible.
+Verify Ansible.
 
 Install Warewulf and prepare the environment.
 
@@ -12,10 +12,10 @@ Install Warewulf and prepare the environment.
 <details>
 <summary>Solution</summary>
 
-Install Ansible.
+Check Ansible.
 
 ```plain
-apt -y install ansible
+ansible --version
 ```{{exec}}
 
 Remove local installed Go.

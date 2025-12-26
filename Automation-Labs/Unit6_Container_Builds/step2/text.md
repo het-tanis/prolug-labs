@@ -83,6 +83,80 @@ Verify that we have the image in docker images.
 docker images
 ```{{exec}}
 
+Add the shell and file provisioners to move the code into the flask container. (This goes into the build section of the previous docker-flask.pkr.hcl files)
+
+```plain
+vi docker-flask.pkr.hcl
+```{{exec}}
+
+```plain
+packer {
+  required_plugins {
+    docker = {
+      version = ">= 1.0.8"
+      source  = "github.com/hashicorp/docker"
+    }
+  }
+}
+
+variable "docker_image" {
+  type    = string
+  default = "python:3.9-alpine"
+}
+
+source "docker" "flask" {
+  image  = var.docker_image
+  commit = true
+  changes = [
+    "CMD view.py",
+    "ENTRYPOINT python",
+    "WORKDIR /app",
+    "EXPOSE 6000"
+  ]
+}
+
+build {
+  name    = "packer-flask"
+  sources = [
+    "source.docker.flask",
+  ]
+
+  provisioner "shell" {
+    inline = ["mkdir /app"]
+  }
+
+  provisioner "file" {
+    source      = "/root/docker/templates/index.html"
+    destination = "/app/index.html"
+  }
+
+  provisioner "file" {
+    source      = "/root/docker/view.py"
+    destination = "/app/view.py"
+  }
+
+  provisioner "file" {
+    source      = "/root/docker/requirements.txt"
+    destination = "/app/requirements.txt"
+  }
+  
+  provisioner "shell" {
+    inline = [
+      "pip3 install -r /app/requirements.txt"
+    ]
+  }
+
+  post-processor "docker-tag" {
+    repository = "packer-flask"
+    tags       = ["packer-flask"]
+    only       = ["docker.flask"]
+  }
+
+}
+
+```
+
+
 
 
 </details>

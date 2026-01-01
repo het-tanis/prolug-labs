@@ -11,7 +11,7 @@ cat /root/packages_install.yaml
 
 Note: This will conditionally install certain packages on hosts. 
 
-Run the Playbook push the users.
+Run the Playbook push the packages.
 ```plain
 ansible-playbook -i /root/hosts /root/packages_install.yaml
 ```{{exec}}

@@ -8,8 +8,6 @@ Use Docker to build a ready container for your environment.
 
 User apptainer to build a ready container for your environment.
 
-Ensure you have the Ansible module for kubernetes core.
-
 <br>
 <details>
 <summary>Solution</summary>

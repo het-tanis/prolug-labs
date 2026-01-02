@@ -40,6 +40,12 @@ while IFS= read -r -d '' file; do
 done
 ```
 
+Make the watcher executable
+
+```plain
+chmod 755 /root/packer/watcher.sh
+```{{exec}}
+
 Start the watcher running
 
 ```plain

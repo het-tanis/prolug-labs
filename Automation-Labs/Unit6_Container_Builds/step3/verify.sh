@@ -1,3 +1,3 @@
 #!/bin/bash
 
-kubectl get ns | grep -v 'daily-test'
+ls -l /root/packer/change.log

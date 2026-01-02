@@ -1,8 +1,10 @@
 ### Lab Activities
 
-Your team has decided to use Hashicorp Packer as a tool for accurately building and pushing images in your environment. You have decided to use it to push your simple flask app, and test the capabilities of putting it into a CI/CD pipeline.
+Your team has decided to use Hashicorp Packer as a tool for accurately building and pushing images in your environment. You have decided to use it to push a simple nginx app that shows a static page.
 
-Build the same container that you did with docker in step 1, but with the name packer prepended to it.
+Build the static index.html
+
+Build the nginx with your loaded static content
 
 <br>
 <details>

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-kubectl get all -n daily-test
+docker images | grep -i nginx

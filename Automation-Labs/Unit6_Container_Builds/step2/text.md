@@ -15,10 +15,33 @@ mkdir /root/packer
 cd /root/packer
 ```{{exec}}
 
-Make the docker-flask.pkr.hcl file
+Make a basic index.html
 
 ```plain
-vi docker-flask.pkr.hcl
+vi index.html
+```{{exec}}
+
+Press "i" and add the following lines
+
+```plain
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage</title>
+</head>
+<body>
+    <h1>Welcome to ProLUG</h1>
+    <p>Look around.</p>
+</body>
+</html>
+```
+
+Make the docker-nginx.pkr.hcl file
+
+```plain
+vi docker-nginx.pkr.hcl
 ```{{exec}}
 
 Press "i" and add the following lines
@@ -27,38 +50,33 @@ Press "i" and add the following lines
 packer {
   required_plugins {
     docker = {
-      version = ">= 1.0.8"
       source  = "github.com/hashicorp/docker"
+      version = "~> 1"
     }
   }
 }
 
-variable "docker_image" {
-  type    = string
-  default = "python:3.9-alpine"
-}
-
-source "docker" "flask" {
-  image  = var.docker_image
+source "docker" "nginx_custom" {
+  image  = "nginx:latest"
   commit = true
   changes = [
-    "CMD view.py",
-    "ENTRYPOINT python",
-    "WORKDIR /app",
-    "EXPOSE 6000"
+    "CMD [\"nginx\", \"-g\", \"daemon off;\"]"
   ]
 }
 
 build {
-  name    = "packer-flask"
   sources = [
-    "source.docker.flask",
+    "source.docker.nginx_custom"
   ]
 
+  provisioner "file" {
+    source      = "./index.html"
+    destination = "/usr/share/nginx/html/index.html"
+  }
+
   post-processor "docker-tag" {
-    repository = "packer-flask"
-    tags       = ["packer-flask"]
-    only       = ["docker.flask"]
+    repository = "packer-nginx"
+    tags       = ["latest"]
   }
 
 }
@@ -83,80 +101,19 @@ Verify that we have the image in docker images.
 docker images
 ```{{exec}}
 
-Add the shell and file provisioners to move the code into the flask container. (This goes into the build section of the previous docker-flask.pkr.hcl files)
+Run the image with docker to expose the web page
 
 ```plain
-vi docker-flask.pkr.hcl
+ docker run -d -p 8080:80 packer-nginx
 ```{{exec}}
 
+Use curl to verify you can read the page
+
 ```plain
-packer {
-  required_plugins {
-    docker = {
-      version = ">= 1.0.8"
-      source  = "github.com/hashicorp/docker"
-    }
-  }
-}
+curl 127.0.0.1:8080
+```{{exec}}
 
-variable "docker_image" {
-  type    = string
-  default = "python:3.9-alpine"
-}
-
-source "docker" "flask" {
-  image  = var.docker_image
-  commit = true
-  changes = [
-    "CMD view.py",
-    "ENTRYPOINT python",
-    "WORKDIR /app",
-    "EXPOSE 6000"
-  ]
-}
-
-build {
-  name    = "packer-flask"
-  sources = [
-    "source.docker.flask",
-  ]
-
-  provisioner "shell" {
-    inline = ["mkdir /app"]
-  }
-
-  provisioner "file" {
-    source      = "/root/docker/templates/index.html"
-    destination = "/app/index.html"
-  }
-
-  provisioner "file" {
-    source      = "/root/docker/view.py"
-    destination = "/app/view.py"
-  }
-
-  provisioner "file" {
-    source      = "/root/docker/requirements.txt"
-    destination = "/app/requirements.txt"
-  }
-  
-  provisioner "shell" {
-    inline = [
-      "pip3 install -r /app/requirements.txt"
-    ]
-  }
-
-  post-processor "docker-tag" {
-    repository = "packer-flask"
-    tags       = ["packer-flask"]
-    only       = ["docker.flask"]
-  }
-
-}
-
-```
-
-
+If this is all working, you're ready to move onto the next part.
 
 
 </details>

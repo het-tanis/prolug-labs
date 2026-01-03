@@ -1,2 +1,2 @@
 Look at you, learning automation!
-You used Ansible to interact with Kubernetes to deploy and remove resources.
+You used Docker Files, Apptainer, and Packer to build read to execute containers in your environment. You then automated a watch against a directory to trigger a build with Packer.

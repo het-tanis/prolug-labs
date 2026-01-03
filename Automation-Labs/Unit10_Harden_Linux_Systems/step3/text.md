@@ -27,14 +27,11 @@ Add the following lines to this file
 
 Make sure you hit "esc" :wq or some other "save" inside of vi.
 
-
-
-Setup the environment for openscap
+Setup the environment for STIGs
 
 ```plain
-cd /root
-mkdir openscap
-cd openscap
+mkdir /root/stig
+cd /root/stig
 ```{{exec}}
 
 Download the STIG Remediation tool for Rocky 9
@@ -56,7 +53,7 @@ unzip rhel9STIG-ansible.zip
 Move into the correct directory
 
 ```plain
-cd /root/openscap/ansible
+cd /root/stig/ansible
 ```{{exec}}
 
 Fix the hosts in the main.yml to point to chrooted environment

@@ -60,7 +60,7 @@ cd /root/stig/ansible
 Fix the hosts in the main.yml to point to chrooted environment
 
 ```plain
-vi main.yml
+vi site.yml
 ```{{exec}}
 
 hit "i" to enter insert mode and chnge the top line as follows

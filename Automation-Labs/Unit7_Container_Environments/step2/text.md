@@ -24,6 +24,14 @@ View your  terraform.tfstate file to see what Terraform tracks in a configuratio
 
 Let's start by creating a Terraform configuration.
 
+Make a directory to work in
+
+```plain
+mkdir /root/terraform
+cd /root/terraform
+```{{exec}}
+
+
 ```plain
 vi main.tf
 ```

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-kubectl get ns | grep -v 'daily-test'
+curl 127.0.0.1:8080 && curl 127.0.0.1:8081

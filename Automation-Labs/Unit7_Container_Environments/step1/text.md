@@ -1,104 +1,55 @@
-### Lab Activities
-
-THIS LAB IS UNDER CONSTRUCTION
 
 This lab is designed as part of a larger set of instruction that is free from the Professional Linux Users Group (ProLUG). The lab book for this course can be found here: https://professionallinuxusersgroup.github.io/course-books/pcae/unitindex
 
-Your development teams have decided to deploy environments in Kubernetes. You have decided to look into ensuring that automation supports the different tasks they will need your team to complete.
-
-Ensure you have the Ansible module for kubernetes core.
+Your development teams have decided to use containers. You want to familiarize yourself with rapidly deploying environments of those containers. You have decided to look into ensuring that automation supports the different tasks they will need your team to complete.
 
 <br>
+
+### Tip
+
+<details>
+<summary>Tip</summary>
+
+[Terraform Lab Example](https://developer.hashicorp.com/terraform/tutorials/docker-get-started/docker-build)
+
+</details>
+
+### Solution
 <details>
 <summary>Solution</summary>
 
-Install the module for kubernetes core.
+Check that containerd is running and exposed on your system
 
 ```plain
-ansible-galaxy collection install kubernetes.core
+systemctl status containerd --no-pager
+ss -ntulp | grep -i containerd
 ```{{exec}}
 
-Was this already installed?
-
-Install the other dependencies
+So containerd is running. Can you check that terraform is installed?
 
 ```plain
-apt -y install python3-kubernetes
+which terraform
+terraform version
 ```{{exec}}
 
-Create a basic test to see ansible communicate with your kubernetes cluster.
+What version of terraform are you running?
 
-vi unit7_kubernetes_1.yaml and add the following lines
-
-```plain
-- hosts: localhost
-  gather_facts: true
-  vars:
-  tasks:
-   
-  - name: Create a k8s namespace
-    kubernetes.core.k8s:
-      name: testing
-      api_version: v1
-      kind: Namespace
-      state: present
-```
-
-View your current namespaces before the change
+Let's make a directory for this project.
 
 ```plain
-kubectl get ns
+mkdir /root/terraform
+cd /root/terraform/
 ```{{exec}}
 
-Execute your change
-
+Let's do a check around the system to make sure nothing is running in container space.
 
 ```plain
-ansible-playbook unit7_kubernetes_1.yaml
+docker ps
+docker images
 ```{{exec}}
 
-Verify the new namespace
+There are no images downloaded, nor containers deployed on your system.
 
-```plain
-kubectl get ns
-```{{exec}}
-
-Now, put in a variable and create another namespace.
-
-```plain
-cp unit7_kubernetes_1.yaml unit7_kubernetes_2.yaml
-```{{exec}}
-
-vi unit7_kubernetes_2.yaml
-
-Modify as follows
-
-```plain
-- hosts: localhost
-  gather_facts: true
-  vars:
-  tasks:
-   
-  - name: Create a k8s namespace
-    kubernetes.core.k8s:
-      name: "{{ prolug_namespace }}"
-      api_version: v1
-      kind: Namespace
-      state: present
-```
-
-Execute this and pass in a variable at the command line
-
-```plain
-ansible-playbook unit7_kubernetes_2.yaml --extra-vars "prolug_namespace=dev-app2-v1"
-```{{exec}}
-
-Verify that your new namespace has been created.
-
-```plain
-kubectl get ns
-```{{exec}}
-
-Now, think about all the ways that variables can be passed into Ansible. Where else might you get these variables passed in as you create these environments? What other ways can teams present variables to your automations?
 
 </details>
+

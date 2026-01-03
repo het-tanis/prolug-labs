@@ -9,17 +9,17 @@
       },
       "steps": [
         {
-          "title": "Install ansible kubernetes module",
+          "title": "Setting up Terraform",
           "text": "step1/text.md",
           "verify": "step1/verify.sh"
         },
         {
-          "title": "Build an environment in Kubernetes",
+          "title": "Creating our first Deployment",
           "text": "step2/text.md",
           "verify": "step2/verify.sh"
         },
         {
-          "title": "Cleaning up the environment",
+          "title": "Extending the Deployment",
           "text": "step3/text.md",
           "verify": "step3/verify.sh"
         }

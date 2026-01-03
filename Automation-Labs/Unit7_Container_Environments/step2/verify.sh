@@ -1,3 +1,3 @@
 #!/bin/bash
 
-kubectl get all -n daily-test
+curl 127.0.0.1:8000

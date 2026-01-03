@@ -15,6 +15,7 @@ You've installed Warewulf and downloaded an image. Harden that image to a STIG s
 Create a "hosts file" but with the chrooted environment you want to edit.
 
 ```plain
+mkdir /root/ansible
 vi /root/ansible/chroots
 ```{{exec}}
 

@@ -1,5 +1,5 @@
 {
-    "title": "Automation Labs - Unit 9 - Build Modern Linux",
+    "title": "Automation Labs - Unit 10 - Secure Modern Linux",
     "description": "Learn how to build modern Linux container in the Warewulf tool.",
     "details": {
       "intro": {
@@ -19,7 +19,7 @@
           "verify": "step2/verify.sh"
         },
         {
-          "title": "Modify the container image with Ansible",
+          "title": "Secure the container image with Ansible",
           "text": "step3/text.md",
           "verify": "step3/verify.sh"
         }

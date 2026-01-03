@@ -26,7 +26,7 @@ apt -y install python3-kubernetes
 
 Create a basic test to see ansible communicate with your kubernetes cluster.
 
-vi unit7_kubernetes_1.yaml and add the following lines
+vi unit8_kubernetes_1.yaml and add the following lines
 
 ```plain
 - hosts: localhost
@@ -52,7 +52,7 @@ Execute your change
 
 
 ```plain
-ansible-playbook unit7_kubernetes_1.yaml
+ansible-playbook unit8_kubernetes_1.yaml
 ```{{exec}}
 
 Verify the new namespace
@@ -64,10 +64,10 @@ kubectl get ns
 Now, put in a variable and create another namespace.
 
 ```plain
-cp unit7_kubernetes_1.yaml unit7_kubernetes_2.yaml
+cp unit8_kubernetes_1.yaml unit8_kubernetes_2.yaml
 ```{{exec}}
 
-vi unit7_kubernetes_2.yaml
+vi unit8_kubernetes_2.yaml
 
 Modify as follows
 
@@ -88,7 +88,7 @@ Modify as follows
 Execute this and pass in a variable at the command line
 
 ```plain
-ansible-playbook unit7_kubernetes_2.yaml --extra-vars "prolug_namespace=dev-app2-v1"
+ansible-playbook unit8_kubernetes_2.yaml --extra-vars "prolug_namespace=dev-app2-v1"
 ```{{exec}}
 
 Verify that your new namespace has been created.

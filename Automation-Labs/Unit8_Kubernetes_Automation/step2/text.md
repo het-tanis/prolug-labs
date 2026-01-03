@@ -19,7 +19,7 @@ You intend to run this automation daily as their service account so that you can
 
 Start by creating your automation file.
 
-vi unit7_kubernetes_test_creation.yaml
+vi unit8_kubernetes_test_creation.yaml
 
 ```plain
 - hosts: localhost
@@ -40,7 +40,7 @@ Verify you can create the namespace.
 
 
 ```plain
-ansible-playbook unit7_kubernetes_test_creation.yaml
+ansible-playbook unit8_kubernetes_test_creation.yaml
 ```{{exec}}
 
 Check the namespaces and then delete the daily-test
@@ -72,7 +72,7 @@ Add in the creation of a pod.
 Execute the deployment
 
 ```plain
-ansible-playbook unit7_kubernetes_test_creation.yaml
+ansible-playbook unit8_kubernetes_test_creation.yaml
 ```{{exec}}
 
 Verify that the namespace and the pod have been created

@@ -8,7 +8,7 @@ Continue building out your test creation script by adding the cleanup required t
 
 Set ansible to wait for 10 seconds and then delete the resources in the namespace.
 
-vi unit7_kubernetes_test_creation.yaml
+vi unit8_kubernetes_test_creation.yaml
 
 ```plain
 - hosts: localhost
@@ -66,7 +66,7 @@ vi unit7_kubernetes_test_creation.yaml
 Run the playbook and see if it properly deletes the resources
 
 ```plain
-ansible-playbook unit7_kubernetes_test_creation.yaml
+ansible-playbook unit8_kubernetes_test_creation.yaml
 ```{{exec}}
 
 Add this last part and delete the namespace.
@@ -83,7 +83,7 @@ Add this last part and delete the namespace.
 Execute and verify that the namespace no longer exists.
 
 ```plain
-ansible-playbook unit7_kubernetes_test_creation.yaml
+ansible-playbook unit8_kubernetes_test_creation.yaml
 ```{{exec}}
 
 ```plain

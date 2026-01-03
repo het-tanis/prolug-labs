@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ls -l /root/ansible/package.yaml
+ls -l /root/ansible/chroots

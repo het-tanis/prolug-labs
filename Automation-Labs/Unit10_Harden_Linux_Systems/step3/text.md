@@ -51,23 +51,41 @@ mkdir ansible
 cp rhel9STIG-ansible.zip ansible/
 cd ansible
 unzip rhel9STIG-ansible.zip
-```{{plain}}
-
-Look at some of the STIGs you can use against the chrooted environment.
-
-```plain
-cd /root/stigs/ansible/roles/rhel9STIG/defaults/
-vim main.yml
 ```{{exec}}
 
-
+Move into the correct directory
 
 ```plain
-rpm -qi telnet
+cd /root/openscap/ansible
 ```{{exec}}
 
-Can you see that the package was recently installed?
+Fix the hosts in the main.yml to point to chrooted environment
 
-You may now complete the lab.
+```plain
+vi main.yml
+```{{exec}}
+
+hit "i" to enter insert mode and chnge the top line as follows
+
+```plain
+- hosts: chroots
+```
+
+Execute this against your chrooted environment
+
+```plain
+ansible-playbook -i /root/ansible/chroots site.yml
+```{{exec}}
+
+What does run, and what breaks? Why do you think this STIG Ansible playbook breaks? What does the error message tell you?
+
+This is where the iterative process of image build starts to take shape. We need to approximately do these steps (outside of the scope of this lab)
+
+1. Harden the image, as above
+2. Deploy the system to a live node
+3. Run your regression and function checks to ensure your base functionality still exists.
+  3a. If 3 passes, then run your STIG reports and see if you're at the minimum standard.
+4. Repeat until functionality and minimum baseline are achieved.
+
 
 </details>

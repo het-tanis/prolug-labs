@@ -1,12 +1,12 @@
 ### Lab Activities
 
-You've installed Warewulf and downloaded an image. Test that you can do the following activities.
+You've installed Warewulf and downloaded an image. Harden that image to a STIG standard (or you can use CIS Benchmarks if you want to modify)
 
-1. Modify the image directly in the chrooted environment
+1. Create an ansible chroots file for modification of environments
 
-2. Modify the image via and automated Ansible process
+2. Download the RHEL 9 stig baseline tool for Ansible
 
-3. Build the image and verify that Warewulf has taken the changes.
+3. Execute and begin the process of hardening your image.
 
 <br>
 <details>

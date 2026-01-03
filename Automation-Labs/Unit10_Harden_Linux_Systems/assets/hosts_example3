@@ -1,0 +1,23 @@
+[servers]
+controlplane
+node01
+
+[servers:vars]
+ansible_user=svc_ansible
+server_api=v1
+
+[test_env]
+controltest type=client
+node01test  type=server
+
+[prod_env]
+controlprod type=client
+node01prod  type=server
+
+[non-prod:children]
+servers
+test_env
+
+[non-prod:vars]
+env=non-prod
+ansible_user=dev_svc_ansible

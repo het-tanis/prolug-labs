@@ -8,6 +8,7 @@
       { "path": "Unit6_Container_Builds" },
       { "path": "Unit7_Container_Environments" },
       { "path": "Unit8_Kubernetes_Automation"},
-      { "path": "Unit9_Build_Modern_Linux"}
+      { "path": "Unit9_Build_Modern_Linux"},
+      { "path": "Unit10_Harden_Linux_Systems"}
     ]
   }

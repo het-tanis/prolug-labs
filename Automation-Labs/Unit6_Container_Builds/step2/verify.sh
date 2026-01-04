@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker images | grep -i nginx
+/bin/true

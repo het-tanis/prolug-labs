@@ -1,0 +1,53 @@
+{
+  "title": "Let's do Linux Configurations",
+  "description": "Grafana Alloy on Ubuntu - manual metrics and logs with Prometheus and Loki",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "foreground": "foreground.sh",
+      "background": "setup.sh"
+    },
+    "steps": [
+      {
+        "title": "Install and configure Grafana and Loki",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      },
+      {
+        "title": "Install and configure Prometheus",
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
+      },
+      {
+        "title": "Install Grafana Alloy",
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
+      },
+      {
+        "title": "Configure Alloy for metrics and logs",
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
+      },
+      {
+        "title": "Verify telemetry in Grafana",
+        "text": "step5/text.md",
+        "verify": "step5/verify.sh"
+      }
+    ],
+    "assets": {
+      "host01": [
+        { "file": "loki.service", "target": "/answers" },
+        { "file": "loki-local-config.yaml", "target": "/answers" },
+        { "file": "prometheus.service", "target": "/answers" },
+        { "file": "prometheus.yml", "target": "/answers" },
+        { "file": "config.alloy", "target": "/answers" }
+      ]
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}

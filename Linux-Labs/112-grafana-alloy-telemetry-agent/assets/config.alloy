@@ -1,0 +1,42 @@
+// Grafana Alloy - Ubuntu lab (localhost backends, manual install)
+
+prometheus.exporter.unix "localhost" {}
+
+prometheus.scrape "local_metrics" {
+  targets    = prometheus.exporter.unix.localhost.targets
+  forward_to = [prometheus.remote_write.prom_server.receiver]
+}
+
+prometheus.remote_write "prom_server" {
+  endpoint {
+    url = "http://127.0.0.1:9090/api/v1/write"
+  }
+}
+
+loki.source.journal "system_logs" {
+  forward_to = [loki.write.loki_server.receiver]
+  labels = {
+    job      = "systemd-journal",
+    hostname = "lab-host",
+  }
+}
+
+loki.source.file "syslog_files" {
+  targets = [
+    {
+      __path__ = "/var/log/syslog",
+      job      = "syslog",
+    },
+    {
+      __path__ = "/var/log/auth.log",
+      job      = "auth",
+    },
+  ]
+  forward_to = [loki.write.loki_server.receiver]
+}
+
+loki.write "loki_server" {
+  endpoint {
+    url = "http://127.0.0.1:3100/loki/api/v1/push"
+  }
+}

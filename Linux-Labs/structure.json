@@ -22,6 +22,7 @@
       { "path": "108-kafka-to-loki-logging" },
       { "path": "109-fail2ban-with-log-monitoring" },
       { "path": "110-fail2ban-with-metric-alerting" },
+      { "path": "112-grafana-alloy-telemetry-agent" },
       { "path": "201-attempted-user-login" },
       { "path": "202-attempted-sudo-access" },
       { "path": "203-updating-golden-image" },

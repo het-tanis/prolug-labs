@@ -1,0 +1,20 @@
+---
+- name: Execute the earthquake data script
+  hosts: localhost
+  tasks:
+     # api call to usgs.gov for earthquake data for the last 24 hours using uri module
+    - name: Fetch earthquake data
+      uri:
+        url: "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
+        return_content: yes
+      register: earthquake_data
+
+     # debug the output to the screen
+    - name: Display earthquake data
+      debug:
+        var: earthquake_data.content
+
+      # debug the number of events
+    - name: display the number of earthquake events
+      debug:
+        msg: "Number of earthquake events: {{ (earthquake_data.content | from_json).metadata.count }}"

@@ -9,6 +9,11 @@
       { "path": "Unit7_Container_Environments" },
       { "path": "Unit8_Kubernetes_Automation"},
       { "path": "Unit9_Build_Modern_Linux"},
-      { "path": "Unit10_Harden_Linux_Systems"}
-    ]
+      { "path": "Unit10_Harden_Linux_Systems"},
+      { "path": "Unit11_Update_and_Patch_Systems"},
+      { "path": "Unit12_Networking_Devices"},
+      { "path": "Unit13_Remediating_Drift"},
+      { "path": "Unit14_CI_CD_Pipelines"},
+      { "path": "Unit15_Troubleshooting_1"},
+      { "path": "Unit16_Troubleshooting_2"}      
   }

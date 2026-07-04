@@ -1,12 +1,12 @@
 ### Lab Activities
 
-You've installed Warewulf and downloaded an image. Harden that image to a STIG standard (or you can use CIS Benchmarks if you want to modify)
+You've installed Warewulf and downloaded an image. Update that server to the newest software that is available in the locally configured repositories.
 
 1. Create an ansible chroots file for modification of environments
 
-2. Download the RHEL 9 stig baseline tool for Ansible
+2. Write the Ansible that will run your package manager (DNF) to update the server software.
 
-3. Execute and begin the process of hardening your image.
+3. Execute and begin the process of updating your image.
 
 <br>
 <details>
@@ -16,6 +16,7 @@ Create a "hosts file" but with the chrooted environment you want to edit.
 
 ```plain
 mkdir /root/ansible
+cd /root/ansible
 vi /root/ansible/chroots
 ```{{exec}}
 
@@ -46,8 +47,13 @@ Add the following lines to the playbook.
   become: True
   tasks:
 
+  - name: push over the correct /etc/resolv.conf
+    copy:
+      src: /etc/resolv.conf
+      dest: /etc/resolv.conf
+
   - name: Upgrade all packages to the latest version
-    apt:
+    ansible.builtin.package:
       name: "*"
       state: latest
 ```
@@ -72,5 +78,6 @@ And then validate the changes
 dnf history
 ```{{exec}}
 
+If you see today's date for your most recent update, you can surmise that the system has been updated by your ansible playbook.
 
 </details>

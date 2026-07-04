@@ -61,7 +61,7 @@ Add the following lines to the playbook.
 Execute this against your chrooted environment
 
 ```plain
-ansible-playbook -i /root/ansible/chroots update.yml --extra-vars "survey_hosts=chroots"
+time ansible-playbook -i /root/ansible/chroots update.yml --extra-vars "survey_hosts=chroots"
 ```{{exec}}
 
 What does run, and what does it show? 

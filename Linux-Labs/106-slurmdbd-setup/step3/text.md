@@ -1,8 +1,8 @@
 Now we want to verify that our database is monitoring job submission stats inside of Slurm.
 
-Execute some jobs with slurm.
+Execute some jobs with Slurm.
 
-Verify that the jobs have completed and are in the slurm database.
+Verify that the jobs have completed and are in the Slurm database.
 
 <br>
 
@@ -69,5 +69,20 @@ squeue
 
 Did all of your jobs complete? Were there errors? If so, why did they fail? Where else might you look for logs, or information?
 
+Other options with the sacct command to try.
+
+Just a single job, by ID
+
+```plain
+sacct -j 2
+```{{exec}}
+
+All jobs by a certain user
+
+```plain
+sacct -u root
+```{{exec}}
+
+#All the jobs are currently from root, but later on, in a live cluster this can prove useful.
 
 </details>

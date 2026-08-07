@@ -1,0 +1,17 @@
+{
+    "items": [
+      { "path": "HPC-Components" },
+      { "path": "HPC-Network-Devices" },
+      { "path": "HPC-Warewulf-Images" },
+      { "path": "HPC-STIG-Hardening" },
+      { "path": "HPC-Storage" },
+      { "path": "HPC-JobScheduler-Slurm-Setup" },
+      { "path": "HPC-JobScheduler-Slurm-Operation" },
+      { "path": "HPC-Software-Spack" },
+      { "path": "HPC-Backup-Bacula" },
+      { "path": "HPC-Monitoring-Stack" },
+      { "path": "HPC-Monitoring-Alerting" },
+      { "path": "HPC-UserAccess" },
+      { "path": "HPC-SecuringAccess-Bastion" }
+    ]
+  }

@@ -1,0 +1,40 @@
+{
+    "title": "Let's do Linux Configurations",
+    "description": "Install Slurmdbd on Linux",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "foreground": "foreground.sh",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Install and configure Slurm",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Configure and setup SlurmDBD",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        },
+        {
+          "title": "Validate the SlurmDBD setup",
+          "text": "step3/text.md",
+          "verify": "step3/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+            {"file": "slurm.conf", "target": "/answers"},
+            {"file": "submit.sh", "target": "/root"}
+         ]
+        },
+	    "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }

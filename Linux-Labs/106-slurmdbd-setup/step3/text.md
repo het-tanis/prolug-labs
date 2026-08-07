@@ -1,4 +1,8 @@
-In progress
+Now we want to verify that our database is monitoring job submission stats inside of Slurm.
+
+Execute some jobs with slurm.
+
+Verify that the jobs have completed and are in the slurm database.
 
 <br>
 
@@ -12,46 +16,58 @@ Schedule a job to run against one node.
 srun -n 1 hostname
 ```{{exec}}
 
-What happened, and what was the output? Was that expected?
-
 Schedule a job to run against both nodes.
 
 ```plain
 srun -n 2 hostname
 ```{{exec}}
 
-Is this output as you expected?
-
-What happens when you schedule a run against more nodes than you have in the cluster.
+Verify the information you can see inside of slurm accounting
 
 ```plain
-srun -n 10 hostname
+sacct
 ```{{exec}}
 
-How did this behave differently than you saw in the other commands? You may have to kill this command with crtl + c . Does it make sense that you tried to schedule against more nodes than you had, and the system did not react well?
+What output did you see?
+Can you see the two jobs and information about them?
 
-Now it is time to run a batch job and look at the configurations we can set inside of a config file.
-
-Examine the /root/submit.sh file and look at the parameters configured.
-
-```plain
-cat /root/submit.sh
-```{{exec}}
-
-Submit the submit.sh to the cluster for execution, and immediately look at the queue to see the job status.
+Run a batch job against the cluster.
 
 ```plain
 sbatch /root/submit.sh; squeue
 ```{{exec}}
 
-Can you see the job ID? Can you tell what node this job is executing on?
+Wait the 60 seconds for this job to complete and then continue.
 
-When this has completed, check the file output that was defined. Verify that the node hostname matches what you saw in your squeue command. Does it? 
+Check the accounting to see if you see the completed job
 
 ```plain
-cat /root/result.txt
+sacct
 ```{{exec}}
 
-What is the output and was it expected from the node(s) that this executed on?
+Submit multiple jobs to see how Slurm handles it on your system.
+
+```plain
+sbatch /root/submit.sh
+sbatch /root/submit.sh
+sbatch /root/submit.sh
+```{{exec}}
+
+Wait the 60 seconds for these jobs to complete and then continue.
+
+Check the accounting to see if you see the completed job
+
+```plain
+sacct
+```{{exec}}
+
+You may also want to run squeue to see status
+
+```plain
+squeue
+```{{exec}}
+
+Did all of your jobs complete? Were there errors? If so, why did they fail? Where else might you look for logs, or information?
+
 
 </details>

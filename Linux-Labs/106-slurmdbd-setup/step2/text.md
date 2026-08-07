@@ -20,13 +20,14 @@ lsof -i :3306
 
 Configure slurm in mariadb
 Follow these steps (Remove the > before each line, that is your prompt.)
+
 ```plain
 mysql
-    > CREATE DATABASE slurm_acct_db;
-	> CREATE USER 'slurm'@'localhost' IDENTIFIED BY 'slurm1234';
-	> GRANT ALL PRIVILEGES ON slurm_acct_db.* TO 'slurm'@'localhost';
-	> FLUSH PRIVILEGES;
-	> EXIT;
+> CREATE DATABASE slurm_acct_db;
+> CREATE USER 'slurm'@'localhost' IDENTIFIED BY 'slurm1234';
+> GRANT ALL PRIVILEGES ON slurm_acct_db.* TO 'slurm'@'localhost';
+> FLUSH PRIVILEGES;
+> EXIT;
 ```
 
 Configure the slurmdbd service
@@ -97,6 +98,9 @@ Restart the services.
 
 ```plain
 systemctl restart slurmdbd
+```{{exec}}
+
+```plain
 systemctl restart slurmctld
 ```{{exec}}
 
@@ -106,5 +110,19 @@ sacctmgr add cluster prolugcluster
 ```{{exec}}
 
 We may see the message that this has already been added, so we can continue.
+
+Fix the configurations over on node01
+
+Copy this config to the other node
+
+```plain
+scp /etc/slurm/slurm.conf node01:/etc/slurm/slurm.conf
+```{{exec}}
+
+```plain
+ssh node01 'systemctl restart slurmd'
+```{{exec}}
+
+You can now continue with the lab.
 
 </details>

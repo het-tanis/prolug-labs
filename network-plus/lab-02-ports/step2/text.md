@@ -15,7 +15,7 @@ ssh node01
 Scan against controlplane node to verify that the ports do not appear open from an external connection
 
 ```plain
-nmap -p 22,80,443,8080,9090 <target-ip>
+nmap -p 22,80,443,8080,9090 controlplane
 ```{{exec}}
 
 Do you see the target ports open?

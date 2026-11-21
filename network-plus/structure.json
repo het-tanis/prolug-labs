@@ -1,0 +1,14 @@
+{
+    "items": [
+        { "path": "lab-01-encapsulation" },
+        { "path": "lab-02-ports" },
+        { "path": "lab-03-subnetting" },
+        { "path": "lab-04-netns" },
+        { "path": "lab-05-routing" },
+        { "path": "lab-06-vlan" },
+        { "path": "lab-07-dns" },
+        { "path": "lab-08-tls" },
+        { "path": "lab-09-firewall" },
+        { "path": "lab-10-troubleshoot" }
+    ]
+}

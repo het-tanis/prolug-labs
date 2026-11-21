@@ -1,5 +1,9 @@
 # Route between two networks
 
+This lab is part of a larger free workshop and presentation put on by ProLUG.org.
+This can be completed on its own, but more context is provided in the study material
+found in the ProLUG Discord.
+
 Two hosts on different subnets cannot talk without a router. You will build one
 out of a network namespace, then prove the path.
 

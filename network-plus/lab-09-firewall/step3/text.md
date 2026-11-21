@@ -23,7 +23,7 @@ cat /etc/ssh/sshd_config
 
 ```plain
 echo "checking all the files under /etc/ssh/sshd_config.d"
-for file in $(ls -l /etc/ssh/sshd_config.d/*); do echo "Checking $file"; cat $file; done
+for file in $(ls /etc/ssh/sshd_config.d/*); do echo "Checking $file"; cat $file; done
 ```{{exec}}
 
 Why do you think there's a difference?

@@ -19,13 +19,11 @@ Where are these values set in the system currently?
 ```plain
 echo "checking /etc/ssh/sshd_config"
 cat /etc/ssh/sshd_config
+```{{exec}}
 
+```plain
 echo "checking all the files under /etc/ssh/sshd_config.d"
-for file in $(ls -l /etc/ssh/sshd_config.d/*)
-do 
-  echo "Checking $file"
-  cat $file
-done
+for file in $(ls -l /etc/ssh/sshd_config.d/*); do echo "Checking $file"; cat $file; done
 ```{{exec}}
 
 Why do you think there's a difference?

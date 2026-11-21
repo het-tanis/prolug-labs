@@ -1,0 +1,34 @@
+{
+  "title": "Network+ Lab 09: firewall rules and SSH defaults",
+  "description": "30 minutes \u00b7 Network+ N10-009 practical",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "foreground": "foreground.sh",
+      "background": "setup.sh"
+    },
+    "steps": [
+      {
+        "title": "Build the input chain",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      },
+      {
+        "title": "Prove the block",
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
+      },
+      {
+        "title": "Harden sshd",
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

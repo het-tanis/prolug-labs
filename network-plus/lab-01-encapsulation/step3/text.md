@@ -8,7 +8,7 @@ TCP: port 8080, handshake and payload
 APPLICATION: HTTP GET / and 200 response
 EOF
 cat /root/cap/layers.txt
-```{exec}
+```{{exec}}
 
 Encapsulation is not an abstraction here; each line is a header you can point
 at in the trace.

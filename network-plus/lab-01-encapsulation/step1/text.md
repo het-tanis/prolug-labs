@@ -5,7 +5,7 @@ mkdir -p /root/cap
 timeout 15 tcpdump -i lo -c 4 -w /root/cap/icmp.pcap icmp &
 sleep 1
 ping -c 3 127.0.0.1
-```{exec}
+```{{exec}}
 
 What is happening in the above commands?
 
@@ -17,7 +17,7 @@ How does this vary from the default behavior?
 
 ```
 tcpdump -r /root/cap/icmp.pcap -nn
-```{exec}
+```{{exec}}
 
 What can you see with the output above?
 

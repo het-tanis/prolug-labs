@@ -24,8 +24,10 @@ ip -n ns2 addr add 172.16.0.2/24 dev veth2
 Validate what you just built
 
 ```plain
-ip addr
-ip -br addr
+ip -n ns1 -br addr
+ip -n ns2 -br addr
 ```{{exec}}
+
+What do you notice about the interfaces?
 
 Each namespace sees only its own end of the cable.

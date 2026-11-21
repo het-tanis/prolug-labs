@@ -18,6 +18,8 @@ Did this filter down to just ssh?
 
 What is the purpose of the -i in this command?
 
+Why are there two ssh ports listed? What is the difference?
+
 Can you filter for just a port number?
 
 ```plain

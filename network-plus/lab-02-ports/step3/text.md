@@ -10,5 +10,4 @@ ss -tulpn | grep -E '8080|9090' || echo "both ports closed"
 
 What does the `grep -E` do in this case?
 
-
 Closing the process is the cleanup; the socket disappears with it.

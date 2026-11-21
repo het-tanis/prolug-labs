@@ -1,6 +1,6 @@
 ## What good looks like
 
-- `ss` is the service truth; `nmap` is the outside view.
+- `ss` is the service truth; Other tools like `nmap` show an outside view.
 - Bind address is a design decision.
 - Stop what you start so the next check is clean.
 
